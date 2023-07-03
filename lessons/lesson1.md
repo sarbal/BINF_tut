@@ -133,7 +133,7 @@ my_seq[1]
 my_seq[1] <- 1000 
 my_seq[3:6] <- c(30,20,40,36) 
 ```
-NOTE: in R, we count from 1 (not 0!)
+NOTE: in R, we count from 1 (not 0)
 
 - Matrix or tables: 
 ```
