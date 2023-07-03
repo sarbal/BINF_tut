@@ -43,30 +43,25 @@ Start off by downloading [R](https://cran.r-project.org/) and then [RStudio](htt
 #### Install packages
 From CRAN: 
 ``` 
-install.packages("very_important_package")
+install.packages("gplots")
 ```
 From Bioconductor: 
 ``` 
-source("http://bioconductor.org/biocLite.R")
-biocLite("very_important_package")
-```
-Or (for the next release)
-``` 
 if (!require("BiocManager"))
     install.packages("BiocManager")
-BiocManager::install("my_super_cool_package")
+BiocManager::install("limma")
 ```
 From github:
 ```  
 install.packages("devtools")
 library(devtools)
-devtools::install_github("very_cool_developer/very_important_tool")
+devtools::install_github("karthik/wesanderson")
 ```
 #### Load libraries 
 ```
-library(very_important_package)
-library(very_important_tool)
-require(very_important_data)
+library(gplots)
+library(limma)
+library(wesanderson)
 ```
 
 ## WheRe to get help
