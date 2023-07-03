@@ -9,7 +9,11 @@ getwd()
 ```
 To set your working diretory: 
 ```
-setwd("H:/URP")
+setwd("cloud/project")
+```
+Or 
+```
+setwd("X:/project")
 ```
 Run this to install/load libraries (this might take a while if you do not have most of the packages installed, so run this as soon as possible). 
 ```
