@@ -1,6 +1,6 @@
-# URP R course
+# R course
 
-An R tutorial designed for the 2018 Undergraduate Research Program at Cold Spring Harbor Laboratory.
+An R tutorial designed for the undergraduate introduction to bioinformatics course.
 
 Written by: 
 - Sara Ballouz
