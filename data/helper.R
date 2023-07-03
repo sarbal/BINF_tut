@@ -3,7 +3,7 @@
 #########################################
 
 ##  Written: Sara Ballouz
-##  Date: July 23rd, 2018
+##  Date: July 3rd, 2023
 
 ## Necessary libraries
 if( !require("gplots")){
@@ -36,7 +36,6 @@ if( !require("pheatmap")){
 if( !require("vioplot")){
   install.packages("vioplot")
 }
-
 if( !require("tidyverse")){
   install.packages("tidyverse")
 }
@@ -67,70 +66,72 @@ rowSE <- function( data){ return( apply( data, 1, sd, na.rm=T)/sqrt(dim(data)[1]
 se    <- function(x){ sd(x,na.rm=T)/sqrt(length(!is.na(x))) }
 rmse  <- function(error){sqrt(mean(error^2, na.rm=T) )}
 mae   <- function(error){ mean(abs(error), na.rm=T)}
+residuals <- function(x,y,A,B,C){ (A*x + B*y + C) }
+residuals2 <- function(x,y,A,B,C) { (A*x + B*y + C)/sqrt(A^2+B^2) }
+residuals3 <- function(x,y,A,B,C) { abs(A*x + B*y + C)/sqrt(A^2+B^2) }
 
-geo_mean <- function(data) {
+geo_mean <- function(data) 
+{
     log_data <- log(data)
     gm <- exp(mean(log_data[is.finite(log_data)]))
     return(gm)
 }
 
-geo_sd <- function(data) {
+geo_sd <- function(data) 
+{
     log_data <- log(data)
     gs <- exp(sd(log_data[is.finite(log_data)]))
     return(gs)
 }
 
-geo_se <- function(data) {
+geo_se <- function(data) 
+{
     gs <- geo_sd(data)
     log_data <- log(data)
     gse <- gs/sqrt(sum(is.finite(log_data)))
     return(gse)
 }
 
-
-lm.studentized  <- function(x,y){
+lm.studentized  <- function(x,y)
+{
 	z = lm(y ~ x )
         z = rstudent(z)
 	return( rank(abs(z)) )
 }
 
-lm.function  <- function(x,y){
+lm.function  <- function(x,y)
+{
 	z = lm(y ~ x )
 	return( rank(abs(z$residuals)) )
 }
 
-
-residuals <- function(x,y,A,B,C){ (A*x + B*y + C) }
-residuals2 <- function(x,y,A,B,C) { (A*x + B*y + C)/sqrt(A^2+B^2) }
-residuals3 <- function(x,y,A,B,C) { abs(A*x + B*y + C)/sqrt(A^2+B^2) }
-
-z_scores <- function(x) {
+z_scores <- function(x) 
+{
    mean_x = mean(x, na.rm=T)
    sd_x = sd(x, na.rm=T)
    z =  (x - mean_x) / (sd_x)
    return(z)
 }
 
-z_scores_mod <- function(x) {
+z_scores_mod <- function(x) 
+{
    med_x = median(x, na.rm=T)
    mad_x = median(abs(x-med_x), na.rm=T)
    z =  0.6745 * (x - med_x) / (mad_x)
    return(z)
 }
 
-calc_cpm <-function(X){
+calc_cpm <-function(X)
+{
         K  = colSums(X)
         X.cpm = sapply(1:length(K), function(k) 10^6*X[,k]/K[k] )
         return(X.cpm)
 }
 
-
-heatmap.3 <- function(mat, ...){
+heatmap.3 <- function(mat, ...)
+{
 	heatmap.2( mat, ..., density="none", trace="none")
 }
-
-
-
 
 # Transparent colors
 makeTransparent<-function(someColor, alpha=100)
@@ -140,21 +141,21 @@ makeTransparent<-function(someColor, alpha=100)
 	blue=curcoldata[3],alpha=alpha, maxColorValue=255)})
 }
 
-
 # Given x and two points
-get_value <- function( x1, x2, y1,y2, x) {
+get_value <- function( x1, x2, y1,y2, x) 
+{
 	m = (y2 - y1) / (x2 - x1 )
 	y = y1 + m *( x - x1)
 	return(y)
 }
 
 # Given y and two points
-get_value_x <- function( x1, x2, y1,y2, y) {
+get_value_x <- function( x1, x2, y1,y2, y) 
+{
 	m = (y2 - y1) / (x2 - x1 )
 	x = x1 + (y - y1)/m
         return(x)
 }
-
 
 ## Formats the density distribution from the histogram function
 get_density <- function(hist)
@@ -165,7 +166,6 @@ get_density <- function(hist)
 
         return(cbind(x,y))
 }
-
 
 ## Formats the counts distribution from the histogram function
 get_counts <- function(hist)
@@ -197,7 +197,8 @@ toc <- function()
 	invisible(toc)
 }
 
-convolve_nets <- function(netA,netB,f){
+convolve_nets <- function(netA,netB,f)
+{
 	n <- order(netA)
 	temp_netA <- netA[n]
 
@@ -205,7 +206,8 @@ convolve_nets <- function(netA,netB,f){
 	convolved = cbind(temp_netA[(f/2):(length(temp_netA)-f/2)],temp_netB/f)
 }
 
-gene_set_enrichment <- function(genes, genes.labels, voc){
+gene_set_enrichment <- function(genes, genes.labels, voc)
+{
 
         genes.names = rownames(genes.labels)
 	labels.names = colnames(genes.labels)
@@ -235,5 +237,4 @@ gene_set_enrichment <- function(genes, genes.labels, voc){
 	colnames(results) = c("term", "descrp","p", "q", "pvals", "padj" )
         results =  results[results[,3] > 0 ,]
 	return (results)
-
 }
