@@ -41,7 +41,7 @@ install.packages("xlsx")
 # This needs a few other packages, in particular rJava. If prompted, download the 64 bit version (for Windows) from: https://www.java.com/en/download/manual.jsp. 
 # This might not be necessary,but in case
 install.packages("rJava") 
-Sys.setenv(JAVA_HOME='C:\\Program Files\\Java\\jre1.8.0_181') # dependeing where Java is installed 
+Sys.setenv(JAVA_HOME='C:\\Program Files\\Java\\jre1.8.0_181') # depending where Java is installed 
 
 library(xlsx) 
 data <- read.xlsx(file="pnasEisen1998.xlsx", 2)
@@ -62,15 +62,15 @@ page <- str_split(pdf_text_extract[[5]], "\n", simplify = TRUE)
 
 ```
 load("lesson3.Rdata") # if the pdf extraction didn't work 
-table <- unlist(page)[4:20]
+table <- unlist(page)[5:21]
 ```
 - extract the columns, using substr(), trimws() and sapply()
 ```
-col1 = sapply(1:length(table), function(i) trimws(substr( table[i], 38, 81)))
-col2 = sapply(1:length(table), function(i) trimws( substr( table[i], 82, 96 )))
-col3 = sapply(1:length(table), function(i) trimws(substr( table[i], 97, 111 )))
-col4 = sapply(1:length(table), function(i) trimws(substr( table[i], 112, 132 )))
-col5 = sapply(1:length(table), function(i) gsub("\r", "", trimws(substr( table[i], 133, 150 ))))
+col1 = sapply(1:length(table), function(i) trimws(substr( table[i], 1, 80)))
+col2 = sapply(1:length(table), function(i) trimws( substr( table[i], 81, 90 )))
+col3 = sapply(1:length(table), function(i) trimws(substr( table[i], 91, 105 )))
+col4 = sapply(1:length(table), function(i) trimws(substr( table[i], 106, 120 )))
+col5 = sapply(1:length(table), function(i) gsub("\r", "", trimws(substr( table[i], 121, 150 ))))
 ```
 - merge the columns together into a table with cbind()
 ```
