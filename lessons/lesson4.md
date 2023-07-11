@@ -53,6 +53,7 @@ enriched2 <- gene_set_enrichment(c("Runx1", "Gfi1", "Gfi1b", "Spi1", "Gata1", "K
 multifunc_assessment <- calculate_multifunc(annot)
 plot(multifunc_assessment[,4])
 auc_mf <- auc_multifunc(annot, multifunc_assessment[,4])
+names(auc_mf) = colnames(annot)
 hist <- plot_distribution(auc_mf, xlab="AUROC", med=FALSE, avg=FALSE)
 ```
 - How multifunctional are our results? 
@@ -63,20 +64,23 @@ hist <- plot_distribution(auc_mf[m], xlab="AUROC", med=FALSE, avg=FALSE)
 
 ## Replicating a figure
 Let's take a look at this paper:  https://genome.cshlp.org/content/22/4/602
-- They've made their data available (the link in the paper is broken): http://giladlab.uchicago.edu/data/final.data.tgz  
+- They've made their data available: https://genome.cshlp.org/content/suppl/2012/01/03/gr.130468.111.DC1/Supplemental.Database.primateRNAseq.zip    
 - Let's try reproducing the heatmap (Supplementary figure 5).  https://genome.cshlp.org/content/suppl/2012/01/03/gr.130468.111.DC1/SupplementalFigures_08_09_11.pdf 
 
 1. Get data 
 
 ```
-gene_expression_file = " Gene.expression.data/Normalized.expression.data.txt" 
+download.file(url="https://genome.cshlp.org/content/suppl/2012/01/03/gr.130468.111.DC1/Supplemental.Database.primateRNAseq.zip", destfile="primateRNAseq.zip")
+unzip("primateRNAseq.zip", files = NULL, list = FALSE, overwrite = TRUE, junkpaths = FALSE, exdir = "primateRNAseq", unzip = "internal", setTimes = FALSE)
+unzip("primateRNAseq/Gene.expression.data.zip", files = NULL, list = FALSE, overwrite = TRUE, junkpaths = FALSE, exdir = "primateRNAseq/", unzip = "internal", setTimes = FALSE)
+gene_expression_file = "primateRNAseq/Gene.expression.data/Normalized.expression.data.txt" 
 exprs = read.table(gene_expression_file, header=T, row.names=1) 
 samples = matrix(unlist(strsplit(colnames(exprs)[33:94] , "_" ) ) , byrow=T, ncol=2)
 ```
 2. Clean up data
 ```
 exprs.means = t(sapply(1:dim(exprs)[1], function(i) tapply(  as.numeric(exprs[i,33:94]), samples[,1], mean, na.rm=T) ))
-samples.sub = names(tapply(  as.numeric(exprs[i,33:94]), samples[,1], mean, na.rm=T)) 
+samples.sub = names(tapply(  as.numeric(exprs[1,33:94]), samples[,1], mean, na.rm=T)) 
 colnames(exprs.means) = samples.sub
 rownames(exprs.means) = rownames(exprs)
 ```
