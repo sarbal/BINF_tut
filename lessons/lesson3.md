@@ -13,7 +13,7 @@ getwd()
 ```
 To set your working diretory: 
 ```
-setwd("H:/URP")
+setwd("X:/project")
 ```
 Run this to install/load libraries
 ```
