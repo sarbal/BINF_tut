@@ -46,7 +46,7 @@ enriched2 <- gene_set_enrichment(c("Runx1", "Gfi1", "Gfi1b", "Spi1", "Gata1", "K
 - How do the results compare?
 
 ### Multifunctionality 
-- One worry we might have with GSE is gene multifunctionality (genes having many functions). (Disclaimer this is what the Gillis lab works on!).  
+- One worry we might have with GSE is gene multifunctionality (genes having many functions).  
 - Multifunctional genes will return many functions in an enrichment assessment (not very useful!).   
 - We can assess our results and genes by calculating how multifunctional genes and gene sets/functions are using the EGAD package 
 ```
