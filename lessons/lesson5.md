@@ -26,21 +26,23 @@ And then downloading this file:
 - User interface function (```ui```) defines the structure of the page 
 - Placing a function in ui tells shiny where to display your object
 - Add an R object to your user interface, the object will be reactive if the code that builds it calls a widget value
-- a widget is a web element that your users can interact with 
+- a widget is a web element that your users can interact with
+- See the example below:
 ```
 ui <- fluidPage( 
   
-  titlePanel("This is the title"),
+  titlePanel("Random numbers: normal distribution"),   # Title panel
   
   # Inputs
   sidebarLayout(
     sidebarPanel(
-      textInput("one", "Number1"),
-      textInput("two", "Number2"),
-      textInput("caption", "Text1"),      
-      actionButton("add", "Add"),
+      textInput("one", "Mean", value=0),
+      textInput("two", "Standard deviation", value=1),
+      textInput("three", "Number of repeats", value=10000),
+      textInput("caption", "X-axis label"),      
+      actionButton("add", "Run"),
       checkboxInput(inputId = "obs", label = strong("Show individual observations"), value = FALSE),
-      sliderInput("bins", "Number of bins:",  min = 1, max = 10, value = 5) 
+      sliderInput("bins", "Number of bins:",  min = 1, max = 100, value = 5) 
     ),
     
     # Result display
@@ -48,7 +50,6 @@ ui <- fluidPage(
       textOutput("check"),
       plotOutput("distPlot"),
       tableOutput("table")
-      
     )
   )
 )
@@ -65,36 +66,35 @@ ui <- fluidPage(
 server <- function(input,output,session) {
   # Reactive input 
   observeEvent( input$add,{
-    x <- as.numeric(input$one)
-    y <- as.numeric(input$two)
-    title <- as.character(input$caption)
+    x <- as.numeric(input$one)  # This input comes from the first number box (Mean)
+    y <- as.numeric(input$two)  # This input comes from the second number box (Standard deviation)
+    n <- as.numeric(input$three)  # This input comes from the third number box (Number of repeats)
+    label <- as.character(input$caption) # This input comes from the text box 
     
     # Reactive expressions
-    n <- x+y
-    d <- round(abs(rnorm(n)  ) * n )
-    m <- mean(d)
-    sdd <- sd(d)
+    d <-  rnorm(n, x, y)
     bins <- seq(min(d), max(d), length.out = input$bins + 1)
-      
+    m <- mean(d)
+    sdd <- sd(d)  
     # Reactive output
     output$check <- renderPrint("Done!")
     output$distPlot <- renderPlot({
       
       # Draw the histogram with the specified number of bins
-      hist(d, breaks = bins, freq=F, col = 'darkgray', border = 'white', main=title)
+      hist(d, breaks = bins, freq=F, col = 'darkgray', border = 'white', xlab=label)
       ld <- density(d)
       lines(ld, col=4) 
-      abline(v=m, lty=2, lwd=3, col=4)      
+      abline(v=x, lty=2, lwd=3, col=4)      
       if (input$obs) { rug(d) }
       
     })
     output$table <- renderTable({
-      data = cbind(n,m, sdd)
+      data = cbind( m, sdd)
       return( data ) 
-    })
-    
+    })  
   })
-)
+}
+
 ```
 ### Run!
 ```
@@ -171,11 +171,8 @@ library(shiny)
 ```
 runApp("my_app")
 ```
-5. We can modify the different bits of code in the ui and server functions to change the display and functionality of the code. 
- 
-
-6. Play around! 
-
+5. We can modify the different bits of code in the ui and server functions to change the display and functionality of the code. Copy the above functions into this app. Run and play around! Increase the number of repeats, change the number of bins, and test different inputs. 
+6. Try different functions. Currently we are using the random "normal" generator. Make one for the Poisson distribution, and two others (see which here). Make sure you change the inputs needed accordingly (ie add more input boxes, change text).
 
 Back to the [homepage](../README.md)
 
