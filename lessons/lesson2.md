@@ -70,9 +70,7 @@ barplot(iris.bar, col="black", xlab="Species", ylab="Count", main="Bar plot of m
 - Let us take a look to see what is distinct about the first peak 
 - Since we want petal widths less than 0.75, we can slice the data:
 ``` 
-small_petals <- which(iris$Petal.Width <0.75)
-count(iris$Species[small_petals])
-count(iris$Species)
+tapply(iris$Petal.Width < 0.75, iris$Species, sum)
 ```
 - That was easy enough, and we can show this again by coloring the histogram based on the species
 - Plots in R work by layering, so we can start by drawing the whole histogram first
@@ -85,7 +83,7 @@ hist(iris$Petal.Width[iris$Species=="setosa"], col="red", add=T)
 hist(iris$Petal.Width[iris$Species=="versicolor"], col="blue", add=T)
 hist(iris$Petal.Width[iris$Species=="virginica"], col="purple", add=T)
 ```
-- Oops! The histograms are all wonky because we've not specified how bin the data. R works "intuitively", and picks the best breaks for that data.  
+- Oops! The histograms are all wonky because we've not specified how to bin the data. R works "intuitively", and picks the best breaks for that data.  
 - We can force similar histogram breaks so that we can bin the data equally
 ```
 h <- hist(iris$Petal.Width, col="lightblue")
@@ -181,23 +179,24 @@ g
 ```
 - This does nothing, because we've not specified what we want to draw:
 ```
-g <- g + geom_point() 
+g <- g + geom_point()
+g
 ```
 - Points! Now to color them:
 ```
 g <- g + geom_point(aes(color = Species))
+g
 ```
 - We can keep building onto the "g" variable. 
 ```
 g <- ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) + geom_point()  +  geom_smooth(method = "lm", se = F) 
-
+g
 ``` 
 - How about boxplots? 
 ```
 g <- ggplot(data=iris, aes(x=Species, y=Sepal.Length))
 g + geom_boxplot(aes(fill=Species)) + 
-  ylab("Sepal Length") + ggtitle("Iris Boxplot") +
-  stat_summary(fun.y=mean, geom="point", shape=5, size=4)  
+  ylab("Sepal Length") + ggtitle("Iris Boxplot")  
 ```
 - Histograms:
 ```
@@ -207,7 +206,7 @@ g + geom_histogram(binwidth=0.2, color="black", aes(fill=Species)) +  xlab("Sepa
 - Barplots:
 ```
 g <- ggplot(data=iris, aes(x=Species, y=Sepal.Length))
-g + geom_bar(stat = "summary", fun.y = "mean") + xlab("Species") +  ylab("Mean") + ggtitle("Bar plot of mean Sepal Length") 
+g + geom_bar(stat = "summary", fun = "mean") + xlab("Species") +  ylab("Mean") + ggtitle("Bar plot of mean Sepal Length") 
 ```
 More [here](https://www.mailman.columbia.edu/sites/default/files/media/fdawg_ggplot2.html)
 
