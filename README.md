@@ -1,6 +1,6 @@
-# An R and python course
+# R and python tutorials
 
-A set of tutorials designed for the undergraduate introduction to bioinformatics course.
+A set of tutorials designed for the undergraduate introduction to bioinformatics course (BINF2010).
 
 Written by: 
 - Sara Ballouz
@@ -26,16 +26,16 @@ Let's start at the very beginning [(a very good place to start)](/intro/intro.md
 
 
 ## Week 7: Python basics 
-[First things first! Let's get started.](/lessons/lesson5.md)   
+[First things first! Let's get started.](/lessons/lesson6.md)   
 
 ## Week 8: Data Viz 
-[Some visual things you can do with R.](/lessons/lesson6.md)
+[Some visual things you can do with R.](/lessons/lesson7.md)
 
 ## Week 9: Snakes on a plane 
-[Let's play with real data.](/lessons/lesson7.md)
+[Let's play with real data.](/lessons/lesson8.md)
 
 ## Week 10:  
-[Let's reproduce some analyses.](/lessons/lesson8.md)
+[Let's reproduce some analyses.](/lessons/lesson9.md)
 
 
 
