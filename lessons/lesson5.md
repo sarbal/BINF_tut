@@ -1,4 +1,4 @@
-# Lesson 5: So shiny!
+# Week 5: So shiny!
 Let's make something interactive! Start off by installing the shiny package: 
 ```
 install.packages("shiny")
