@@ -2,16 +2,20 @@
 Hi! 
 
 ## CouRse aims 
-- Introduce you to R 
+- Introduce you to R and Python
 - Basic concepts in data analysis
 - "Cool" visuals 
 
 ## CouRse outline
-1. [Lesson 1: R basics](../lessons/lesson1.md)
-2. [Lesson 2: More R](../lessons/lesson2.md)
-3. [Lesson 3: A fun example](../lessons/lesson3.md)
-4. [Lesson 4: Another potentially fun example.](../lessons/lesson4.md)
-5. [Lesson 5: So shiny!](../lessons/lesson5.md) 
+1. [Week 1: R basics](../lessons/lesson1.md)
+2. [Week 2: More R](../lessons/lesson2.md)
+3. [Week 3: A fun example](../lessons/lesson3.md)
+4. [Week 4: Another potentially fun example.](../lessons/lesson4.md)
+5. [Week 5: So shiny!](../lessons/lesson5.md)
+6. [Week 7:](../lessons/lesson6.md)
+7. [Week 8:](../lessons/lesson7.md)
+8. [Week 9:](../lessons/lesson8.md)
+9. [Week 10:](../lessons/lesson9.md)
 
 ## What is R? 
 - Statistical and graphical language
@@ -85,3 +89,10 @@ library(wesanderson)
 - https://peerj.com/collections/50-practicaldatascistats/
 - http://www-huber.embl.de/csama2018/#home
 - https://elifesciences.org/labs/cad57bcf/composing-reproducible-manuscripts-using-r-markdown
+
+
+## A brief history of Python
+Initially developed during the late 1980’s by Guido van Rossum. First development version released in 1991. Version 1 released in 1994.
+Python 2.0.0 released June, 2001 and Python 2.x end-of-life Jan 1, 2020.
+This version was so popular and widely used that many Bioinformatics programs were written using it. Some of these tools have been converted to support v3.x, others are in the process of being upgraded or have been abandoned and will stay on v2.x. The last Python 2.x release is still available for download.
+Python 3.x (December 2008) was a significant re-design and broke compatibility with some parts of v2.x.
