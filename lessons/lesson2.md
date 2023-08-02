@@ -1,4 +1,4 @@
-# Lesson 2: More R
+# Week 2: More R
 Some visual things you can do with R. Once more, download these files into your working directory: 
 - [lesson2](../data/lesson2.Rdata). 
 - [helper.R](../data/helper.R)
