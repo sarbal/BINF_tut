@@ -1,28 +1,41 @@
-# R course
+# An R and python course
 
-An R tutorial designed for the undergraduate introduction to bioinformatics course.
+A set of tutorials designed for the undergraduate introduction to bioinformatics course.
 
 Written by: 
 - Sara Ballouz
 
 
 ## Intro: 
-Let's start at the very begining [(a very good place to start)](/intro/intro.md)   
+Let's start at the very beginning [(a very good place to start)](/intro/intro.md)   
 
-## Lesson 1: R basics 
+## Week 1: R basics 
 [First things first! Let's get started.](/lessons/lesson1.md)   
 
-## Lesson 2: More R 
+## Week 2: More R 
 [Some visual things you can do with R.](/lessons/lesson2.md)
 
-## Lesson 3: A fun example 
+## Week 3: A fun example 
 [Let's play with real data.](/lessons/lesson3.md)
 
-## Lesson 4: Another potentially fun example.
+## Week 4: Another potentially fun example.
 [Let's reproduce some analyses.](/lessons/lesson4.md)
 
-## Lesson 5: So shiny!
+## Week 5: So shiny!
 [Let's make something interactive.](/lessons/lesson5.md)
+
+
+## Week 7: Python basics 
+[First things first! Let's get started.](/lessons/lesson5.md)   
+
+## Week 8: Data Viz 
+[Some visual things you can do with R.](/lessons/lesson6.md)
+
+## Week 9: Snakes on a plane 
+[Let's play with real data.](/lessons/lesson7.md)
+
+## Week 10:  
+[Let's reproduce some analyses.](/lessons/lesson8.md)
 
 
 
