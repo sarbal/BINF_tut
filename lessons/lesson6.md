@@ -56,12 +56,11 @@ print(allcaps)
 newstr = tmpstr.replace("Nik","Joe")
 print(newstr)
 
-# you can also use the + symbol to concatenate strings
+- you can also use the + symbol to concatenate strings
 tmpstr2 = "How are you doing?"
 print(tmpstr + " " + tmpstr2)
 
-# you can find the position of one string in another
-# returns -1 if not found
+- you can find the position of one string in another. Returns -1 if not found
 print(tmpstr2.find("you"))
 print(tmpstr2.find("california"))
 Here is a list of the various methods you can use on strings.
@@ -76,67 +75,75 @@ treatment = True
 print(control)
 print(treatment)
 Booleans come into play when making comparisons. The simplest comparisons are comparing integers:
-
+```
 print(1<1)
 print(1<2)
 print(2>1)
 print(1<=1)
 print(2>=1)
-
-# the double equals is an equality comparison, a single equals is for assignment.
+```
+- the double equals is an equality comparison, a single equals is for assignment.
+```
 print(1==1)
 print(0==1)
-
-# You can also do string comparisons
+```
+- You can also do string comparisons
+```
 gene_id = "BRCA2"
 hw = "HELLO!!! WORLD!!!"
 print(gene_id == "BRCA2")
 print(hw == "hello")
-Built-in datatypes and the type function
+```
+### Built-in datatypes and the type function
 You can use the “type” function to query the type of a variable:
-
+```
 print("The data type of the variable 'control' is:")
 print(type(control))
 print("The data type of the variable 'hw' is:")
 print(type(hw))
 print("The data type of the variable 'gene_count' is:")
 print(type(gene_count))
+```
 Here is a list of the built-in datatypes and their corresponding category:
+- Text Type: str
+- Numeric Types: int, float, complex
+- Sequence Types: list, tuple, range
+- Mapping Type: dict
+- Set Types: set, frozenset
+- Boolean Type: bool
+- Binary Types: bytes, bytearray, memoryview
 
-Text Type: str
-Numeric Types: int, float, complex
-Sequence Types: list, tuple, range
-Mapping Type: dict
-Set Types: set, frozenset
-Boolean Type: bool
-Binary Types: bytes, bytearray, memoryview
-
-Casting
+### Casting
 In python, you can convert certain values for certain datatypes to other datatypes. Three of the commonly used functions for this are ‘bool’, ‘int’, and ‘str’.
-
-# convert a string to a boolean
+- convert a string to a boolean
+```
 tmpstr = "Hello"
 tmpbool = bool(tmpstr)
 print(tmpbool)
-
-# convert a decimal to a string
-# the print function can only print strings
-# anything that isn't a string needs to be converted to a string using the "str" method, to be able to print it.
+```
+convert a decimal to a string
+the print function can only print strings
+anything that isn't a string needs to be converted to a string using the "str" method, to be able to print it.
+```
 x = 45.5
 print("The number is: " + str(x))
+```
 
-# convert string to an integer
+Convert string to an integer
+```
 mystr = "50"
 myint = int(mystr) + 1
 print(str(myint))
-Arithmetic: Addition/subtraction, multiplication/division, assignment arithmetic (assignment operators).
+```
+
+### Arithmetic: Addition/subtraction, multiplication/division, assignment arithmetic (assignment operators).
+```
 if flow
-
 print("\nArithmetic\n")
-
 a = 21
 b = 3
-
+```
+```
 # Addition
 print(a + b)
 
@@ -171,12 +178,14 @@ import math
 print(math.ceil(3.2))
 print(math.floor(3.7))
 print(int(3.7))
+```
 The math package has many common math functions you can use.
 
 PRACTICE: Add and multiply various datatypes together using conversions and math methods. Play around with other math methods. Try the “atan2” method and try the “log” method with a different base than the default.
 
 ## Basic Data Structures: Lists and Dictionaries.
 Lists
+```
 if flow
 if flow
 if flow
@@ -238,14 +247,14 @@ print(gene_list)
 gene_list.reverse()
 print(gene_list)
 Here is a list of functions and methods for lists.
-
+```
 PRACTICE: Play with some list methods. Try out the “pop”, “insert”, and “sort” methods. Try to insert a new gene name in the middle of gene_list.
 
 ### Dictionaries
 A set of key/value pairs where the keys are unique. Used primarily when you want to use a string as an index.
 Dictionary values are pointed to by the keys. Values can be anything from int, float, and bool to lists, tuples, and other dictionaries.
 dictionary
-
+```
 print("\nDictionaries\n")
 
 gene_exp_dict = {"DDX11L1":43.2,"WASH7P":45,"MIR6859-1":60.1,"MIR1302-2HG":12,"MIR1302-2":0.5,"FAM138A":23}
@@ -277,4 +286,6 @@ print("BRCA2" in gene_exp_dict)
 
 # to make a copy of a dictionary, you need to use the "copy" method
 gene_exp_dict_copy = gene_exp_dict.copy()
-PRACTICE: Create a dictionary for personnel in a company where each person has a unique employee ID, and for each employee you have a name, an address, and a DOB. Populate this dictionary with at least two employees. Write the code to get the address of the 2nd employee. Create a dictionary for gene expression of multiple genes for multiple samples. Populate the dictionary with at least 3 genes for 5 samples. Write the code to get the gene expression for the 2nd gene, 4th sample.
+```
+
+ Create a dictionary for gene expression of multiple genes for multiple samples. Populate the dictionary with at least 3 genes for 5 samples. Write the code to get the gene expression for the 2nd gene, 4th sample.
