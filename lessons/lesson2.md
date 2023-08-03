@@ -29,6 +29,7 @@ colnames(iris)
 ``` 
 plot(iris)
 ```
+![scatterplot](../imgs/plot_iris.png)
 - Similar to calling this function, which plots a matrix of scatterplots:
 ```
 pairs(iris, upper.panel = NULL )
