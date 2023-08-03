@@ -268,10 +268,14 @@ plot(1:n, col=turbo(n), pch=19, cex=5)
 
 ## Test yourself! 
 1. Create an R markdown file (using RStudio). Save the file as "yourname_Lesson2.Rmd". Once again, delete the instructions starting from "This is an [R...". For the remaining exercises, insert the code as R chunks when you are satisified with your solutions. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
-2. Load the file "lesson2.Rdata" into your environment. Plot three plots of the dataset "X". Be as creative as you can in one, as deceptive as you can in the second, and then as clear as you can in the last.
-3. Now, using the dataset "Y", plot a heatmap. Aim for clarity! 
-4. And finally, look at dataset "Z". Plot it the best way you think would show its key feature. 
-5. "Knit" your R markdown file into an html page, a pdf and a word document. Save the latter two. Email either file to me! 
+2. Load the file "lesson2.Rdata" into your environment.
+3. Plot three plots from the dataset "X" to answer the next set of questions. There are multiple columns in the dataset, so feel free to explore and play around first.
+    a. What are the average weights per sex? Show as a histogram.
+    b. What are the range of scute numbers per set? Show as a boxplot.
+    c. What are the correlations between the biometrics? Show as a correlation plot. 
+5. Now, using the dataset "Y", plot a heatmap. Aim for clarity! 
+6. And finally, look at dataset "Z". Plot it the best way you think would show its key feature. 
+7. "Knit" your R markdown file into an html page, a pdf and a word document. Save the latter two. Email either file to me! 
  
 Solutions: Next week!
 
