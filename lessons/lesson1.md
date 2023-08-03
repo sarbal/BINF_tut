@@ -15,7 +15,7 @@ title: "Week 1"
 author: "Sara"
 ```
 ###
-To check your working directory:
+In the console window below the source window, check your working directory by typing in:
 ```
 getwd()
 ```
