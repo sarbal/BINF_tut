@@ -24,18 +24,17 @@ Let's start at the very beginning [(a very good place to start)](/intro/intro.md
 ## Week 5: So shiny!
 [Let's make something interactive.](/lessons/lesson5.md)
 
-
 ## Week 7: Python basics 
-[First things first! Let's get started.](/lessons/lesson6.md)   
+[Restart!](/lessons/lesson6.md)   
 
 ## Week 8: Data Viz 
-[Some visual things you can do with R.](/lessons/lesson7.md)
+[Python visualisations.](/lessons/lesson7.md)
 
 ## Week 9: Snakes on a plane 
-[Let's play with real data.](/lessons/lesson8.md)
+[Data wrangling.](/lessons/lesson8.md)
 
 ## Week 10:  
-[Let's reproduce some analyses.](/lessons/lesson9.md)
+[Reproducing some analyses.](/lessons/lesson9.md)
 
 
 
