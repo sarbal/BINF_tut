@@ -5,7 +5,7 @@ Download these files into your working directory:
 - [lesson3](../data/lesson3.Rdata) 
 - [helper.R](../data/helper.R)
 - [data](../data/my_data.zip)
-
+Extract the data.zip folder.  
 ####  
 To check your working directory:
 ```
