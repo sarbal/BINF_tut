@@ -16,7 +16,6 @@ Run this to install/load libraries
 source("helper.R") 
 ```
 
-
 ## Visuals
 - R is pretty good for visualization
 - We will start off with the famous [Iris](http://stat.ethz.ch/R-manual/R-devel/library/datasets/html/iris.html) dataset. You can read more about it [here](https://en.wikipedia.org/wiki/Iris_flower_data_set).   
@@ -133,7 +132,7 @@ bty
 ```
 - Going back to the matrix scatterplot, let's have a visual that summarizes all the data
 ```
-## Ignore these for now 
+## Ignore these functions (for now) 
 panel.hist <- function(x, ...)
 {
     usr <- par("usr"); on.exit(par(usr))
@@ -244,14 +243,20 @@ library(RColorBrewer)
 display.brewer.all()
 brewer.pal(8, "Set3" ) 
 ```
-- everyone's new favorite are the viridis palettes (color-blind friendly)
+- favorites are the viridis palettes (color-blind friendly)
 ```
 library(viridis)
-magma()
-plasma()
-inferno()
-viridis()
-cividis()
+n=10
+magma(n)
+plasma(n)
+inferno(n)
+viridis(n)
+cividis(n)
+turbo(n)
+plot(1:n, col=magma(n), pch=19, cex=5)
+plot(1:n, col=plasma(n), pch=19, cex=5)
+n=100
+plot(1:n, col=turbo(n), pch=19, cex=5)
 ```
 
 #### More here: 
