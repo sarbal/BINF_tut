@@ -200,8 +200,8 @@ g + geom_boxplot(aes(fill=Species)) +
 ```
 - Histograms:
 ```
-g <- ggplot(data=iris, aes(x=Sepal.Width))
-g + geom_histogram(binwidth=0.2, color="black", aes(fill=Species)) +  xlab("Sepal Width") +  ylab("Frequency") + ggtitle("Histogram of Sepal Width") 
+g <- ggplot(data=iris, aes(x=Petal.Width))
+g + geom_histogram(binwidth=0.2, color="black", aes(fill=Species)) +  xlab("Petal Width") +  ylab("Frequency") + ggtitle("Histogram of Petal Width") 
 ```
 - Barplots:
 ```
