@@ -30,15 +30,17 @@ colnames(iris)
 plot(iris)
 ```
 ![scatterplot](../imgs/plot_iris.png)
-- Similar to calling this function, which plots a matrix of scatterplots:
+- The pairs function works in a similar way, and plots a matrix of scatterplots We can specify only to show the lower panel:
 ```
 pairs(iris, upper.panel = NULL )
 ```
+![scatterplot](../imgs/plot_iris_2.png)
 - Now that we've seen all the bits of the data, we can play with visualizing parts of it differently  
 - Let's start with a scatter plot of the sepal length versus the petal length
 ``` 
 plot(iris$Sepal.Length, iris$Petal.Length, pch=19, col=as.numeric(iris$Species) )
 ```
+![scatterplot3](../imgs/plot_iris_3.png)
 - let's play around with this
 ``` 
 ## Playing with parameters 
@@ -48,7 +50,9 @@ plot(lowess(iris$Sepal.Length, iris$Petal.Length), pch=19)
 ## Plotting using the forumla method 
 plot(Petal.Length ~ Sepal.Length, data=iris, pch=19, col=Species)
 ```
-
+![scatterplot](../imgs/plot_iris_4.png)
+![scatterplot](../imgs/plot_iris_5.png)
+![scatterplot](../imgs/plot_iris_6.png)
 - We can view sepal width by species distributions with a boxplot, beanplot, violin plot or "joy" plots: 
 ``` 
 boxplot(iris$Sepal.Width~ iris$Species, col=1:3 )
@@ -56,15 +60,21 @@ beanplot(iris$Sepal.Width~ iris$Species, col=list(1,2,3))
 iris.list = lapply( unique(iris$Species), function(si) iris$Sepal.Width[iris$Species==si]) 
 vioplot( iris.list[[1]], iris.list[[2]], iris.list[[3]], col="darkgreen")  
 ```
-- or take a look at the distribution of petal width
-``` 
-hist(iris$Petal.Width, col="lightblue")
-```
+![scatterplot](../imgs/plot_iris_boxplot.png)
+![scatterplot](../imgs/plot_iris_beanplot.png)
+![scatterplot](../imgs/plot_iris_vioplot.png)
 - or build a barplot :
 ``` 
 iris.bar = tapply( iris$Sepal.Length, iris$Species, mean)
 barplot(iris.bar, col="black", xlab="Species", ylab="Count", main="Bar plot of mean Sepal Length")
 ```
+![scatterplot](../imgs/plot_iris_barplot.png)
+- or take a look at the distribution of petal width
+``` 
+hist(iris$Petal.Width, col="lightblue")
+```
+![scatterplot](../imgs/plot_iris_hist.png)
+
 - We see biomodality (two modes/peaks) in the petal width data 
 - And there is a clear division (<0.75)
 - Let us take a look to see what is distinct about the first peak 
@@ -76,13 +86,14 @@ tapply(iris$Petal.Width < 0.75, iris$Species, sum)
 - Plots in R work by layering, so we can start by drawing the whole histogram first
 ```
 hist(iris$Petal.Width, col="lightblue")
-``` 
+```
 - And then adding each individual species as a layer  
 ```
 hist(iris$Petal.Width[iris$Species=="setosa"], col="red", add=T)
 hist(iris$Petal.Width[iris$Species=="versicolor"], col="blue", add=T)
 hist(iris$Petal.Width[iris$Species=="virginica"], col="purple", add=T)
 ```
+![scatterplot](../imgs/plot_iris_hist_add_wrong.png)
 - Oops! The histograms are all wonky because we've not specified how to bin the data. R works "intuitively", and picks the best breaks for that data.  
 - We can force similar histogram breaks so that we can bin the data equally
 ```
@@ -96,6 +107,7 @@ hist(iris$Petal.Width[iris$Species=="setosa"],  breaks=h$breaks,col="red", add=T
 hist(iris$Petal.Width[iris$Species=="versicolor"], breaks=h$breaks, col="blue", add=T)
 hist(iris$Petal.Width[iris$Species=="virginica"],  breaks=h$breaks,col="purple", add=T)
 ```
+![scatterplot](../imgs/plot_iris_hist_add_wrong2.png)
 - There is still some overlap, so we can play with the opacity of the colors, and force no color for the first histogram
 ```
 h <- hist(iris$Petal.Width, col=0, border=0)
@@ -104,12 +116,14 @@ hist(iris$Petal.Width[iris$Species=="versicolor"], breaks=h$breaks, col=makeTran
 hist(iris$Petal.Width[iris$Species=="virginica"],  breaks=h$breaks,col=makeTransparent("purple"), add=T)
 
 ```
+![scatterplot](../imgs/plot_iris_hist_add_final.png)
 - How about some density lines? 
 ```
 h <- hist(iris$Petal.Width, freq=F)
 d_all <-density( iris$Petal.Width) 
 lines(d_all, col="black")
 ```
+![scatterplot](../imgs/plot_iris_hist_add_density.png)
 - We can keep adding layers to our plots with other functions:
 ```
 points()
@@ -156,7 +170,7 @@ panel.cor <- function(x, y, digits = 2, prefix = "", cex.cor, ...)
 }
 pairs(iris, bg=1:3,lower.panel = panel.smooth, pch=19, upper.panel = panel.cor, diag.panel = panel.hist, cex.labels = 2, font.labels = 2)
 ```
-
+![scatterplot](../imgs/plot_iris_pairs.png)
 - Great. What if we want to ask how similar are these individual plants to each other within each species. What can we look at? 
 - Correlations are fun. 
 ```
@@ -169,6 +183,10 @@ heatmap.3(iris.r2, RowSideCol=cols7[as.numeric(iris$Species)] , col=viridis(100)
 samples.cor = cor( t(iris2) )
 heatmap.3(samples.cor, col=plasma(100), ColSideCol=cols7[as.numeric(iris$Species)])
 ```
+![heatmap](../imgs/iris_heatmap1.png)
+![heatmap](../imgs/iris_heatmap2.png)
+![heatmap](../imgs/iris_heatmap3.png)
+
 
 
 ## "Tidyr" versions 
@@ -177,37 +195,45 @@ We can do most all of this with [ggplot2](https://github.com/rstudio/cheatsheets
 g <- ggplot(iris, aes(x = Sepal.Length, y = Petal.Length)) 
 g
 ```
+![ggplot](../imgs/iris_ggplot1.png)
+
 - This does nothing, because we've not specified what we want to draw:
 ```
 g <- g + geom_point()
 g
 ```
+![ggplot](../imgs/iris_ggplot2.png)
 - Points! Now to color them:
 ```
 g <- g + geom_point(aes(color = Species))
 g
 ```
+![ggplot](../imgs/iris_ggplot3.png)
 - We can keep building onto the "g" variable. 
 ```
 g <- ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) + geom_point()  +  geom_smooth(method = "lm", se = F) 
 g
-``` 
+```
+![ggplot](../imgs/iris_ggplot4.png)
 - How about boxplots? 
 ```
 g <- ggplot(data=iris, aes(x=Species, y=Sepal.Length))
 g + geom_boxplot(aes(fill=Species)) + 
   ylab("Sepal Length") + ggtitle("Iris Boxplot")  
 ```
+![ggplot](../imgs/iris_ggplot_boxplot.png)
 - Histograms:
 ```
 g <- ggplot(data=iris, aes(x=Petal.Width))
 g + geom_histogram(binwidth=0.2, color="black", aes(fill=Species)) +  xlab("Petal Width") +  ylab("Frequency") + ggtitle("Histogram of Petal Width") 
 ```
+![ggplot](../imgs/iris_ggplot_hist.png)
 - Barplots:
 ```
 g <- ggplot(data=iris, aes(x=Species, y=Sepal.Length))
 g + geom_bar(stat = "summary", fun = "mean") + xlab("Species") +  ylab("Mean") + ggtitle("Bar plot of mean Sepal Length") 
 ```
+![ggplot](../imgs/iris_ggplot_barplot.png)
 More [here](https://www.mailman.columbia.edu/sites/default/files/media/fdawg_ggplot2.html)
 
 ## Colors and palettes 
@@ -259,6 +285,9 @@ plot(1:n, col=plasma(n), pch=19, cex=5)
 n=100
 plot(1:n, col=turbo(n), pch=19, cex=5)
 ```
+![plot](../imgs/plot_magma.png)
+![plot](../imgs/plot_plasma.png)
+![plot](../imgs/plot_turbo.png)
 
 #### More here: 
 - https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf
