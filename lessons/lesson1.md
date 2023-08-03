@@ -2,6 +2,18 @@
 First things first! Download these files into your working directory: 
 - [lesson1](../data/lesson1.Rdata)
 - [helper.R](../data/helper.R)
+
+## Setting up
+Make sure you have installed Rstudio or can access the posit.cloud version. 
+Open up Rstudio.
+You should be able to see 4 different windows. 
+We will be working within the "Source" and "Console" windows. 
+Start a new notebook file by selecting "File" -> "New File" -> "R Notebook" 
+This should open up a file in the source window. Change the title to "Week 1", and include your name as the author by including this line underneath the title:
+```
+title: "Week 1" 
+author: "Sara"
+```
 ###
 To check your working directory:
 ```
