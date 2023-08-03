@@ -305,7 +305,7 @@ plot(1:n, col=turbo(n), pch=19, cex=5)
     c. What are the correlations between the biometrics? Show as a correlation plot. 
 5. Now, using the dataset "Y", plot a heatmap. Aim for clarity! 
 6. And finally, look at dataset "Z". Plot it the best way you think would show its key feature. 
-7. "Knit" your R markdown file into an html page, a pdf and a word document. Save the latter two. Email either file to me! 
+7. "Knit" your R markdown file into an html page, a pdf and a word document. Save the latter two. Upload! 
  
 Solutions: Next week!
 
