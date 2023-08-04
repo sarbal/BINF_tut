@@ -227,10 +227,11 @@ E <- list()
 data.frame( x=1:10, y = rep("hello", 10) ) 
 ```
 
-## More functions
-- Functions take in inputs or arguments  
-- Every function has its own set of inputs it needs 
-- They have to be entered into the function in the correct order 
+## Functions
+- Functions take in inputs or arguments
+- User defined or from other packages 
+- Every function has its own set of inputs
+- They have to be entered into the function in the correct order, or labelled 
 - You can find out the necessary input from the man page of a function 
 ``` 
 ?order
@@ -239,7 +240,6 @@ data.frame( x=1:10, y = rep("hello", 10) )
 ``` 
 order
 ```
-
 Some useful functions:
 ``` 
 length(my_list) # returns the length of an object 
@@ -248,6 +248,26 @@ ls()     # lists all the objects in your environment
 ```
 - more here: https://www.statmethods.net/management/functions.html 
 
+### User-defined functions
+- The structure of a function: 
+```
+my_function <- function(arg1, arg2, ... ){
+  commands (or statements)
+  return(object)
+}
+```
+- objects in the function are local, so changing them within the function does not have a global effect (mostly, but beware!)
+- objects returned can be any data type
+- can look inside other functions to see how they work:
+```
+dist
+```
+- you can write your function for tasks that are usually repetitive or have some 'abstract' function
+```
+my_plot <- function(data){ 
+ plot(data, pch=19, col="blue", cex=2)
+}
+```
 
 
 ## Test yourself! 
