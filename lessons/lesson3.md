@@ -20,27 +20,6 @@ Run this to install/load libraries
 ```
 source("helper.R") 
 ```
-## Functions 
-- User defined or from other packages 
-- The structure of a function: 
-```
-my_function <- function(arg1, arg2, ... ){
-  commands (or statements)
-  return(object)
-}
-```
-- objects in the function are local, so changing them within the function does not have a global effect (mostly, but beware!)
-- objects returned can be any data type
-- can look inside other functions to see how they work:
-```
-dist
-```
-- you can write your function for tasks that are usually repetitive or have some 'abstract' function
-```
-my_plot <- function(data){ 
- plot(data, pch=19, col="blue", cex=2)
-}
-```
 
 ## Reading in data
 - Depending on the format, there are multiple ways to input data into R 
