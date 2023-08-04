@@ -5,7 +5,8 @@ Download these files into your working directory:
 - [lesson3](../data/lesson3.Rdata) 
 - [helper.R](../data/helper.R)
 - [data](../data/my_data.zip)
-Extract the data.zip folder.  
+Extract the data.zip folder.
+
 ####  
 To check your working directory:
 ```
@@ -19,7 +20,27 @@ Run this to install/load libraries
 ```
 source("helper.R") 
 ```
-
+## Functions 
+- User defined or from other packages 
+- The structure of a function: 
+```
+my_function <- function(arg1, arg2, ... ){
+  commands (or statements)
+  return(object)
+}
+```
+- objects in the function are local, so changing them within the function does not have a global effect (mostly, but beware!)
+- objects returned can be any data type
+- can look inside other functions to see how they work:
+```
+dist
+```
+- you can write your function for tasks that are usually repetitive or have some 'abstract' function
+```
+my_plot <- function(data){ 
+ plot(data, pch=19, col="blue", cex=2)
+}
+```
 
 ## Reading in data
 - Depending on the format, there are multiple ways to input data into R 
@@ -57,33 +78,39 @@ library("tidyverse")
 pdf_filename  <- "elife-27469-v1.pdf"
 pdf_text_extract <- pdf_text(pdf_filename)
 length(pdf_text_extract)
+# load("lesson3.Rdata") # if the pdf extraction didn't work 
+```
+- We can then extract the text from each page. Let's pick page 5, and extract the table that starts around line 5.
+[!elife_table](../imgs/elife_table.png)
+```
 page <- str_split(pdf_text_extract[[5]], "\n", simplify = TRUE) 
-```
-
-```
-load("lesson3.Rdata") # if the pdf extraction didn't work 
 table <- unlist(page)[5:21]
 ```
-- extract the columns, using substr(), trimws() and sapply()
+- Each row of the table is one long string. To extract the columns, we can use a combination of substr(), trimws() and sapply().
+- This is a little messy, but the as the data is not in an ideal format, we need to spotcheck and make sure we are extracting the correct text.
+- For the first column, we take the first 80 characters with the *substr* function. We trim away all leading and trailing whitespace with *trimws*.
+- We apply this function to all the rows in the table with *sapply*. 
 ```
-col1 = sapply(1:length(table), function(i) trimws(substr( table[i], 1, 80)))
-col2 = sapply(1:length(table), function(i) trimws( substr( table[i], 81, 90 )))
-col3 = sapply(1:length(table), function(i) trimws(substr( table[i], 91, 105 )))
-col4 = sapply(1:length(table), function(i) trimws(substr( table[i], 106, 120 )))
-col5 = sapply(1:length(table), function(i) gsub("\r", "", trimws(substr( table[i], 121, 150 ))))
+mutation_types = sapply(1:length(table), function(i) trimws(substr( table[i], 1, 80)))
 ```
-- merge the columns together into a table with cbind()
+- Repeat for all the other columns
 ```
-data_table = cbind(cbind(col2, col3, col4,col5)[1,],  t(cbind(col2, col3, col4,col5)[-1,]))
-colnames(data_table) =  c("day", col1[-1] )
-rownames(data_table) = cbind(col2, col3, col4,col5)[1,]
-data_table = as.data.frame(data_table)
-temp1 = apply(data_table, 2, as.numeric, as.character)
-temp1 = as.data.frame(temp1)
-temp1[,5] = as.factor(data_table[,5] )
-temp1[,1] = as.factor(data_table[,1] )
-rownames(temp1) = rownames(data_table)
-data_table = temp1
+day1 = sapply(1:length(table), function(i) trimws( substr( table[i], 81, 90 )))
+day8 = sapply(1:length(table), function(i) trimws(substr( table[i], 91, 105 )))
+day15 = sapply(1:length(table), function(i) trimws(substr( table[i], 106, 120 )))
+```
+However, the last column has an extra character "\r" that we need to remove as well. We do with with the *gsub* function, which substitutes a regexp, string, with another (in this case we used an empty string).   
+```
+day8_15 = sapply(1:length(table), function(i) gsub("\r", "", trimws(substr( table[i], 121, 150 ))))
+```
+- We now have 5 columns, which we merge into a marix/table with *cbind*. The row equivalent is *rbind*.  
+```
+data_table = cbind(mutation_types, day1, day8, day15,day8_15)
+```
+- This table is messy as a matrix, as all the numbers are stored as strings, so let's build it in a more useful format like a data frame that can handle the different data types.
+- We use the data.frame function, and assign each column a label and the data. Note, we are removing the first element/row through negative indexing. 
+```
+data_table_df = data.frame(mutation_types = mutation_types[-1], day1=day1[-1], day8=day8[-1], day15=day15[-1], day8_15=day8_15[-1])
 ```
 
 
@@ -91,19 +118,25 @@ data_table = temp1
 - URLs: using RCurl, e.g., http://rfunction.com/archives/1672 
 - SQL databases: using DBI, dblplyr, or plyr. e.g., SRADB https://www.rdocumentation.org/packages/SRAdb/versions/1.30.0/topics/getSRA 
 - APIs: using httr, jsonlite, e.g., https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/ 
-- Twitter: httpuv, twitteR, ROAuth, rtweet, ... e.g., https://cran.r-project.org/web/packages/rtweet/vignettes/intro.html
 
 
-### Clean up data
-- Data/sanity checks
-- Does it looks like what you think it should? 
-- Same number of lines imported as file contains? 
+### Check data
+It is always very important to check that you have correctly read in your data. Some basic data/sanity checks. 
+- Does it looks like what you think it should? Did you read in the correct file? 
+- Same number of lines imported as the file contains? 
 - No weird characters? Some special characters have special properties when being read in. 
-- How many empty values? Find/replace empty values with NAs 
 - Correct data type? If numbers are stored as characters, there may be something odd in your input. 
-- Put data into different variables, into tables or into the tidyverse. 
+- Store data into different variables, into tables or into the tidyverse tibbles etc.
+- Visualize/spot check.  
 
-### Save/export data
+### Clean up data, or data "wrangling"
+Data is never tidy. Data wrangling is the process of cleaning and structuring data to improve the data quality, remove inaccurate data, and ensure that the data is of good enough quality for your analysis.
+- Data structuring: Adjust format to make it compatible with future use, and easier to work with. Spread/pivot tables, or gather. Add labels, and/or combine datasets. 
+- Data cleaning: How many empty values? Find/replace empty values with NAs. If row or column has too many empty or invalid entries (~80% as a rough guide), remove or flag that column/row.
+- Data validation: Verifying that your data is consistent and high quality. Quality control could be experiment/data dependent - e.g., removing doublets from single-cell data. Or could be a broader check on the distribution of the data. Low correlation to expected values, or too many outliers could be a sign of a poor quality dataset. Or it could be interesting!  
+
+ 
+## Saving (or exporting) data
 - As text 
 ```
 write.table(my_list, file="my_list.txt", sep="\t", quote="", row.names=T)
@@ -130,27 +163,7 @@ png("my_plot.png") # or try # jpg()
 plot(my_data)
 dev.off() 
 ```
-## Functions 
-- User defined or from other packages 
-- The structure of a function: 
-```
-my_function <- function(arg1, arg2, ... ){
-  commands (or statements)
-  return(object)
-}
-```
-- objects in the function are local, so changing them within the function does not have a global effect (mostly, but beware!)
-- objects returned can be any data type
-- can look inside other functions to see how they work:
-```
-dist
-```
-- you can write your function for tasks that are usually repetitive or have some 'abstract' function
-```
-my_plot <- function(data){ 
- plot(data, pch=19, col="blue", cex=2)
-}
-```
+
 
 ## Test yourself! 
 1. Create an R markdown file (using RStudio). Save the file as "yourname_Lesson3.Rmd". Once again, delete the instructions starting from "This is an [R...". For the remaining exercises, insert the code as R chunks when you are satisified with your solutions. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
