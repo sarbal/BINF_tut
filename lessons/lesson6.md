@@ -10,10 +10,9 @@ Copy and paste (or type) this into your new file:
 ```
 print("Hello, World!")
 ```
-Save the file and name it “helloworld.py”. Note the “.py” extension. 
-If using VSCode, click the triangle “play” button to run your code in the terminal. 
-
-Python can be run interactively, however, we will be saving the code to files to be run in VSCode.  
+Save the file and name it “helloworld.py”. Note the “.py” extension.  If using VSCode, click the triangle “play” button to run your code in the terminal. 
+Python can also be run interactively. Type in "python" into the terminal. Paste/type in the code snippets.
+Finally, you can also run python in a Jupyter notebook. 
 
 ## Defintions
 Variables
