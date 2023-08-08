@@ -221,6 +221,7 @@ print(type(val))
 ```
 
 - Creating a new variable equal to a list does NOT create a copy, both variables point to the same list
+```
 gene_list2 = gene_list
 gene_list2[2] = "DMR3"
 print(gene_list)
