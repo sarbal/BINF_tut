@@ -124,44 +124,58 @@ print(str(myint))
 ```
 
 ### Arithmetic: 
-
+ Addition
 ```
-# Addition
-a = 21
-b = 3
+a = 42
+b = 7
 print(a + b)
 
-# Add and assign 
+- Subtraction
+```
+print(b - a)
+```
+
+- Add/subtract and assign 
+```
 c = 83
 c += 5
 print(c)
+c -= 10
+print(c)
+```
 
-# Subtraction
-print(b - a)
-
-# Division
+- Division
+```
 print(a/b)
+```
 
-# Exponents
+- Exponents
+```
 print(4**b)
 #or
 expb = pow(4,b)
 print(expb)
+```
 
-# Remainder 
-print(4 % 3)
+- Remainder 
+```
+print(42 % 4)
+```
 
-# Absolute value
-av = abs(22-32)
+- Absolute value
+```
+av = abs(24-42)
 print(av)
+```
 
-# Round, Floor, Ceiling
-print(round(3.2))
-print(int(3.2))
+- Round, Floor, Ceiling
+```
+print(round(4.2))
+print(int(4.2))
 import math
-print(math.ceil(3.2))
-print(math.floor(3.7))
-print(int(3.7))
+print(math.ceil(4.2))
+print(math.floor(4.8))
+print(int(4.8))
 ```
 
 - The math package has many common math functions you can use: https://docs.python.org/3/library/math.html 
@@ -234,6 +248,7 @@ print(gene_list)
 print(gene_list2)
 ```
 - Check for membership in a list with "in"
+```
 print("BRCA2" in gene_list)
 ```
 #### Built-in list methods
@@ -255,34 +270,45 @@ More list methods: https://www.tutorialsteacher.com/python/list-methods
 - Values can be anything from int, float, and bool to lists, tuples, and other dictionaries.
 ```
 gene_exp_dict = {"DDX11L1":43.2,"WASH7P":45,"MIR6859-1":60.1,"MIR1302-2HG":12,"MIR1302-2":0.5,"FAM138A":23}
-
-# You can access a value in the dictionary by referencing the key
+```
+- Accessing a value in the dictionary by referencing the key
+```
 print(gene_exp_dict["WASH7P"])
-
-# You can overwrite a value
+```
+- Overwriting a value
+```
 gene_exp_dict["WASH7P"] = 39
 print(gene_exp_dict["WASH7P"])
-
-# You can add a new value
+```
+- Adding a new value
+```
 gene_exp_dict["BRCA2"] = 100
 print(gene_exp_dict)
 ```
 
 #### Dictionary built-in methods
+- Returns all the keys
 ```
-# returns all the keys
 print(gene_exp_dict.keys())
+```
 
-# returns all the values
+- Returns all the values
+```
 print(gene_exp_dict.values())
+```
 
-# returns all the key,value pairs
+- Returns all the key,value pairs
+```
 print(gene_exp_dict.items())
+```
 
-# you can also check if a key exists in a dictionary
+- Check if a key exists in a dictionary
+```
 print("BRCA2" in gene_exp_dict)
+```
 
-# to make a copy of a dictionary, you need to use the "copy" method
+- Make a copy of a dictionary
+```
 gene_exp_dict_copy = gene_exp_dict.copy()
 ```
 
