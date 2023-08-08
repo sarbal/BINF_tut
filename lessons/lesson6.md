@@ -1,8 +1,5 @@
 # Week 6: Python basics
 Taken/adapted from: https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python2
-First things first! Download these files into your working directory: 
-- [lesson5](../data/lesson)
-- [helper.py](../data/helper.py)
 ###
 
 Open a new file in your editor of choice. Most use VScode.  
