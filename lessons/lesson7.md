@@ -17,6 +17,7 @@ Then, run an interactive python session in a terminal. In your python session:
 import numpy as np
 import pandas as pd
 import seaborn as sns
+import matplotlib.pyplot as plt
 ```
 - Pandas is a library for working with tabular data. Based on the R data.frame library.
 - Seaborn is a visulization package. 
@@ -47,8 +48,17 @@ df.query("year > 2007")
 ### Plotting 
 ```
 sns.histplot(df['bill_length_mm'],kde=True,bins=20)
+plt.show() 
+```
+
+```
 sns.jointplot(data=df, x="bill_length_mm", y="bill_depth_mm")
+plt.show() 
+```
+
+```
 sns.pairplot(df)
+plt.show() 
 ```
 
 ```
@@ -60,7 +70,9 @@ g = sns.boxplot(x = 'island',
             linewidth=0.3)
 g.set_xlabel('Island')
 g.set_ylabel('Body Mass')
+plt.show() 
 ```
+
 
 ```
 g = sns.lmplot(x="flipper_length_mm",
@@ -71,6 +83,7 @@ g = sns.lmplot(x="flipper_length_mm",
                palette=['#FF8C00','#159090','#A034F0'])
 g.set_xlabels('Flipper Length')
 g.set_ylabels('Body Mass')
+plt.show() 
 ```
 
 
