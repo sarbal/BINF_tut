@@ -6,7 +6,7 @@ Into a terminal, type in:
 pip -q install palmerpenguins
 ```
 
-Then, run an interactive python session:
+Then, run an interactive python session in a terminal. In your python session:
 ```
 import numpy as np
 import pandas as pd
