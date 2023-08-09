@@ -86,4 +86,12 @@ g.set_ylabels('Body Mass')
 plt.show() 
 ```
 
-
+```
+import matplotlib.pyplot as pltt
+fig ,ax = pltt.subplots(figsize=(15,12), ncols=2,nrows=2)
+sns.swarmplot(data=df,x='species',y='body_mass_g',ax=ax[0,0],hue='species')
+sns.violinplot(data=df,x='species',y='body_mass_g',ax=ax[0,1])
+sns.boxplot(data=df,x='species',y='body_mass_g',ax=ax[1,0])
+sns.barplot(data=df,x='species',y='body_mass_g',ax=ax[1,1])
+pltt.show()
+```
