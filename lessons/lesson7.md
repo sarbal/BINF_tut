@@ -95,3 +95,29 @@ sns.boxplot(data=df,x='species',y='body_mass_g',ax=ax[1,0])
 sns.barplot(data=df,x='species',y='body_mass_g',ax=ax[1,1])
 pltt.show()
 ```
+
+
+See the documentation at https://pandas.pydata.org/docs/user_guide/io.html
+
+
+### Show the help message for this function.
+```
+df.to_csv?
+```     
+
+### Save to a file, load from file 
+```
+df.to_csv("mytaxis.csv")
+df = pd.read_csv("mytaxis.csv")
+df.head()
+```    
+
+### 
+```
+df["color"].value_counts()
+df.groupby("color")["tip"].mean()
+df.groupby("color").agg({"tip": "mean"})    
+df.groupby("color")["tip"].describe()
+```
+
+
