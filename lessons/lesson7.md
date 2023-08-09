@@ -1,10 +1,6 @@
 # Week 8: Data Viz
-First things first! Download these files into your working directory: 
-- [lesson](../data/lesson)
-- [helper.py](../data/helper.py)
-###
-
 ### Download data 
+First things first! Download these palmer penguins data into your working directory. 
 Into a terminal, type in: 
 ```
 pip -q install palmerpenguins
