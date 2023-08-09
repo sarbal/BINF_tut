@@ -6,7 +6,12 @@ Into a terminal, type in:
 pip -q install palmerpenguins
 ```
 
-### Importing libraries 
+### Installing and importing libraries 
+```
+pip install numpy
+pip install pandas
+pip install seaborn
+```
 Then, run an interactive python session in a terminal. In your python session:
 ```
 import numpy as np
@@ -23,3 +28,4 @@ df = load_penguins()
 print(type(df))
 df
 ```  
+
