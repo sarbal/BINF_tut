@@ -125,7 +125,7 @@ print(str(myint))
 a = 42
 b = 7
 print(a + b)
-
+```
 - Subtraction
 ```
 print(b - a)
