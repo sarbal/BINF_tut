@@ -1,5 +1,5 @@
 
-# Installing R on a Mac:
+# Installing software on a Mac:
 
 ## Installing R:
 *Please make sure you install the latest version of R (R version 3.5.0).*
@@ -17,5 +17,13 @@
 - Download the installer for the Mac OS `RStudio-XX - Mac OS X 10.6+ (64-bit)` 
 - Open and run the executable file 
 
+## Installing Python on a Mac:
+- Go to https://www.python.org/ftp/python/3.10.1/python-3.10.1-macos11.pkg.
+- If you need another version, go to the python3 downloads: https://code.visualstudio.com/#alt-downloads 
+- Install python3.  
+
+## Installing VSCode on a Mac
+- Go to the: https://code.visualstudio.com/
+- It should detect your OS and give you a download link
 
 Back to the [homepage](../README.md)
