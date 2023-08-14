@@ -28,6 +28,8 @@ Let's start at the very beginning [(a very good place to start)](/intro/intro.md
 ## Week 5: So shiny!
 [Let's make something interactive.](/lessons/lesson5.md)
 
+## Week 6: BReak!
+
 ## Week 7: Python basics 
 [Restart!](/lessons/lesson6.md)   
 
