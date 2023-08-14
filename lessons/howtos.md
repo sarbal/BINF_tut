@@ -20,3 +20,5 @@ url = "https://cran.r-project.org/bin/windows/contrib/3.6/sm_2.2-5.5.zip"
 # MAC
 url = "https://cran.r-project.org/bin/macosx/el-capitan/contrib/3.5/sm_2.2-5.4.tgz"
 ```
+
+### How to install a package from conda
