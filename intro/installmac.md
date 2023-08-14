@@ -26,4 +26,8 @@
 - Go to the: https://code.visualstudio.com/
 - It should detect your OS and give you a download link
 
+## Installing Anaconda: 
+- Follow the steps here: https://docs.anaconda.com/free/anaconda/install/mac-os/ 
+
+
 Back to the [homepage](../README.md)
