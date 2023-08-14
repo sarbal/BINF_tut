@@ -25,4 +25,6 @@
 - It should automatically detect your OS and give you a download link.
 - You can also go to https://code.visualstudio.com/#alt-downloads and chose from there. 
 
+## Installing Anaconda:
+- Follow steps here: https://docs.anaconda.com/free/anaconda/install/windows/
 Back to the [homepage](../README.md)
