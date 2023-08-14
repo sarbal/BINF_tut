@@ -26,7 +26,7 @@
 - Type `sudo dpkg -i code_1.63.2-1639562499_amd64.deb` to install it.
 
 ## Installing Anaconda:
-- Follow steps here: https://docs.anaconda.com/free/anaconda/install/windows/
+- Follow steps here: https://docs.anaconda.com/free/anaconda/install/linux/
 
 Back to the [homepage](../README.md)
 
