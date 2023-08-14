@@ -21,4 +21,8 @@ url = "https://cran.r-project.org/bin/windows/contrib/3.6/sm_2.2-5.5.zip"
 url = "https://cran.r-project.org/bin/macosx/el-capitan/contrib/3.5/sm_2.2-5.4.tgz"
 ```
 
-### How to install a package from conda
+### How to install a package through conda
+One useful setup is to use "conda", a package manager and environment management system. Anaconda is the Python and R distribution. Go to the intro page to install it. Then, when you need to install a package or update a tool, you run:  
+```
+conda install r-XXXX
+```
