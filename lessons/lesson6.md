@@ -1,4 +1,4 @@
-# Week 6: Python basics
+# Week 7: Python basics
 Taken/adapted from: https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python2
 ###
 
