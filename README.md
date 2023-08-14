@@ -4,6 +4,9 @@ A set of tutorials designed for the undergraduate introduction to bioinformatics
 
 Written by: 
 - Sara Ballouz
+Adapted from:
+- https://github.com/jbkinney/23e_urp/
+- https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python1
 
 
 ## Intro: 
@@ -44,4 +47,5 @@ Let's start at the very beginning [(a very good place to start)](/intro/intro.md
 - http://www.datacarpentry.org/R-genomics/
 - https://github.com/cambiotraining/r-intro
 - http://garrettgman.github.io/tidying/
+- https://www.tidyverse.org/blog/2023/08/teach-tidyverse-23/
 
