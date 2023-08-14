@@ -12,10 +12,11 @@ Hi!
 3. [Week 3: A fun example](../lessons/lesson3.md)
 4. [Week 4: Another potentially fun example.](../lessons/lesson4.md)
 5. [Week 5: So shiny!](../lessons/lesson5.md)
-6. [Week 7:](../lessons/lesson6.md)
-7. [Week 8:](../lessons/lesson7.md)
-8. [Week 9:](../lessons/lesson8.md)
-9. [Week 10:](../lessons/lesson9.md)
+6. Week 6: BReak! 
+7. [Week 7: Introduction to Python](../lessons/lesson6.md)
+8. [Week 8: Data Viz](../lessons/lesson7.md)
+9. [Week 9: Snakes on a plane](../lessons/lesson8.md)
+10. [Week 10: Recap](../lessons/lesson9.md)
 
 ## What is R? 
 - Statistical and graphical language
