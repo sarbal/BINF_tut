@@ -13,8 +13,7 @@ Adapted from:
 ## Intro: 
 Let's start at the very beginning [(a very good place to start)](/intro/intro.md)   
 Installation:
-- RStudio and R for [windows](/intro/installwindows.md), [macs](/intro/installmac.md), or [linux](/intro/installunix.md/)
-- VSCode and Python [windows](/intro/installwindows.md), [macs](/intro/installmac.md), or [linux](/intro/installunix.md/)
+- R, RStudio, Python3 and VSCode for [windows](/intro/installwindows.md), [macs](/intro/installmac.md), or [linux](/intro/installunix.md/)
 
 ## Week 1: R basics 
 [First things first! Let's get started.](/lessons/lesson1.md)   
