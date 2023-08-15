@@ -31,7 +31,8 @@ dataA <- read.csv(file="my_dataA.csv")
 dataB <- read.table(file="my_dataB.tab", header=TRUE)
 datasaurus <- read.delim(file="DatasaurusDozen.txt", sep="\t")
 ```
-- With more control: 
+- With more control:
+  
 ```
 scan()
 readLines()
@@ -49,7 +50,9 @@ library(xlsx)
 data <- read.xlsx(file="pnasEisen1998.xlsx", 2)
 key <- read.xlsx(file="pnasEisen1998.xlsx", sheetName = "Key")
 ```
+
 - From a PDF (a little more advanced)
+
 ```{r}
 install.packages("pdftools")
 library("pdftools")
@@ -59,8 +62,10 @@ library("tidyverse")
 pdf_filename  <- "elife-27469-v1.pdf"
 pdf_text_extract <- pdf_text(pdf_filename)
 length(pdf_text_extract)
-# load("lesson3.Rdata") # if the pdf extraction didn't work 
+# load("lesson3.Rdata") # if the pdf extraction didn't work
 ```
+
+
 - We can then extract the text from each page. Let's pick page 5, and extract the table that starts around line 5.
 [!elife_table](../imgs/elife_table.png)
 ```{r}
