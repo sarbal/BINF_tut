@@ -97,7 +97,7 @@ import matplotlib
 
 
 ## WheRe to get help
-- https://www.rstudio.com/
+- (https://www.rstudio.com/)
 - https://www.r-bloggers.com/
 - https://www.statmethods.net/index.html
 
