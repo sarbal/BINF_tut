@@ -290,6 +290,8 @@ dist
 my_plot <- function(data){ 
  plot(data, pch=19, col="blue", cex=2)
 }
+
+my_plot(my_seq)
 ```
 
 
@@ -303,7 +305,7 @@ my_plot <- function(data){
 4. Generate two square matrices (equal width and height) named B1 and B2. Multiply these matrices and save the output of the multiplication as B. Print out the first column of B1, the last row of B2, and then the diagonal of B. 
 5. Plot any of the plots from the CatterPlot page.
 6. Make a matrix of dimension 20 by 40, full of zeroes. Then, modify the matrix so that once viewed, it spells out your initials OR a random shape OR pixel art. Use the [image()](https://www.rdocumentation.org/packages/graphics/versions/3.5.1/topics/image) function to view it as you go along, but remember, it plots things [rotated](https://www.r-bloggers.com/creating-an-image-of-a-matrix-in-r-using-image/)... Once done, plot it using the image function, but remove the axes. 
-7. "Knit" your R markdown file into an html page, a pdf and a word document. Save the latter two. 
+7. "Knit" your R markdown file into a pdf or html. 
  
 Solutions: Next week!
 
