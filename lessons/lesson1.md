@@ -31,7 +31,7 @@ getwd()
 
 
 
-To set your working diretory: 
+To set your working directory: 
 ```
 setwd("cloud/project")
 ```
