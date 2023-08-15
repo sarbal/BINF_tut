@@ -10,20 +10,18 @@ Adapted from:
 - https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python1
 
 
-## Intro: 
+## Week 1: Setting up: 
 Let's start at the very beginning [(a very good place to start)](/intro/intro.md)   
 Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/intro/installwindows.md), [macs](/intro/installmac.md), or [linux](/intro/installunix.md/)
 
-## Week 1: R basics 
+## Week 2: R basics 
 [First things first! Let's get started.](/lessons/lesson1.md)   
 
-## Week 2: More R 
+## Week 3: More R 
 [Some visual things you can do with R.](/lessons/lesson2.md)
 
-## Week 3: A fun example 
+## Week 4: A fun example 
 [Let's play with real data.](/lessons/lesson3.md)
-
-## Week 4: Another potentially fun example.
 [Let's reproduce some analyses.](/lessons/lesson4.md)
 
 ## Week 5: So shiny!
