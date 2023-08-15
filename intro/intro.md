@@ -7,9 +7,10 @@ Hi! Welcome to the BINF2010 tutorial stream.
 - "Cool" visuals 
 
 ## CouRse outline
-1. [Week 2: R basics](../lessons/lesson1.md)
-2. [Week 3: Data Viz in R](../lessons/lesson2.md)
-3. [Week 4: A fun example](../lessons/lesson3.md) and another potentially fun example.](../lessons/lesson4.md)
+1. [Week 1: Intro](../intro/intro.md)
+2. [Week 2: R basics](../lessons/lesson1.md)
+3. [Week 3: Data Viz in R](../lessons/lesson2.md)
+4. [Week 4: A fun example](../lessons/lesson3.md) and another potentially fun example.](../lessons/lesson4.md)
 5. [Week 5: So shiny!](../lessons/lesson5.md)
 6. Week 6: BReak! 
 7. [Week 7: Introduction to Python](../lessons/lesson6.md)
