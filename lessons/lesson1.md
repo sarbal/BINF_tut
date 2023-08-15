@@ -58,8 +58,7 @@ source("helper.R")
 print("Hello World")
 ```
 
-- The print function is given an argument (also known as input) within the '()' 
-- All functions are called this way
+- The print function is given an argument (also known as input) within the '()' . All functions are called this way
 ``` 
 load("lesson1.Rdata")
 sum(x)
@@ -133,8 +132,7 @@ data <- data + more_data
 "Whatever"
 ```
 
-- Array or vector: 
-  - Made of multiple elements of the same data class
+- Array or vector: made of multiple elements of the same data class
 ``` 
 c(1,3,5)
 c('A', 'B', 'C')
@@ -144,11 +142,11 @@ rnorm(100)
 rep(1,10)
 seq(0,200,10)
 ```
-- can assign them to variables 
+- Can assign them to variables 
 ```  
 my_seq <- seq(0,200,10)
 ```
-- access elements by an index 
+- Access elements by an index 
 ```  
 my_seq[1] 
 ```
@@ -166,14 +164,15 @@ matrix(1:10, ncol=5, nrow=2)
 cbind(1:10, 10:1)
 rbind(1:10, 10:1)
 ```
-- can also access elements via indices, but this time we select the row, then column:
+
+- Can also access elements via indices, but this time we select the row, then column:
 ``` 
 A <- diag(5)
 A[1,5] <- 9
 A
 ```
-- Negative indexing returns all but the indices specified
-- useful for data splicing 
+
+- Negative indexing returns all but the indices specified, useful for data splicing.  
 ``` 
 my_seq <- seq(0,200,10)
 my_seq[-10]
@@ -181,28 +180,27 @@ my_seq[-10:-20]
 ```
 
 ### Advanced data types 
-- Factors 
-- define your own data class 
-- has levels or strict values that this new data class can take 
+
+- Factors: define your own data class and has levels or strict values that this new data class can take.
 ``` 
 sex <-  c("male", "female", "male", "male", "female")  
 sex <- factor( sex, levels=c("male", "female"))
 sex
 ```
-- If you try to assign a new value to a variable, it has be one of the levels 
+- If you try to assign a new value to a variable, it has be one of the known levels, otherwise goes to NA. 
+
 ``` 
 sex[1] <- "female"
 sex[2] <- "unknown" # This will cause an error! 
 ```
 
-- Lists are collections of data 
-- Elements can be of varying lengths and data classes/types 
+- Lists are collections of data, and elements in a list can be of varying lengths and data classes/types. 
 ``` 
 B <- 1:10
 C <- sex
 D <- list(A,B,C)
 ```
-- access different levels with double square brackets  
+- Access different levels with double square brackets
 ``` 
 D[[1]]
 ```
@@ -213,13 +211,13 @@ D$A
 D[["A"]]
 ```
 - We can have an almost infinite number of nested lists (but this is dangerous/mad/confusing/useful)
-- We can add elements to a list
+- We can add elements to a list by assigning a position/index to a value. 
 ``` 
 D[[4]] <- D 
 D[[4]][[4]] <- D 
 D[[4]][[4]][[3]]
 ```
-- Can delete a component by assigning NULL to it
+- Can delete a component by assigning NULL to it. 
 ``` 
 D[[1]] <- NULL
 ```
@@ -229,15 +227,20 @@ my_list = list("a", "b", "c")
 your_list = list("x", "y","z")
 append(my_list, your_list)
 ```
-- But, lists themselves need to be specified beforehand 
+- But, lists themselves need to be specified/initialised beforehand 
 ``` 
 E <- list()
 ```
 
-- Data frames also combine multiple data types, but as a matrix 
+- Data frames also combine multiple data types, but as a table (or matrix) 
 ``` 
 data.frame( x=1:10, y = rep("hello", 10) ) 
 ```
+- They also work in a similar way to the matrix class, but have stricter rules for row.names, and are much easier to mess up.
+- Updated versions of data.frame include tibbles, but this belongs to the "tidyverse". We will come back to this later.
+
+### Advanced R types 
+As R is an object-oriented (OO) language, there are also some OO systems (which we will not go through here). The most commonly used in bioinformatics related packages is the S4 class. For some advanced reading: http://adv-r.had.co.nz/S4.html. 
 
 ## Functions
 - Functions take in inputs or arguments
@@ -248,17 +251,19 @@ data.frame( x=1:10, y = rep("hello", 10) )
 ``` 
 ?order
 ```
-- Or by typing in the name of the function into the console 
+- Or by typing in the name of the function into the console
 ``` 
 order
 ```
+
 Some useful functions:
 ``` 
 length(my_list) # returns the length of an object 
 sort(my_seq)   # sorts a list, vector or matrix  
 ls()     # lists all the objects in your environment 
 ```
-- more here: https://www.statmethods.net/management/functions.html 
+
+- More here: https://www.statmethods.net/management/functions.html 
 
 ### User-defined functions
 - The structure of a function: 
