@@ -121,3 +121,10 @@ df.groupby("color")["tip"].describe()
 ```
 
 
+
+
+Solutions: Next week!
+
+Back to the [homepage](../README.md)
+
+
