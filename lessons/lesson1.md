@@ -187,11 +187,13 @@ sex <-  c("male", "female", "male", "male", "female")
 sex <- factor( sex, levels=c("male", "female"))
 sex
 ```
+
 - If you try to assign a new value to a variable, it has be one of the known levels, otherwise goes to NA. 
 
 ``` 
 sex[1] <- "female"
-sex[2] <- "unknown" # This will cause an error! 
+sex[2] <- "unknown" # This will cause an error!
+sex # You should see the NA value 
 ```
 
 - Lists are collections of data, and elements in a list can be of varying lengths and data classes/types. 
@@ -200,11 +202,13 @@ B <- 1:10
 C <- sex
 D <- list(A,B,C)
 ```
+
 - Access different levels with double square brackets
 ``` 
 D[[1]]
 ```
-- or, if we have tags/labels/names on the elements within the list, via the tag operator $
+
+- or, if we have tags/labels/names on the elements within the list, via the tag operator `$`
 ```  
 names(D) <- c("A", "B", "C")
 D$A
@@ -227,6 +231,7 @@ my_list = list("a", "b", "c")
 your_list = list("x", "y","z")
 append(my_list, your_list)
 ```
+
 - But, lists themselves need to be specified/initialised beforehand 
 ``` 
 E <- list()
