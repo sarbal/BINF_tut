@@ -5,6 +5,7 @@ First things first! Download these files into your working directory:
 
 ## Setting up
 Make sure you have installed Rstudio or can access the posit.cloud version. 
+
 Open up Rstudio.
 You should be able to see 4 different windows. 
 We will be working within the "Source" and "Console" windows. 
@@ -14,8 +15,9 @@ This should open up a file in the source window. Change the title to "Week 1", a
 title: "Week 1" 
 author: "Sara"
 ```
-###
+
 In the console window below the source window, check your working directory by typing in:
+
 ```
 getwd()
 ```
