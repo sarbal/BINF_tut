@@ -1,4 +1,4 @@
-# Week 3: A fun(ctional) example
+# Week 4: A fun(ctional) example
 Let's play with real data!
 
 Download these files into your working directory: 
