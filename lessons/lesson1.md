@@ -7,13 +7,16 @@ First things first! Download these files into your working directory:
 Make sure you have installed Rstudio or can access the posit.cloud version. 
 
 Open up Rstudio.
-You should be able to see 4 different windows. 
-We will be working within the "Source" and "Console" windows. 
-Start a new notebook file by selecting "File" -> "New File" -> "R Notebook" 
+![rstudio console](../imgs/rstudio.png)
 
-![rstudio console](../imgs/rstudio_notebook.png)
+You should be able to see 4 different windows. We will be working within the "Source" and "Console" windows. 
+
+Start a new notebook file by selecting "File" -> "New File" -> "R Notebook" 
+![rstudio console](../imgs/rstudio1.png)
 
 This should open up a file in the source window. Change the title to "Week 1", and include your name as the author by including this line underneath the title:
+![rstudio console](../imgs/rstudio_notebook.png)
+
 ```
 title: "Week 1" 
 author: "Sara"
@@ -24,6 +27,10 @@ In the console window below the source window, check your working directory by t
 ```
 getwd()
 ```
+![rstudio console](../imgs/rstudio2.png)
+
+
+
 To set your working diretory: 
 ```
 setwd("cloud/project")
