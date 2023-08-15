@@ -59,6 +59,7 @@ print("Hello World")
 ```
 
 - The print function is given an argument (also known as input) within the '()' . All functions are called this way
+
 ``` 
 load("lesson1.Rdata")
 sum(x)
