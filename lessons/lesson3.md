@@ -5,6 +5,7 @@ Download these files into your working directory:
 - [lesson3](../data/lesson3.Rdata) 
 - [helper.R](../data/helper.R)
 - [data](../data/my_data.zip)
+
 Extract the data.zip folder.
 
 ####  
@@ -36,7 +37,8 @@ scan()
 readLines()
 ```
 - From Excel 
-```
+
+```{r}
 install.packages("xlsx") 
 # This needs a few other packages, in particular rJava. If prompted, download the 64 bit version (for Windows) from: https://www.java.com/en/download/manual.jsp. 
 # This might not be necessary,but in case
