@@ -1,4 +1,4 @@
-# Week 1: R basics
+# Week 2: R basics
 First things first! Download these files into your working directory: 
 - [lesson1](../data/lesson1.Rdata)
 - [helper.R](../data/helper.R)
