@@ -65,6 +65,7 @@ print(type(gene))
 - Equalities (==)
 - Inequalities (>,<, >=, <=) 
 - Can be used for numerical and string comparisons
+  
 ```
 print(1<1)
 print(1<2)
@@ -82,6 +83,7 @@ print(greeting == "hello")
 ### Built-in string methods: 
 - Strings have a long list of built-in methods to return modified versions of the string. 
 - The methods do not modify the string, they return a new string.
+  
 ```
 tmpstr = "Hello my name is X"
 allcaps = tmpstr.upper()
@@ -101,7 +103,9 @@ More here: https://www.w3schools.com/python/python_ref_string.asp
 
 ### Casting
 - Casting is converting certain values for certain datatypes to other datatypes
-- Convert a string to a boolean with "bool" 
+- Convert a string to a boolean with "bool"
+
+
 ```
 tmpstr = "Hello"
 tmpbool = bool(tmpstr)
@@ -120,7 +124,7 @@ print(str(myint))
 ```
 
 ### Arithmetic: 
- Addition
+- Addition
 ```
 a = 42
 b = 7
@@ -131,7 +135,8 @@ print(a + b)
 print(b - a)
 ```
 
-- Add/subtract and assign 
+- Add/subtract and assign
+  
 ```
 c = 83
 c += 5
@@ -180,24 +185,30 @@ print(int(4.8))
 ## Basic Data Structures
 
 ### Lists
-- List of variables/elements 
+- List of variables/elements
+
 ```
 gene_list = ["DDX11L1","WASH7P","MIR6859-1","MIR1302-2HG","MIR1302-2","FAM138A"]
 ```
+
 - In python, lists are 0-indexed 
-- First element: 
+- First element
+  
 ```
 print(gene_list[0])
 print(gene_list[-6])   
 
 ```
-- Last element: 
+
+- Last element
+  
 ```
 print(gene_list[-1])
 print(gene_list[5])
 ```
 
-- Extracting a range of the list - not very intuitive 
+- Extracting a range of the list - not very intuitive
+  
 ```
 print(gene_list[-3:]) # last three elements
 print(gene_list[1:3]) # elements 2 to 3 
@@ -208,7 +219,8 @@ print(gene_list[1:2])  # second element, but returns a list
 print(gene_list[1])    # second element, but returns a string 
 ```
 
--  Note, the same range can be applied to strings, where you extract 'characters' 
+-  Note, the same range can be applied to strings, where you extract 'characters'
+  
 ```
 mystring = "The quick brown fox jumps over the lazy dog"
 print(mystring[4:9])
