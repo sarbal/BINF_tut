@@ -7,10 +7,9 @@ Hi! Welcome to the BINF2010 tutorial stream.
 - "Cool" visuals 
 
 ## CouRse outline
-1. [Week 1: R basics](../lessons/lesson1.md)
-2. [Week 2: More R](../lessons/lesson2.md)
-3. [Week 3: A fun example](../lessons/lesson3.md)
-4. [Week 4: Another potentially fun example.](../lessons/lesson4.md)
+1. [Week 2: R basics](../lessons/lesson1.md)
+2. [Week 3: Data Viz in R](../lessons/lesson2.md)
+3. [Week 4: A fun example](../lessons/lesson3.md) and another potentially fun example.](../lessons/lesson4.md)
 5. [Week 5: So shiny!](../lessons/lesson5.md)
 6. Week 6: BReak! 
 7. [Week 7: Introduction to Python](../lessons/lesson6.md)
@@ -22,11 +21,33 @@ Hi! Welcome to the BINF2010 tutorial stream.
 - Statistical and graphical language
 - Follower of [S](https://en.wikipedia.org/wiki/S_(programming_language))
 
-## What is it good foR?  
+### What is it good foR?  
 - Data mining/analysis 
 - Data visualization and graphics
 - Statistics! 
 - Glorified calculator? 
+
+### Packages, Repositories, oh my!
+- Packages are code (and other!) bundles.
+- Packages are accessed through the `library()` or `require()` functions. 
+- Repositories are where packages are located. Most are in [CRAN](https://cran.r-project.org/web/packages/). [Bioconductor](https://www.bioconductor.org/packages/release/BiocViews.html) and also [github](https://github.com/trending/r). 
+- More on this [here](http://r-pkgs.had.co.nz/) and [here](https://www.datacamp.com/community/tutorials/r-packages-guide). 
+
+## What is Python?
+- Initially developed during the late 1980’s by Guido van Rossum. First development version released in 1991. Version 1 released in 1994.
+Python 2.0.0 released June, 2001 and Python 2.x end-of-life Jan 1, 2020.
+This version was so popular and widely used that many Bioinformatics programs were written using it. Some of these tools have been converted to support v3.x, others are in the process of being upgraded or have been abandoned and will stay on v2.x. The last Python 2.x release is still available for download.
+Python 3.x (December 2008) was a significant re-design and broke compatibility with some parts of v2.x.
+
+### What isssssssss it good for?  
+- Data mining/analysis
+- Machine learning
+
+### Modules 
+- Modules are code bundles. 
+- Modules are accessed by using the import statement. When you do this, you execute the code of the module, keeping the scopes of the definitions so that your current file(s) can make use of these.
+- You can download modules through `pip` (package installer for Python). 
+
 
 ## How do I...
 ### Install R
@@ -35,16 +56,6 @@ Start off by downloading [R](https://cran.r-project.org/) and then [RStudio](htt
 - [Installing R for Mac](installmac.md)
 - [Installing R for Unix](installunix.md)
 
-## Is it installed? Does it Run? 
-### Use R 
-- We will get to more fun stuff later, but first things first: 
-#### Run RStudio
-- Click it! 
-
-### Packages, Repositories, oh my!
-- Packages are code (and other!) bundles. 
-- Repositories are where packages are located. Most are in [CRAN](https://cran.r-project.org/web/packages/). [Bioconductor](https://www.bioconductor.org/packages/release/BiocViews.html) and also [github](https://github.com/trending/r). 
-- More on this [here](http://r-pkgs.had.co.nz/) and [here](https://www.datacamp.com/community/tutorials/r-packages-guide). 
 #### Install packages
 From CRAN: 
 ``` 
@@ -69,6 +80,21 @@ library(limma)
 library(wesanderson)
 ```
 
+### Install Python
+
+
+#### Install modules
+``` 
+pip install matplotlib
+```
+#### Import modules
+```
+import matplotlib
+```
+
+
+
+
 ## WheRe to get help
 - https://www.rstudio.com/
 - https://www.r-bloggers.com/
@@ -91,9 +117,3 @@ library(wesanderson)
 - http://www-huber.embl.de/csama2018/#home
 - https://elifesciences.org/labs/cad57bcf/composing-reproducible-manuscripts-using-r-markdown
 
-
-## A brief history of Python
-Initially developed during the late 1980’s by Guido van Rossum. First development version released in 1991. Version 1 released in 1994.
-Python 2.0.0 released June, 2001 and Python 2.x end-of-life Jan 1, 2020.
-This version was so popular and widely used that many Bioinformatics programs were written using it. Some of these tools have been converted to support v3.x, others are in the process of being upgraded or have been abandoned and will stay on v2.x. The last Python 2.x release is still available for download.
-Python 3.x (December 2008) was a significant re-design and broke compatibility with some parts of v2.x.
