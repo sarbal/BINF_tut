@@ -12,9 +12,9 @@ Python can also be run interactively. Type in "python" into the terminal. Paste/
 Finally, you can also run python in a Jupyter notebook. 
 
 ## Defintions
-Variables
-Data types 
-Casting 
+- Variables
+- Data types 
+- Casting 
 
 ## Variables 
 - "Named" storage. 
