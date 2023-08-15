@@ -11,7 +11,7 @@ You should be able to see 4 different windows.
 We will be working within the "Source" and "Console" windows. 
 Start a new notebook file by selecting "File" -> "New File" -> "R Notebook" 
 
-![rstudio console](../imgs/rstudio.png)
+![rstudio console](../imgs/rstudio_notebook.png)
 
 This should open up a file in the source window. Change the title to "Week 1", and include your name as the author by including this line underneath the title:
 ```
