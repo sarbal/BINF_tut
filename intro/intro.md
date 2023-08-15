@@ -97,24 +97,23 @@ import matplotlib
 
 
 ## WheRe to get help
-- (https://www.rstudio.com/)
-- https://www.r-bloggers.com/
-- https://www.statmethods.net/index.html
+- [Rstudio](https://www.rstudio.com/)
+- [R-Bloggers](https://www.r-bloggers.com/)
+- [Stat Methods](https://www.statmethods.net/index.html)
 
 ## OtheR useful stuff 
-- https://plot.ly/r/
-- https://shiny.rstudio.com/
-- https://rmarkdown.rstudio.com/
-- https://www.rstudio.com/resources/cheatsheets/ 
-- http://swirlstats.com/
-- https://www.tidyverse.org/
-- https://www.listendata.com/p/r-programming-tutorials.html
-- http://genomicsclass.github.io/book/
-- https://twitter.com/@RLangTip 
-- https://twitter.com/hashtag/rstats?src=hash
-- http://serialmentor.com/dataviz/
-- https://adv-r.hadley.nz/
-- https://peerj.com/collections/50-practicaldatascistats/
-- http://www-huber.embl.de/csama2018/#home
-- https://elifesciences.org/labs/cad57bcf/composing-reproducible-manuscripts-using-r-markdown
+- [Plotly](https://plot.ly/r/)
+- [Shiny](https://shiny.rstudio.com/)
+- [RMarkdown](https://rmarkdown.rstudio.com/)
+- [Cheatsheets](https://www.rstudio.com/resources/cheatsheets/) 
+- [Swirl](http://swirlstats.com/)
+- [Tidyverse](https://www.tidyverse.org/)
+- [R tutorials](https://www.listendata.com/p/r-programming-tutorials.html)
+- [Genomics classes](http://genomicsclass.github.io/book/)
+- [RLang](https://twitter.com/@RLangTip)
+- [Data viz](http://serialmentor.com/dataviz/)
+- [Advanced R](https://adv-r.hadley.nz/)
+- [50 Practical data sci stats](https://peerj.com/collections/50-practicaldatascistats/)
+- [CSAMA](http://www-huber.embl.de/csama2018/#home)
+- [Composing-reproducible-manuscripts-using-r-markdown](https://elifesciences.org/labs/cad57bcf/composing-reproducible-manuscripts-using-r-markdown)
 
