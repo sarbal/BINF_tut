@@ -208,6 +208,9 @@ iris.r2  = apply(iris[,1:4], 2, rank)
 heatmap.3(iris.r2, RowSideCol=cols7[as.numeric(iris$Species)] , col=viridis(100))
 ```
 ![heatmap](../imgs/iris_heatmap3.png)
+
+- We can also calculate how similar each sample is through the correlation function (across all their features). Plotting this allows us to visualise these similarities (color) and clustering them allows us to group the samples.
+- Note that each iris species clusters together (with very little mixing).  
 ```
 samples.cor = cor( t(iris2) )
 heatmap.3(samples.cor, col=plasma(100), ColSideCol=cols7[as.numeric(iris$Species)])
