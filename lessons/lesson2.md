@@ -53,12 +53,14 @@ plot(Petal.Length ~ Sepal.Length, data=iris, pch=19, col=Species)
 ![scatterplot](../imgs/plot_iris_4.png)
 ![scatterplot](../imgs/plot_iris_5.png)
 ![scatterplot](../imgs/plot_iris_6.png)
-- We can view sepal width by species distributions with a boxplot, beanplot, violin plot or "joy" plots: 
+- We can view sepal width by species distributions with a boxplot, beanplot, or violinplot: 
 ``` 
 boxplot(iris$Sepal.Width~ iris$Species, col=1:3 )
 beanplot(iris$Sepal.Width~ iris$Species, col=list(1,2,3))
+
 iris.list = lapply( unique(iris$Species), function(si) iris$Sepal.Width[iris$Species==si]) 
-vioplot( iris.list[[1]], iris.list[[2]], iris.list[[3]], col="darkgreen")  
+vioplot( iris.list[[1]], iris.list[[2]], iris.list[[3]], col="darkgreen")
+
 ```
 ![scatterplot](../imgs/plot_iris_boxplot.png)
 ![scatterplot](../imgs/plot_iris_beanplot.png)
