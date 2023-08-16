@@ -2,7 +2,7 @@
 Some visual things you can do with R. Once more, download these files into your working directory: 
 - [lesson2](../data/lesson2.Rdata). 
 - [helper.R](../data/helper.R)
-####  
+
 To check your working directory:
 ```
 getwd()
@@ -15,12 +15,41 @@ Run this to install/load libraries
 ```
 source("helper.R") 
 ```
+## Flow control
+- Way to program different paths for the program to take
+- Come in the form of `if`, `else if`, and `else` statements, which allow you to execute code based on if a condition is met
+```
+if(condition)
+{
+    do_this
+}
+```
+
+- Extend the conditions with `else if` and `else` statements
+```
+if(condition1)
+{
+    do_this
+}
+else if (condition2)
+{
+   do_that
+}
+else
+{
+    do_that_other_thing
+}
+```
+
+- can have as many else if statements as you wish
+- can only have an if statement 
+
 ## Loops and apply functions 
 - Loops, like in most other languages, run while certain conditions are met (while loop) 
 ```
 while (test_expression)
 {
-statement
+  do_this
 }
 ```
 
@@ -28,7 +57,7 @@ statement
 ```
 for (i in objects)
 {
-statement
+  do_this
 }
 ```
 
