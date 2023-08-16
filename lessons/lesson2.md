@@ -170,9 +170,14 @@ panel.cor <- function(x, y, digits = 2, prefix = "", cex.cor, ...)
     if(missing(cex.cor)) cex.cor <- 0.8/strwidth(txt)
     text(0.5, 0.5, txt, cex = cex.cor * r, col= plasma(100)[round(r,2)*100])
 }
+```
+
+```
 pairs(iris, bg=1:3,lower.panel = panel.smooth, pch=19, upper.panel = panel.cor, diag.panel = panel.hist, cex.labels = 2, font.labels = 2)
 ```
+
 ![scatterplot](../imgs/plot_iris_pairs.png)
+
 - Great. What if we want to ask how similar are these individual plants to each other within each species. What can we look at? 
 - Correlations are fun. 
 ```
