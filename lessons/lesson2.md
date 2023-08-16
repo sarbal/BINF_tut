@@ -15,6 +15,39 @@ Run this to install/load libraries
 ```
 source("helper.R") 
 ```
+## Loops and apply functions 
+- Loops, like in most other languages, run while certain conditions are met (while loop) 
+```
+while (test_expression)
+{
+statement
+}
+```
+
+- or for a certain set of objects, terms, range (for). 
+```
+for (i in objects)
+{
+statement
+}
+```
+
+
+-  A similar but more efficient set of functions are the apply functions.
+-  Main function of the apply group: apply().
+-  It takes a DataFrame, a matrix, or a multi-dimensional array as input and, depending on the input object type and the function passed in, outputs a vector, a list, a matrix, or an array.
+```
+apply(X, MARGIN, FUN)
+```
+- Other functions include lapply(), sapply() and tapply()
+```
+sapply()
+```
+
+```
+tapply()
+```
+
 
 ## Visuals
 - R is pretty good for visualization
