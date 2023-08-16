@@ -45,26 +45,37 @@ plot(iris$Sepal.Length, iris$Petal.Length, pch=19, col=as.numeric(iris$Species) 
 ``` 
 ## Playing with parameters 
 plot(iris$Sepal.Length, iris$Petal.Length, pch=12, cex=3, lwd=4, lty=4, type="b", col=colors()[sample(600,5)][as.numeric(iris$Species)] )
+```
+![scatterplot](../imgs/plot_iris_4.png)
+```
 ## Plotting smoothed version
 plot(lowess(iris$Sepal.Length, iris$Petal.Length), pch=19)
+```
+![scatterplot](../imgs/plot_iris_5.png)
+
+```
 ## Plotting using the forumla method 
 plot(Petal.Length ~ Sepal.Length, data=iris, pch=19, col=Species)
 ```
-![scatterplot](../imgs/plot_iris_4.png)
-![scatterplot](../imgs/plot_iris_5.png)
 ![scatterplot](../imgs/plot_iris_6.png)
+
 - We can view sepal width by species distributions with a boxplot, beanplot, or violinplot: 
 ``` 
 boxplot(iris$Sepal.Width~ iris$Species, col=1:3 )
-beanplot(iris$Sepal.Width~ iris$Species, col=list(1,2,3))
-
-iris.list = lapply( unique(iris$Species), function(si) iris$Sepal.Width[iris$Species==si]) 
-vioplot( iris.list[[1]], iris.list[[2]], iris.list[[3]], col="darkgreen")
-
 ```
 ![scatterplot](../imgs/plot_iris_boxplot.png)
+
+```
+beanplot(iris$Sepal.Width~ iris$Species, col=list(1,2,3))
+```
 ![scatterplot](../imgs/plot_iris_beanplot.png)
+
+```
+iris.list = lapply( unique(iris$Species), function(si) iris$Sepal.Width[iris$Species==si]) 
+vioplot( iris.list[[1]], iris.list[[2]], iris.list[[3]], col="darkgreen")
+```
 ![scatterplot](../imgs/plot_iris_vioplot.png)
+
 - or build a barplot :
 ``` 
 iris.bar = tapply( iris$Sepal.Length, iris$Species, mean)
@@ -178,21 +189,32 @@ pairs(iris, bg=1:3,lower.panel = panel.smooth, pch=19, upper.panel = panel.cor, 
 
 ![scatterplot](../imgs/plot_iris_pairs.png)
 
-- Great. What if we want to ask how similar are these individual plants to each other within each species. What can we look at? 
-- Correlations are fun. 
+- Great. What if we want to ask how similar are these individual plants to each other within each species. What can we look at?
+- Heatmaps and clustering!
 ```
 iris2  = apply(iris[,1:4], 2, as.numeric)
 heatmap.3(iris2, RowSideCol=cols7[as.numeric(iris$Species)] , col=viridis(100))
+```
+![heatmap](../imgs/iris_heatmap1.png)
+
+```
 iris.r  = t(apply(iris[,1:4], 1, rank))
 heatmap.3(iris.r, RowSideCol=cols7[as.numeric(iris$Species)] , col=viridis(100))
+```
+![heatmap](../imgs/iris_heatmap2.png)
+
+```
 iris.r2  = apply(iris[,1:4], 2, rank)
 heatmap.3(iris.r2, RowSideCol=cols7[as.numeric(iris$Species)] , col=viridis(100))
+```
+![heatmap](../imgs/iris_heatmap3.png)
+```
 samples.cor = cor( t(iris2) )
 heatmap.3(samples.cor, col=plasma(100), ColSideCol=cols7[as.numeric(iris$Species)])
 ```
-![heatmap](../imgs/iris_heatmap1.png)
-![heatmap](../imgs/iris_heatmap2.png)
-![heatmap](../imgs/iris_heatmap3.png)
+![heatmap](../imgs/iris_heatmap4.png)
+
+
 
 
 
