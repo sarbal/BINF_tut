@@ -216,6 +216,12 @@ print(int(4.8))
 
  
 ## Basic Data Structures
+### Tuples 
+- List of elements, but cannot be changed
+- defined by "()".
+```
+gene_tuple = ("DDX11L1","WASH7P","MIR6859-1","MIR1302-2HG","MIR1302-2","FAM138A")
+```
 
 ### Lists
 - List of variables/elements
