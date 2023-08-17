@@ -381,12 +381,22 @@ print("BRCA2" in gene_exp_dict)
 gene_exp_dict_copy = gene_exp_dict.copy()
 ```
 
+
 ## Test yourself!
-1. Create an Jupyter file (using VSCode).
-2. Save the file as “yourname_Lesson6.ipynb”.
-3. Create a dictionary for gene expression of multiple genes for multiple samples.
+1. Create a Jupyter file (using VSCode).
+2. Save the file as “yourname_Lesson6.ipynb”. 
+3. Create a dictionary for gene expression of multiple genes for multiple samples. Call it gene_dict. 
 4. Populate the dictionary with at least 10 genes for 5 samples.
 5. Write the code to get the gene expression for the 4th gene, 2nd sample.
+6. Create a dictionary called dna_map that maps DNA bases to their complementary bases. I.e., A -> T, C -> G, etc..
+7. Use str.maketrans() to convert this to a "translation table" named dna_table.
+8. By passing dna_table to the string method .translate(), then using indexing with a step of -1 ([::-1]), compute the reverse complement of the MCS sequence given below.
+```
+mcs_seq = 'GAGACCCAAGCTGGCTAGCGTTTAAACTTAAGCTTGGTACCGAGCTCGGATCCACTA' \
+          'GTCCAGTGTGGTGGAATTCTGCAGATATCCAGCACAGTGGCGGCCGCTCGAGTCTAG' \
+          'AGGGCCCGTTTAAACCCGCTGATCAGCCT'
+```
+
 
 Solutions: Next week!
 
