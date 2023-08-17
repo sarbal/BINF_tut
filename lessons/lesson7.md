@@ -48,19 +48,16 @@ df.query("year > 2007")
 ### Plotting 
 ```
 sns.histplot(df['bill_length_mm'],kde=True,bins=20)
-plt.show() 
 ```
-
+![penguin](../imgs/penguin_histplot.png)
 ```
-sns.jointplot(data=df, x="bill_length_mm", y="bill_depth_mm")
-plt.show() 
+sns.jointplot(data=df, x="bill_length_mm", y="bill_depth_mm") 
 ```
-
+![penguin](../imgs/penguin_scatterplot.png)
 ```
 sns.pairplot(df)
-plt.show() 
 ```
-
+![penguin](../imgs/penguin_pairs.png)
 ```
 g = sns.boxplot(x = 'island',
             y ='body_mass_g',
@@ -72,7 +69,7 @@ g.set_xlabel('Island')
 g.set_ylabel('Body Mass')
 plt.show() 
 ```
-
+![penguin](../imgs/penguin_boxplot.png)
 
 ```
 g = sns.lmplot(x="flipper_length_mm",
@@ -85,6 +82,7 @@ g.set_xlabels('Flipper Length')
 g.set_ylabels('Body Mass')
 plt.show() 
 ```
+![penguin](../imgs/penguin_lmplot.png)
 
 ```
 import matplotlib.pyplot as pltt
@@ -95,7 +93,7 @@ sns.boxplot(data=df,x='species',y='body_mass_g',ax=ax[1,0])
 sns.barplot(data=df,x='species',y='body_mass_g',ax=ax[1,1])
 pltt.show()
 ```
-
+![penguin](../imgs/penguin_multiple.png)
 
 See the documentation at https://pandas.pydata.org/docs/user_guide/io.html
 
