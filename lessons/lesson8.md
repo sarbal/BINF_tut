@@ -91,3 +91,22 @@ N = 100
 ns = np.arange(N)
 ns
 ```
+
+## Functions
+```
+def n_factorial(n): 
+    # Check that n is of the right type and form
+    assert isinstance(n,int),'Input is not an integer'
+    assert n >= 0, 'Input needs to be positive'
+    assert n <= 1000, 'Intput is too large!'
+
+    # Initialize return variable
+    val = 1
+
+    # Loop over n
+    for i in range(1,n+1):
+        val *= i
+
+    return val
+```
+
