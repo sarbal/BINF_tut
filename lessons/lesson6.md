@@ -1,6 +1,10 @@
 # Week 7: Python basics
 Taken/adapted from: https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python2
-###
+## Objectives 
+- Introduce you to as many concepts in python as possible.
+- Python's basic data and data structures  
+
+## Setting up 
 
 Open a new file in your editor of choice, let's use VScode.  
 ![vscode](../imgs/vscode2.png)
