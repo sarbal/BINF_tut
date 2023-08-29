@@ -1,5 +1,11 @@
 # Week 9: Snakes on a plane 
-This week's tutorial is on flow control and data wrangling in python. 
+## Objectives 
+This week's tutorial is on flow control and data wrangling in python. You will learn: 
+- Flow control statements
+- Functions and vectorised computations
+- 
+
+## Downloads 
 
 ## if statements
 Allow blocks of code to be executed only under specific conditions.
