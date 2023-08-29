@@ -1,4 +1,4 @@
-# Week 4: Gene set enrichment and reproducing plots.
+# Gene set enrichment and reproducing plots.
 Let's do some analyses. 
 
 Download these files into your working directory: 
