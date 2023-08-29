@@ -309,5 +309,9 @@ my_plot(my_seq)
  
 Solutions: Next week!
 
+## Resources and cheatsheets
+https://posit.cloud/learn/cheat-sheets 
+https://posit.cloud/learn/primers/1.2 
+
 Back to the [homepage](../README.md)
 
