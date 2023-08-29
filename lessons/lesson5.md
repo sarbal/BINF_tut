@@ -1,8 +1,10 @@
 # Week 5: So shiny!
+## Objectives 
 Let's make something interactive! Start off by installing the shiny package: 
 ```
 install.packages("shiny")
 ```
+## Downloads 
 And then downloading this file:
 - [lesson5](../data/lesson5.Rdata) 
 
