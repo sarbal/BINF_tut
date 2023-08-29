@@ -1,6 +1,11 @@
 # Week 4: A fun(ctional) example
-Let's play with real data!
+## Objectives 
+Let's play with real data! Learn the most important data handling skills. In this tutorial: 
+- Extracting values from a table
+- Reading in data 
+- Calculate summary statistics
 
+## Downloads 
 Download these files into your working directory: 
 - [lesson3](../data/lesson3.Rdata) 
 - [helper.R](../data/helper.R)
@@ -149,6 +154,62 @@ png("my_plot.png") # or try # jpg()
 plot(my_data)
 dev.off() 
 ```
+
+## Tidy data 
+Tidyverse packages are designed to work well together. 
+![tidyverse](../imgs/tidyverse_packs.png)
+
+### Tibbles
+The basic data format for the tidyverse are "tibbles" (tidy tables). They work (and look) a little different to the basic R table, but can be manipulated with tidy based functions. 
+R will print only the first ten rows of a tibble as well as all of the columns that fit into your console window. R also adds useful summary information about the tibble, such as the data types of each column and the size of the data set.
+Note, when you do not have the tidyverse packages loaded, tibbles act as data.frames! 
+```
+
+```
+
+- You can transform a data frame to a tibble with the as_tibble() function. 
+```
+x <- c("A", "B", "C", "D")
+y <- 4:1
+z <- c("How", "do", "you", "do?")
+data_frame = data.frame(ID=x, num=y, words=z)
+tibble_data = as_tibble(data_frame)
+```
+
+### Tidy functions 
+- `select()` and `filter()`, which let you extract rows and columns from a data frame
+- `arrange()`, which lets you reorder the rows in your data
+```
+select(tibble_data, ID, num)
+filter(tibble_data, ID == "A")
+arrange(tibble_data, num)
+```
+
+- `%>%,` which organizes your code into reader-friendly “pipes”
+Another useful tidy functionality is the use of the pipe. This allows you to use the output of your last function into a new function, with no need to assign intermediate variables. Take for example the below steps: 
+```
+iris_tibble = as_tibble(iris)
+
+iris_tibble_set <- filter(iris_tibble, Species == "setosa", Petal.Length > 1.6 )
+iris_tibble_set <- select(iris_tibble_set, Sepal.Length, Sepal.Width)
+iris_tibble_set <- arrange(iris_tibble_set, desc(Sepal.Width))
+```
+These could be combined:  
+```
+arrange(select(filter(iris_tibble, Species == "setosa", Petal.Length > 1.6), Sepal.Length, Sepal.Width), desc(Sepal.Width))
+```
+But this is a little hard to read. The pipe version "tidies" this to: 
+```
+iris_tibble %>% 
+  filter(Species == "setosa", Petal.Length > 1.6 ) %>% 
+  select(Sepal.Length, Sepal.Width) %>% 
+  arrange(desc(Sepal.Width))
+```
+### Reshaping tidy data 
+- `mutate()`, `group_by()`, and `summarize()`, which help you use your data to compute new variables and summary statistics
+- `gather()` - which reshapes wide data into long data. Newer version is called `pivot_longer()`
+- `spread()` - which reshapes long data into wide data. Newer version is called `pivot_wider()`
+
 
 
 ## Test yourself! 
