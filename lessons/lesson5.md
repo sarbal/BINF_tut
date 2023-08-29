@@ -1,16 +1,26 @@
 # Week 5: So shiny!
 ## Objectives 
-Let's make something interactive! Start off by installing the shiny package: 
-```
-install.packages("shiny")
-```
+Let's make something interactive! 
+Shiny is an R package that makes it easy to build interactive web applications (apps) straight from R. This lesson will get you started building Shiny apps right away. You will learn how to: 
+- Build a user interface
+- Add control widgets
+- Display reactive output
+- Use R scripts and data
+- Use reactive expressions
+ 
 ## Downloads 
 And then downloading this file:
 - [lesson5](../data/lesson5.Rdata) 
 
 ## What's Shiny, precious, eh?
 - Shiny is an R package that makes it easy to build interactive web apps.
-- Shiny apps are interactive ways to display/showcase or work with your data. See here: https://shiny.rstudio.com/ 
+- Shiny apps are interactive ways to display/showcase or work with your data. See here: https://shiny.rstudio.com/
+  
+Start off by installing the shiny package: 
+```
+install.packages("shiny")
+```
+
 ### Reactive == Interactive 
 - Reactivity is the ability of a program to compute outputs from user inputs
 - The program 'responds' to user defined changes
@@ -103,11 +113,8 @@ server <- function(input,output,session) {
 shinyApp(ui = ui, server = server)
 ```
 
-
-
 #### Widgets (input)  
 - go in the ui function 
-
 
 function | widget
 --- | --- 
