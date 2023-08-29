@@ -1,7 +1,17 @@
 # Week 2: R basics
+## Objectives
+This tutorial will teach you background knowledge on R. 
+You’ll learn about:
+- objects
+- R’s basic data types
+- R’s basic data structures including vectors and lists
+- functions and their arguments
+
+## Downloads
 First things first! Download these files into your working directory: 
 - [lesson1](../data/lesson1.Rdata)
 - [helper.R](../data/helper.R)
+
 
 ## Setting up
 Make sure you have installed Rstudio or can access the posit.cloud version. 
@@ -114,7 +124,7 @@ data <- data + more_data
 ```
 
 
-## Data types 
+## Data types and structures
 - Numbers (integers, doubles): 
 ``` 
 1
@@ -132,7 +142,7 @@ data <- data + more_data
 "Booo"
 "Whatever"
 ```
-
+ 
 - Array or vector: made of multiple elements of the same data class
 ``` 
 c(1,3,5)
@@ -180,23 +190,6 @@ my_seq[-10]
 my_seq[-10:-20]
 ```
 
-### Advanced data types 
-
-- Factors: define your own data class and has levels or strict values that this new data class can take.
-``` 
-sex <-  c("male", "female", "male", "male", "female")  
-sex <- factor( sex, levels=c("male", "female"))
-sex
-```
-
-- If you try to assign a new value to a variable, it has be one of the known levels, otherwise goes to NA. 
-
-``` 
-sex[1] <- "female"
-sex[2] <- "unknown" # This will cause an error!
-sex # You should see the NA value 
-```
-
 - Lists are collections of data, and elements in a list can be of varying lengths and data classes/types. 
 ``` 
 B <- 1:10
@@ -238,6 +231,23 @@ append(my_list, your_list)
 E <- list()
 ```
 
+
+### Advanced data types and structures
+
+- Factors: define your own data class and has levels or strict values that this new data class can take.
+``` 
+sex <-  c("male", "female", "male", "male", "female")  
+sex <- factor( sex, levels=c("male", "female"))
+sex
+```
+
+- If you try to assign a new value to a variable, it has be one of the known levels, otherwise goes to NA. 
+
+``` 
+sex[1] <- "female"
+sex[2] <- "unknown" # This will cause an error!
+sex # You should see the NA value 
+```
 - Data frames also combine multiple data types, but as a table (or matrix) 
 ``` 
 data.frame( x=1:10, y = rep("hello", 10) ) 
