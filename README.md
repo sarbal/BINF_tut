@@ -15,14 +15,13 @@ Let's start at the very beginning [(a very good place to start)](/intro/intro.md
 Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/intro/installwindows.md), [macs](/intro/installmac.md), or [linux](/intro/installunix.md/)
 
 ## Week 2: R basics 
-[First things first! Let's get started.](/lessons/lesson1.md)   
+[First things first! Let's get started.](/lessons/lesson2.md)   
 
 ## Week 3: More R 
-[Some visual things you can do with R.](/lessons/lesson2.md)
+[Some visual things you can do with R.](/lessons/lesson3.md)
 
 ## Week 4: A fun example 
-[Let's play with real data.](/lessons/lesson3.md)
-[Let's reproduce some analyses.](/lessons/lesson4.md)
+[Let's play with real data.](/lessons/lesson4.md)
 
 ## Week 5: So shiny!
 [Let's make something interactive.](/lessons/lesson5.md)
