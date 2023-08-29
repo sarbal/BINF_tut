@@ -5,14 +5,13 @@
 
   
 
-# Gene set enrichment and reproducing plots.
+## Gene set enrichment and reproducing plots.
 Let's do some analyses. 
 
 Download these files into your working directory: 
 - [lesson4](../data/lesson4.Rdata) 
 - [helper.R](../data/helper.R)
 
-####  
 To check your working directory:
 ```
 getwd()
@@ -27,8 +26,6 @@ source("helper.R")
 load("lesson4.Rdata")
 ```
 
-
-## The many ways of gene set enrichment 
 ### Gene set enrichment (GSE)
 A method to identify properties of genes or proteins that are over-represented. GSE is a (relatively) straightforward method to sumamrize the results of your experiment, in particualr when you believe there is some link or association to a known phenotype (e.g., enrichment for dopamine receptors in Parkinson's disease). Uses statistical approaches to identify significantly enriched groups of genes, and the main annotation database is the Gene Ontology ([GO](http://www.geneontology.org/)) and the Molecular Signatures database ([MSigDB](http://software.broadinstitute.org/gsea/msigdb/index.jsp)). 
 - The most well known method is GSEA: http://www.pnas.org/content/102/43/15545.short, but it can be a little complicated to run on other data (mostly for gene expression experiments) and interpret (old dispute here https://www.ncbi.nlm.nih.gov/pubmed/20048385). 
