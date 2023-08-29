@@ -1,5 +1,9 @@
 # Week 8: Data Viz
-### Download data 
+## Objectives 
+- Plotting and displaying data in python
+- Using numpy, pandas and seaborn libraries
+  
+## Downloads  
 First things first! Download these palmer penguins data into your working directory. 
 Into a terminal, type in: 
 ```
