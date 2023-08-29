@@ -205,12 +205,36 @@ iris_tibble %>%
   select(Sepal.Length, Sepal.Width) %>% 
   arrange(desc(Sepal.Width))
 ```
-### Reshaping tidy data 
+### Extracting summaries 
 - `mutate()`, `group_by()`, and `summarize()`, which help you use your data to compute new variables and summary statistics
+```
+summarise(iris_tibble, total = sum(Sepal.Width), max = max(Sepal.Width), mean = mean(Sepal.Width))
+```
+```
+iris_tibble %>%
+    group_by(Sepal.Width, Species) %>% 
+    summarise( sum(Sepal.Length))
+```
+```
+iris_tibble %>%
+    group_by(Sepal.Width, Species) %>% 
+    summarise( sum(Sepal.Length))
+```
+```
+iris_tibble %>%
+  mutate(ratio = Sepal.Width/Petal.Width)
+```
+
+### Reshaping tidy data 
 - `gather()` - which reshapes wide data into long data. Newer version is called `pivot_longer()`
 - `spread()` - which reshapes long data into wide data. Newer version is called `pivot_wider()`
-
-
+### Joining data 
+- `left_join()`, `right_join()`, `full_join()`, and `inner_join()` - which augment a copy of one data frame with information from a second
+- `semi_join()` and `anti_join()` - which filter the contents of one data frame against the contents of a second
+- `bind_rows()`, `bind_cols()`, and set operations - which combine data sets in more simple ways
+### Other 
+- `separate()` - which separates a column of cells into multiple columns
+- `unite()` - which combines multiple columns of cells into a single column
 
 ## Test yourself! 
 1. Create an R markdown file (using RStudio). Save the file as "yourname_Lesson3.Rmd". Once again, delete the instructions starting from "This is an [R...". For the remaining exercises, insert the code as R chunks when you are satisified with your solutions. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
