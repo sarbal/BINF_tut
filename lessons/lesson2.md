@@ -1,5 +1,15 @@
-# Week 3: More R
-Some visual things you can do with R. Once more, download these files into your working directory: 
+# Week 3: Data vizualisation and exploratory analysis 
+## Objectives 
+Some visual things you can do with R and ways to explore your data systematically.
+In the tutorial you will:
+- Learn about flow control, loops, and vectorised 
+- Learn strategies for exploring and finding patterns data
+- Different types of plots to explore data
+
+
+## Downloads 
+Once more, download these files into your working directory: 
+
 - [lesson2](../data/lesson2.Rdata). 
 - [helper.R](../data/helper.R)
 
@@ -437,12 +447,6 @@ plot(1:n, col=turbo(n), pch=19, cex=5)
 ![plot](../imgs/plot_plasma.png)
 ![plot](../imgs/plot_turbo.png)
 
-#### More here: 
-- https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf
-- https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html
-- https://moderndata.plot.ly/create-colorful-graphs-in-r-with-rcolorbrewer-and-plotly/
-
-
 
 ## Test yourself! 
 1. Create an R markdown file (using RStudio). Save the file as "yourname_Lesson2.Rmd". Once again, delete the instructions starting from "This is an [R...". For the remaining exercises, insert the code as R chunks when you are satisified with your solutions. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
@@ -456,5 +460,12 @@ plot(1:n, col=turbo(n), pch=19, cex=5)
 7. "Knit" your R markdown file into an html page or a pdf.  
  
 Solutions: Next week!
+
+
+ ## Resources  
+- https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf
+- https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html
+- https://moderndata.plot.ly/create-colorful-graphs-in-r-with-rcolorbrewer-and-plotly/
+
 
 Back to the [homepage](../README.md)
