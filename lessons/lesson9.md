@@ -81,16 +81,20 @@ gene_expression_file = "primateRNAseq/Gene.expression.data/Normalized.expression
 exprs = read.table(gene_expression_file, header=T, row.names=1) 
 samples = matrix(unlist(strsplit(colnames(exprs)[33:94] , "_" ) ) , byrow=T, ncol=2)
 ```
+
 2. Clean up data
+
 ```
 exprs.means = t(sapply(1:dim(exprs)[1], function(i) tapply(  as.numeric(exprs[i,33:94]), samples[,1], mean, na.rm=T) ))
 samples.sub = names(tapply(  as.numeric(exprs[1,33:94]), samples[,1], mean, na.rm=T)) 
 colnames(exprs.means) = samples.sub
 rownames(exprs.means) = rownames(exprs)
 ```
+
 3. Data analysis 
 - Which genes are present in enough species?
 - Which species does not have enough data?
+  
 ```
 colSums(is.na(exprs.means ))
 filt.species = which.max(colSums(is.na(exprs.means )))
@@ -98,6 +102,7 @@ gene.subset  = rowSums(is.na(exprs.means[,-filt.species ] )  ) >5
 
 samples.cor = cor(exprs.means[gene.subset,-filt.species ], m="s", use="p")
 ```
+
 4. Plot/graph 
 
 ```
