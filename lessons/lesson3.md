@@ -25,6 +25,11 @@ Run this to install/load libraries
 ```
 source("helper.R") 
 ```
+## Setting up
+Start a new notebook file by selecting "File" -> "New File" -> "R Notebook" 
+Save the file as "yourname_week3.Rmd". Delete the instructions starting from "This is an [R...". For the different code below, insert it as R chunks. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
+As before, copy the code chunks into your R notebook as R chunks. 
+
 ## Flow control
 - Way to program different paths for the program to take
 - Come in the form of `if`, `else if`, and `else` statements, which allow you to execute code based on if a condition is met
