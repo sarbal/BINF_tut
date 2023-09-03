@@ -75,8 +75,9 @@ This strategy is said to be more "Pythonic"
 for i, c in enumerate(name):
     print("name[%d] = %s"%(i,c))
 ```
+
+Range is the Pythonic way of iterating over consecutive integers.
 ```
-Range is the Pythonic way of iterating over consecutive integers
 for x in range(10):
     print(x)
 ```
