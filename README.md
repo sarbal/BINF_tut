@@ -11,8 +11,8 @@ Adapted from:
 
 
 ## Week 1: Setting up: 
-Let's start at the very beginning [(a very good place to start)](/intro/intro.md)   
-Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/intro/installwindows.md), [macs](/intro/installmac.md), or [linux](/intro/installunix.md/)
+Let's start at the very beginning [(a very good place to start)](/lessons/intro.md)   
+Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/installwindows.md), [macs](/lessons/installmac.md), or [linux](/lessons/installunix.md/)
 
 ## Week 2: R basics 
 [First things first! Let's get started.](/lessons/lesson2.md)   
