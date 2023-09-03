@@ -151,13 +151,13 @@ To set your working directory, where <home> is your directory, and project is a 
 ```
 setwd("C:/<home>/project")
 ```
-Run the code from [earlier](#) to install/load libraries. Then, save this [helper](/../data/helper.R) script in your working directory.
+Run the code from [earlier](#install-packages) to install/load libraries. Then, save this [helper](/../data/helper.R) script in your working directory.
 
-Then run this bit of code (this might take a while if you do not have most of the packages installed, so run this as soon as possible). 
+Then run this bit of code in your console. Note, it might take a little while, but hopefully it will run smoothly. 
 ```
 source("helper.R") 
 ```
 
-
+And that's it for this week! 
 
 Back to the [homepage](../README.md)
