@@ -2,11 +2,11 @@
 # Installing software on a Mac:
 
 ## Installing R:
-*Please make sure you install the latest version of R (R version 3.5.0).*
+*Please make sure you install the latest version of R (R version 4.3.1).*
 
 - Go to http://cran.r-project.org/
 - Click on `Download R for (Mac) OS X`
-- Select the latest release `R-3.5.0.pkg`
+- Select the latest release `R-4.3.1.pkg`
 - Open and run the executable file to install R 
 - *Might be a good idea to also install or update XQuartz*
 
