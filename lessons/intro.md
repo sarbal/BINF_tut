@@ -1,7 +1,7 @@
 # Week 1: Intro and setting up
 Hi! Welcome to the BINF2010 tutorial stream. 
 
-## TutoRial aims 
+## Overall tutoRial aims 
 - Introduce you to R :large_blue_circle: and Python :snake:
 - Basic concepts in data analysis
 - "Cool" visuals 
