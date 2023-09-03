@@ -9,12 +9,12 @@ You’ll learn about:
 
 ## Downloads
 First things first! Download these files into your working directory: 
-- [lesson1](../data/lesson1.Rdata)
+- [data](../data/lesson1.Rdata)
 - [helper.R](../data/helper.R)
 
 
 ## Setting up
-Make sure you have installed Rstudio or can access the posit.cloud version. 
+Make sure you have installed Rstudio. 
 
 Open up Rstudio.
 ![rstudio console](../imgs/rstudio.png)
