@@ -120,8 +120,8 @@ import matplotlib
 
 
 
-## Testing your installation  
-Make sure you have installed Rstudio. 
+## Testing your installation - R 
+Make sure you have installed Rstudio and R correctly. 
 
 Open up Rstudio.
 ![rstudio console](../imgs/rstudio.png)
@@ -139,27 +139,21 @@ This should open up a file in the source window. Change the title to "Week 1", a
 title: "Week 1" 
 author: "Sara"
 ```
-Save the file as "yourname_week1.Rmd". Delete the instructions starting from "This is an [R...". For the different code below, insert it as R chunks. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
-
+Save the file as "yourname_week1.Rmd". Delete the instructions starting from "This is an [R...". Insert any notes or comments below in the notebook. Code can be saved as R chunks. An R chunk is code placed after a line that starts with ` ```{r} `and ends before a line with ` ``` `.  
 
 In the console window below the source window, check your working directory by typing in:
-
 ```
 getwd()
 ```
 ![rstudio console](../imgs/rstudio2.png)
 
+To set your working directory, where <home> is your directory, and project is a directory for your tutorials: 
+```
+setwd("C:/<home>/project")
+```
+Run the code from [earlier](#) to install/load libraries. Then, save this [helper](/../data/helper.R) script in your working directory.
 
-
-To set your working directory: 
-```
-setwd("cloud/project")
-```
-Or 
-```
-setwd("X:/project")
-```
-Run this to install/load libraries (this might take a while if you do not have most of the packages installed, so run this as soon as possible). 
+Then run this bit of code (this might take a while if you do not have most of the packages installed, so run this as soon as possible). 
 ```
 source("helper.R") 
 ```
