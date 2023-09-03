@@ -71,8 +71,9 @@ source("helper.R")
 ```  
 print("Hello World")
 ```
+***Copy the above code into your console and press enter. Next, copy it as an R chunk into your notebook. Press play.*** 
 
-- The print function is given an argument (also known as input) within the '()' . All functions are called this way
+- The print function is given an argument (also known as input) within the '()' . All functions are called this way.
 
 ``` 
 load("lesson1.Rdata")
