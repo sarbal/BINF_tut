@@ -97,9 +97,6 @@ pip install matplotlib
 import matplotlib
 ```
 
-
-
-
 ## WheRe to get help
 - [Rstudio](https://www.rstudio.com/)
 - [R-Bloggers](https://www.r-bloggers.com/)
@@ -120,6 +117,31 @@ import matplotlib
 - [50 Practical data sci stats](https://peerj.com/collections/50-practicaldatascistats/)
 - [CSAMA](http://www-huber.embl.de/csama2018/#home)
 - [Composing-reproducible-manuscripts-using-r-markdown](https://elifesciences.org/labs/cad57bcf/composing-reproducible-manuscripts-using-r-markdown)
+
+
+
+## Testing your installation  
+Make sure you have installed Rstudio. 
+
+Open up Rstudio.
+![rstudio console](../imgs/rstudio.png)
+
+You should be able to see 4 different windows. We will be working within the "Source" and "Console" windows. 
+
+Start a new notebook file by selecting "File" -> "New File" -> "R Notebook" 
+![rstudio console](../imgs/rstudio1.png)
+
+
+This should open up a file in the source window. Change the title to "Week 1", and include your name as the author by including this line underneath the title:
+![rstudio console](../imgs/rstudio_notebook.png)
+
+```
+title: "Week 1" 
+author: "Sara"
+```
+Save the file as "yourname_week1.Rmd". Delete the instructions starting from "This is an [R...". For the different code below, insert it as R chunks. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
+
+
 
 
 Back to the [homepage](../README.md)
