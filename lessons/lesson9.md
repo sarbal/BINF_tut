@@ -3,30 +3,20 @@
 - Recap and revision of what you've learnt this term
 - Reproducing analyses in either R or Python
 
-  
-
-## Gene set enrichment and reproducing plots.
+## Gene set enrichment 
 Let's do some analyses. 
 
 Download these files into your working directory: 
-- [lesson4](../data/lesson4.Rdata) 
+- [data](../data/lesson4.Rdata) 
 - [helper.R](../data/helper.R)
 
-To check your working directory:
-```
-getwd()
-```
-To set your working diretory: 
-```
-setwd("X:/project")
-```
 Run this to install/load libraries
 ```
 source("helper.R") 
 load("lesson4.Rdata")
 ```
 
-### Gene set enrichment (GSE)
+### Gene set enrichment (GSE) in R 
 A method to identify properties of genes or proteins that are over-represented. GSE is a (relatively) straightforward method to sumamrize the results of your experiment, in particualr when you believe there is some link or association to a known phenotype (e.g., enrichment for dopamine receptors in Parkinson's disease). Uses statistical approaches to identify significantly enriched groups of genes, and the main annotation database is the Gene Ontology ([GO](http://www.geneontology.org/)) and the Molecular Signatures database ([MSigDB](http://software.broadinstitute.org/gsea/msigdb/index.jsp)). 
 - The most well known method is GSEA: http://www.pnas.org/content/102/43/15545.short, but it can be a little complicated to run on other data (mostly for gene expression experiments) and interpret (old dispute here https://www.ncbi.nlm.nih.gov/pubmed/20048385). 
 - There have been many others, and the simplest is a hypergeometric test to measure overlap. 
@@ -66,7 +56,7 @@ m = match( enriched2[,1], names(auc_mf))
 hist <- plot_distribution(auc_mf[m], xlab="AUROC", med=FALSE, avg=FALSE)
 ```
 
-## Replicating a figure
+## Replicating a figure in R
 Let's take a look at this paper:  https://genome.cshlp.org/content/22/4/602
 - They've made their data available: https://genome.cshlp.org/content/suppl/2012/01/03/gr.130468.111.DC1/Supplemental.Database.primateRNAseq.zip    
 - Let's try reproducing the heatmap (Supplementary figure 5).  https://genome.cshlp.org/content/suppl/2012/01/03/gr.130468.111.DC1/SupplementalFigures_08_09_11.pdf 
