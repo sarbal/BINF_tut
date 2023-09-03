@@ -23,6 +23,23 @@ Start off by installing the shiny package:
 ```
 install.packages("shiny")
 ```
+Then load the package. 
+```
+library(shiny)
+```
+RStudio makes it very easy to build an app. Simply click on the "File" dropdown menu, then "New File" and then "Shiny Web App...". 
+A pop up box will ask you for an "Application name", call your app whatever you wish (e.g., my_app). 
+Select the "Single File (app.R)" radio button. 
+And then pick your working directory (click Browse on the final box). 
+When you are ready, click "Create".   
+
+This will generate a folder with your app name, and a file called "app.R". We will be working with this file. 
+It should have two functions: ui and server. 
+They should be pre-filled with a histogram drawing app. 
+You can test it out by running in the command console (make sure you are in the working directory where your app is):
+```
+runApp("my_app")
+```
 
 ### Reactive == Interactive 
 - Reactivity is the ability of a program to compute outputs from user inputs
@@ -169,22 +186,9 @@ renderUI   |   a Shiny tag object or HTML
 
 
 
-## Easy as 1, 2, 3, infinity 
-1. Install it! 
-``` 
-install.packages("shiny") 
-```
-2. Load it!
-```
-library(shiny)
-```
-3. RStudio makes it very easy to build an app. Simply click on the "File" dropdown menu, then "New File" and then "Shiny Web App...". A pop up box will ask you for an "Application name", call your app whatever you wish (e.g., my_app). Select the "Single File (app.R)" radio button. And then pick your working directory (click Browse on the final box). When you are ready, click "Create".   
-4. This will generate a folder with your app name, and a file called "app.R". We will be working with this file. It should have two functions: ui and server. They should be pre-filled with a histogram drawing app. You can test it out by running in the command console (make sure you are in the working directory where your app is):
-```
-runApp("my_app")
-```
-5. We can modify the different bits of code in the ui and server functions to change the display and functionality of the code. Copy the above functions into this app. Run and play around! Increase the number of repeats, change the number of bins, and test different inputs. 
-6. Try different functions. Currently we are using the random "normal" generator. Make one for the Poisson distribution, and two others (see which here). Make sure you change the inputs needed accordingly (ie add more input boxes, change text).
+## Test yourself! 
+1. We can modify the different bits of code in the ui and server functions to change the display and functionality of the code. Copy the above functions into this app. Run and play around! Increase the number of repeats, change the number of bins, and test different inputs. 
+2. Try different functions. Currently we are using the random "normal" generator. Make one for the Poisson distribution, and two others (see which here). Make sure you change the inputs needed accordingly (ie add more input boxes, change text).
 
 
 ## Resources and other 
