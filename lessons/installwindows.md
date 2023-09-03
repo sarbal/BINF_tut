@@ -20,7 +20,7 @@
 - Download this https://www.python.org/ftp/python/3.10.1/python-3.10.1-amd64.exe
 - Or go to and select your version https://www.python.org/downloads/windows/ 
  
-## Installing VSCode. 
+## Installing VSCode: 
 - Go to https://code.visualstudio.com/
 - It should automatically detect your OS and give you a download link.
 - You can also go to https://code.visualstudio.com/#alt-downloads and chose from there. 
