@@ -2,13 +2,13 @@
 # Installing software on Windows:
 
 ## Installing R:
-*Please make sure you install the latest version of R (R version 4.?).*
+*Please make sure you install the latest version of R (R version 4.3.1).*
 
 - Go to http://cran.r-project.org/
 - Click on `Download R for Windows`
 - Click on `base`
-- Click on `Download R 3.5.0 for Windows`
-- Open and run the executable file `R-3.5.0-win.exe`
+- Click on `Download R 4.3.1 for Windows`
+- Open and run the executable file `R-4.3.1-win.exe`
 
 ## Installing RStudio:
 - Go to http://www.rstudio.com/
