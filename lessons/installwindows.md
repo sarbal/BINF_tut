@@ -13,7 +13,7 @@
 ## Installing RStudio:
 - Go to http://www.rstudio.com/
 - Click on `Download` and then select the `Rstudio Desktop` option 
-- Download the installer for Windows `RStudio 1.1.453 - Windows Vista/7/8/10`
+- Download the installer for Windows `RStudio XXX - Windows Vista/7/8/10`
 - Open and run the executable file 
 
 ## Installing Python: 
