@@ -8,10 +8,6 @@ Shiny is an R package that makes it easy to build interactive web applications (
 - Use R scripts and data
 - Use reactive expressions
  
-## Downloads 
-And then downloading this file:
-- [data](../data/lesson5.Rdata) 
-
 ## Setting up
 You will be creating a shiny app, so there is no need for a notebook this week.  
 
