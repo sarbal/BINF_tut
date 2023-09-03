@@ -54,6 +54,7 @@ Run this to install/load libraries (this might take a while if you do not have m
 source("helper.R") 
 ```
 
+### For each code chunk in the tutorial, test it in the console then copy it into your notebook as an R code chunk. This should run when you press play. 
 
 ## Defintions
 - Variable: Holds a value 
