@@ -5,20 +5,22 @@ Taken/adapted from: https://ucdavis-bioinformatics-training.github.io/2022-Feb-I
 - Python's basic data and data structures  
 
 ## Setting up 
+Make sure you have VSCode and python installed. 
 
-Open a new file in your editor of choice, let's use VScode.  
+Open a new file in VSCode.  
 ![vscode](../imgs/vscode2.png)
 
 Copy and paste (or type) this into your new file:
 ```
 print("Hello, World!")
 ```
-Save the file and name it “helloworld.py”. Note the “.py” extension.  If using VSCode, click the triangle “play” button to run your code in the terminal. 
+Save the file and name it “helloworld.py”. Note the “.py” extension.  Click the triangle “play” button to run your code in the terminal. 
 Python can also be run interactively. Type in "python" into the terminal. Paste/type in the code snippets in the terminal.
 ![vscode](../imgs/vscode3.png)
 
 Finally, you can also run python in a Jupyter notebook. The extension for this is ".ipynb". Each "chunk" of code can be run within the notebook. 
 ![vscode](../imgs/vscode4.png)
+Save a Jupyter notebook as "yourname_week7.ipynb". Similar to an R markdown notebook, you can write and run your code chunks in this file. Make sure to save! As before, copy the code throughout the tutorial into your notebook.  
 
 ## Defintions
 - Variables
