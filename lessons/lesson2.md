@@ -19,28 +19,6 @@ Start a new notebook file by selecting "File" -> "New File" -> "R Notebook"
 Save the file as "yourname_week2.Rmd". Delete the instructions starting from "This is an [R...". For the different code below, insert it as R chunks. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
 As before, copy the code chunks into your R notebook as R chunks. 
 
-In the console window below the source window, check your working directory by typing in:
-
-```
-getwd()
-```
-![rstudio console](../imgs/rstudio2.png)
-
-
-
-To set your working directory: 
-```
-setwd("cloud/project")
-```
-Or 
-```
-setwd("X:/project")
-```
-Run this to install/load libraries (this might take a while if you do not have most of the packages installed, so run this as soon as possible). 
-```
-source("helper.R") 
-```
-
 ### Reminder: For each code chunk in the tutorial, test it in the console then copy it into your notebook as an R code chunk. This should run when you press play. 
 
 ## Defintions
