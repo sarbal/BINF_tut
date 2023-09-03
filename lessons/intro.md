@@ -8,15 +8,15 @@ Hi! Welcome to the BINF2010 tutorial stream.
 
 ## CouRse outline
 1. Week 1: [Intro](intro.md)
-2. Week 2: R basics[](#lesson2.md)
-3. Week 3: Data Viz in R[](#lesson3.md)
-4. Week 4: A fun example[](#lesson4.md)
-5. Week 5: So shiny![](#lesson5.md)
+2. Week 2: R basics[](lesson2.md)
+3. Week 3: Data Viz in R[](lesson3.md)
+4. Week 4: A fun example[](lesson4.md)
+5. Week 5: So shiny![](lesson5.md)
 6. Week 6: BReak! 
-7. Week 7: Introduction to Python[](#lesson6.md)
-8. Week 8: Data Viz[](#lesson7.md)
-9. Week 9: Snakes on a plane[](#lesson8.md)
-10. Week 10: Recap[](#lesson9.md)
+7. Week 7: Introduction to Python[](lesson6.md)
+8. Week 8: Data Viz[](lesson7.md)
+9. Week 9: Snakes on a plane[](lesson8.md)
+10. Week 10: Recap[](lesson9.md)
 
 ## What is R? 
 - Statistical and graphical language
