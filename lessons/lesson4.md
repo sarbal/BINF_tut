@@ -7,9 +7,9 @@ Let's play with real data! Learn the most important data handling skills. In thi
 
 ## Downloads 
 Download these files into your working directory: 
-- [lesson3](../data/lesson3.Rdata) 
+- [data](../data/lesson3.Rdata) 
 - [helper.R](../data/helper.R)
-- [data](../data/my_data.zip)
+- [extra data](../data/my_data.zip)
 
 Extract the data.zip folder.
 
@@ -26,6 +26,11 @@ Run this to install/load libraries
 ```
 source("helper.R") 
 ```
+## Setting up
+Start a new notebook file by selecting "File" -> "New File" -> "R Notebook" 
+Save the file as "yourname_week4.Rmd". Delete the instructions starting from "This is an [R...". For the different code below, insert it as R chunks. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
+As before, copy the code chunks into your R notebook as R chunks. 
+
 
 ## Reading in data
 - Depending on the format, there are multiple ways to input data into R 
