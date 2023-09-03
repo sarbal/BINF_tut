@@ -10,7 +10,10 @@ Shiny is an R package that makes it easy to build interactive web applications (
  
 ## Downloads 
 And then downloading this file:
-- [lesson5](../data/lesson5.Rdata) 
+- [data](../data/lesson5.Rdata) 
+
+## Setting up
+You will be creating a shiny app, so there is no need for a notebook this week.  
 
 ## What's Shiny, precious, eh?
 - Shiny is an R package that makes it easy to build interactive web apps.
