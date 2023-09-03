@@ -37,7 +37,7 @@ Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/
 ## Week 9: Snakes on a plane 
 [Data wrangling.](/lessons/lesson8.md)
 
-## Week 10:  
+## Week 10: Recap
 [Reproducing some analyses.](/lessons/lesson9.md)
 
 
