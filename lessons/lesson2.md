@@ -14,26 +14,10 @@ First things first! Download these files into your working directory:
 
 
 ## Setting up
-Make sure you have installed Rstudio. 
-
 Open up Rstudio.
-![rstudio console](../imgs/rstudio.png)
-
-You should be able to see 4 different windows. We will be working within the "Source" and "Console" windows. 
-
 Start a new notebook file by selecting "File" -> "New File" -> "R Notebook" 
-![rstudio console](../imgs/rstudio1.png)
-
-
-This should open up a file in the source window. Change the title to "Week 1", and include your name as the author by including this line underneath the title:
-![rstudio console](../imgs/rstudio_notebook.png)
-
-```
-title: "Week 1" 
-author: "Sara"
-```
 Save the file as "yourname_week2.Rmd". Delete the instructions starting from "This is an [R...". For the different code below, insert it as R chunks. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
-
+As before, copy the code chunks into your R notebook as R chunks. 
 
 In the console window below the source window, check your working directory by typing in:
 
