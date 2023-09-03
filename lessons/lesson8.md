@@ -3,9 +3,10 @@
 This week's tutorial is on flow control and data wrangling in python. You will learn: 
 - Flow control statements
 - Functions and vectorised computations
-- 
 
-## Downloads 
+## Setting up
+Start a new notebook. Save the file as "yourname_week9.ipynb". 
+As before, copy the code into your notebook as chunks. 
 
 ## if statements
 Allow blocks of code to be executed only under specific conditions.
