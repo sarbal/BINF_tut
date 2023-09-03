@@ -84,9 +84,9 @@ library(wesanderson)
 ### Install Python
 
 Start off by downloading [R](https://cran.r-project.org/) and then [RStudio](https://www.rstudio.com/).
-- [Installing python for Windows](installwindows.md)
-- [Installing python for Mac](installmac.md)
-- [Installing python for Unix](installunix.md)
+- [Installing python for Windows](installwindows.md#installing-python)
+- [Installing python for Mac](installmac.md#installing-python)
+- [Installing python for Unix](installunix.md#installing-python)
 
 #### Install modules
 ``` 
