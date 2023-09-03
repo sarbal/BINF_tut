@@ -2,7 +2,7 @@
 # Installing software on Unix/Linux:
 
 ## Installing R:
-*Please make sure you install the latest version of R (R version 4.?).*
+*Please make sure you install the latest version of R (R version 4.3.1).*
 
 - Go to http://cran.r-project.org/
 - Click on `Download R for Linux`
