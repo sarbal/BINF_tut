@@ -214,21 +214,21 @@ plot(iris$Sepal.Length, iris$Petal.Length, pch=12, cex=3, lwd=4, lty=4, type="b"
 
 ![scatterplot](../imgs/plot_iris_4.png)
 
+- We can use the lowess function (lowess stands for locally weighted scatterplot smoothing) and is one of many non-parametric regression techniques) to plot a smoothed version of the scatter: 
 ```
-## Plotting smoothed version
 plot(lowess(iris$Sepal.Length, iris$Petal.Length), pch=19)
 ```
 
 ![scatterplot](../imgs/plot_iris_5.png)
 
+- Plotting using the formula method (~):  
 ```
-## Plotting using the forumla method 
 plot(Petal.Length ~ Sepal.Length, data=iris, pch=19, col=Species)
 ```
 
 ![scatterplot](../imgs/plot_iris_6.png)
 
-- We can view sepal width by species distributions with a boxplot, beanplot, or violinplot: 
+- We can view summary plots of the sepal width by species distributions with a boxplot, beanplot, or violinplot.  
 
 ``` 
 boxplot(iris$Sepal.Width~ iris$Species, col=1:3 )
@@ -345,9 +345,11 @@ lwd
 bty
 ... 
 ```
+
 - Going back to the matrix scatterplot, let's have a visual that summarizes all the data
+
 ```
-## Ignore these functions (for now) 
+## Ignore what these functions do for now, but copy them over 
 panel.hist <- function(x, ...)
 {
     usr <- par("usr"); on.exit(par(usr))
@@ -378,32 +380,38 @@ pairs(iris, bg=1:3,lower.panel = panel.smooth, pch=19, upper.panel = panel.cor, 
 
 - Great. What if we want to ask how similar are these individual plants to each other within each species. What can we look at?
 - Heatmaps and clustering!
+
 ```
 iris2  = apply(iris[,1:4], 2, as.numeric)
 heatmap.3(iris2, RowSideCol=cols7[as.numeric(iris$Species)] , col=viridis(100))
 ```
+
 ![heatmap](../imgs/iris_heatmap1.png)
 
 ```
 iris.r  = t(apply(iris[,1:4], 1, rank))
 heatmap.3(iris.r, RowSideCol=cols7[as.numeric(iris$Species)] , col=viridis(100))
+
 ```
 ![heatmap](../imgs/iris_heatmap2.png)
 
 ```
+
 iris.r2  = apply(iris[,1:4], 2, rank)
 heatmap.3(iris.r2, RowSideCol=cols7[as.numeric(iris$Species)] , col=viridis(100))
+
 ```
 ![heatmap](../imgs/iris_heatmap3.png)
 
+
 - We can also calculate how similar each sample is through the correlation function (across all their features). Plotting this allows us to visualise these similarities (color) and clustering them allows us to group the samples.
-- Note that each iris species clusters together (with very little mixing).  
+- Note that each iris species clusters together (with very little mixing).
+  
 ```
 samples.cor = cor( t(iris2) )
 heatmap.3(samples.cor, col=plasma(100), ColSideCol=cols7[as.numeric(iris$Species)])
 ```
 ![heatmap](../imgs/iris_heatmap4.png)
-
 
 
 
