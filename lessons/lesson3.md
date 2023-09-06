@@ -139,11 +139,12 @@ apply(mat, c(1,2), sum)
 
 - Other functions include lapply(), sapply() and tapply()
 ```
-sapply()
-```
+lapply(1:10, function(i) rep(10, i)) 
+sapply(1:10, function(i) rep(i^2, 10))
 
-```
-tapply()
+x = sample(10, size = 100, replace=T)
+y = rep( c("X","Y"), 50 )
+tapply(x,y, sum)
 ```
 
 
@@ -155,16 +156,19 @@ summary(iris)
 class(iris)
 colnames(iris)
 ```
+
 - the iris dataset is a dataframe, and the columns are labelled 
 - first, we can be a little uncouth, and plot everything 
 ``` 
 plot(iris)
 ```
 ![scatterplot](../imgs/plot_iris.png)
+
 - The pairs function works in a similar way, and plots a matrix of scatterplots We can specify only to show the lower panel:
 ```
 pairs(iris, upper.panel = NULL )
 ```
+
 ![scatterplot](../imgs/plot_iris_2.png)
 - Now that we've seen all the bits of the data, we can play with visualizing parts of it differently  
 - Let's start with a scatter plot of the sepal length versus the petal length
@@ -173,32 +177,40 @@ plot(iris$Sepal.Length, iris$Petal.Length, pch=19, col=as.numeric(iris$Species) 
 ```
 ![scatterplot3](../imgs/plot_iris_3.png)
 - let's play around with this
+
 ``` 
-## Playing with parameters 
 plot(iris$Sepal.Length, iris$Petal.Length, pch=12, cex=3, lwd=4, lty=4, type="b", col=colors()[sample(600,5)][as.numeric(iris$Species)] )
 ```
+
 ![scatterplot](../imgs/plot_iris_4.png)
+
 ```
 ## Plotting smoothed version
 plot(lowess(iris$Sepal.Length, iris$Petal.Length), pch=19)
 ```
+
 ![scatterplot](../imgs/plot_iris_5.png)
 
 ```
 ## Plotting using the forumla method 
 plot(Petal.Length ~ Sepal.Length, data=iris, pch=19, col=Species)
 ```
+
 ![scatterplot](../imgs/plot_iris_6.png)
 
 - We can view sepal width by species distributions with a boxplot, beanplot, or violinplot: 
+
 ``` 
 boxplot(iris$Sepal.Width~ iris$Species, col=1:3 )
 ```
+
 ![scatterplot](../imgs/plot_iris_boxplot.png)
+
 
 ```
 beanplot(iris$Sepal.Width~ iris$Species, col=list(1,2,3))
 ```
+
 ![scatterplot](../imgs/plot_iris_beanplot.png)
 
 ```
@@ -213,7 +225,9 @@ iris.bar = tapply( iris$Sepal.Length, iris$Species, mean)
 barplot(iris.bar, col="black", xlab="Species", ylab="Count", main="Bar plot of mean Sepal Length")
 ```
 ![scatterplot](../imgs/plot_iris_barplot.png)
+
 - or take a look at the distribution of petal width
+
 ``` 
 hist(iris$Petal.Width, col="lightblue")
 ```
@@ -223,13 +237,17 @@ hist(iris$Petal.Width, col="lightblue")
 - And there is a clear division (<0.75)
 - Let us take a look to see what is distinct about the first peak 
 - Since we want petal widths less than 0.75, we can slice the data:
+
 ``` 
 tapply(iris$Petal.Width < 0.75, iris$Species, sum)
 ```
+
 - That was easy enough, and we can show this again by coloring the histogram based on the species
 - Plots in R work by layering, so we can start by drawing the whole histogram first
 ```
+
 hist(iris$Petal.Width, col="lightblue")
+
 ```
 - And then adding each individual species as a layer  
 ```
@@ -238,21 +256,26 @@ hist(iris$Petal.Width[iris$Species=="versicolor"], col="blue", add=T)
 hist(iris$Petal.Width[iris$Species=="virginica"], col="purple", add=T)
 ```
 ![scatterplot](../imgs/plot_iris_hist_add_wrong.png)
+
 - Oops! The histograms are all wonky because we've not specified how to bin the data. R works "intuitively", and picks the best breaks for that data.  
 - We can force similar histogram breaks so that we can bin the data equally
+
 ```
 h <- hist(iris$Petal.Width, col="lightblue")
 h
 ```
 - The h variable has the histogram output
 - It has useful tags that we can use such as h$counts, h$mids and most importantly, h$breaks.   
+
 ```
 hist(iris$Petal.Width[iris$Species=="setosa"],  breaks=h$breaks,col="red", add=T)
 hist(iris$Petal.Width[iris$Species=="versicolor"], breaks=h$breaks, col="blue", add=T)
 hist(iris$Petal.Width[iris$Species=="virginica"],  breaks=h$breaks,col="purple", add=T)
 ```
 ![scatterplot](../imgs/plot_iris_hist_add_wrong2.png)
+
 - There is still some overlap, so we can play with the opacity of the colors, and force no color for the first histogram
+
 ```
 h <- hist(iris$Petal.Width, col=0, border=0)
 hist(iris$Petal.Width[iris$Species=="setosa"],  breaks=h$breaks,col=makeTransparent("red"), add=T)
@@ -262,13 +285,16 @@ hist(iris$Petal.Width[iris$Species=="virginica"],  breaks=h$breaks,col=makeTrans
 ```
 ![scatterplot](../imgs/plot_iris_hist_add_final.png)
 - How about some density lines? 
+
 ```
 h <- hist(iris$Petal.Width, freq=F)
 d_all <-density( iris$Petal.Width) 
 lines(d_all, col="black")
 ```
+
 ![scatterplot](../imgs/plot_iris_hist_add_density.png)
 - We can keep adding layers to our plots with other functions:
+
 ```
 points()
 polygon()
