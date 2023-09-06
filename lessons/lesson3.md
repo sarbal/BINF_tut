@@ -545,7 +545,7 @@ plot(1:n, col=turbo(n), pch=19, cex=5)
 
 
 ## Test yourself! 
-1. Load the file "lesson2.Rdata" into your environment.
+1. Download and load the file "lesson2.Rdata" into your environment.
 2. Plot three plots from the dataset "X" to answer the next set of questions. There are multiple columns in the dataset, so feel free to explore and play around first.
     a. What are the average weights per sex? Show as a histogram.
     b. What are the range of scute numbers per set? Show as a boxplot.
