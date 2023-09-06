@@ -138,6 +138,7 @@ apply(mat, c(1,2), sum)
 ```
 
 - Other functions include lapply(), sapply() and tapply()
+
 ```
 lapply(1:10, function(i) rep(10, i)) 
 sapply(1:10, function(i) rep(i^2, 10))
