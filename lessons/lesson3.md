@@ -419,45 +419,59 @@ heatmap.3(samples.cor, col=plasma(100), ColSideCol=cols7[as.numeric(iris$Species
 
 
 ## "Tidyr" versions 
-We can do most all of this with [ggplot2](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf).There are less things finicky things to worry about, and is generally more intuitive. 
+We can do most all of this with [ggplot2](https://github.com/rstudio/cheatsheets/blob/master/data-visualization-2.1.pdf).There are less finicky things to worry about, and is generally more intuitive. 
 ```
 g <- ggplot(iris, aes(x = Sepal.Length, y = Petal.Length)) 
 g
 ```
+
 ![ggplot](../imgs/iris_ggplot1.png)
 
 - This does nothing, because we've not specified what we want to draw:
+
 ```
 g <- g + geom_point()
 g
 ```
+
 ![ggplot](../imgs/iris_ggplot2.png)
 - Points! Now to color them:
+  
 ```
 g <- g + geom_point(aes(color = Species))
 g
+
 ```
 ![ggplot](../imgs/iris_ggplot3.png)
 - We can keep building onto the "g" variable. 
+
 ```
 g <- ggplot(iris, aes(x = Sepal.Length, y = Petal.Length, color = Species)) + geom_point()  +  geom_smooth(method = "lm", se = F) 
 g
 ```
+
 ![ggplot](../imgs/iris_ggplot4.png)
+
 - How about boxplots? 
+
 ```
 g <- ggplot(data=iris, aes(x=Species, y=Sepal.Length))
 g + geom_boxplot(aes(fill=Species)) + 
   ylab("Sepal Length") + ggtitle("Iris Boxplot")  
 ```
 ![ggplot](../imgs/iris_ggplot_boxplot.png)
+
 - Histograms:
+
 ```
 g <- ggplot(data=iris, aes(x=Petal.Width))
 g + geom_histogram(binwidth=0.2, color="black", aes(fill=Species)) +  xlab("Petal Width") +  ylab("Frequency") + ggtitle("Histogram of Petal Width") 
 ```
+
 ![ggplot](../imgs/iris_ggplot_hist.png)
+
 - Barplots:
+
 ```
 g <- ggplot(data=iris, aes(x=Species, y=Sepal.Length))
 g + geom_bar(stat = "summary", fun = "mean") + xlab("Species") +  ylab("Mean") + ggtitle("Bar plot of mean Sepal Length") 
@@ -466,26 +480,33 @@ g + geom_bar(stat = "summary", fun = "mean") + xlab("Species") +  ylab("Mean") +
 More [here](https://www.mailman.columbia.edu/sites/default/files/media/fdawg_ggplot2.html)
 
 ## Colors and palettes 
+
 ```
 colors() 
 palette()
 ```
+
 - Preset colors as strings or as numbers 
 - Or based on their RGB 
 - e.g.,
+
 ```
 blacks = c("black", 1, "#000000") 
 reds = c("red", 2, "#FF0000") 
 allreds = colors()[grep("red", colors())]
 ```
+
 - Color ramps 
+
  ```
 allredsRamp <- colorRampPalette(allreds)
 allredsRamp(100)
 grey2blue = colorpanel(100, "lightgrey", "blue", "darkblue")
 ```
+
 - Predefined palettes:
 - default R:
+
 ```
 rainbow(5)
 heat.colors(10)
@@ -493,13 +514,16 @@ terrain.colors(100)
 topo.colors(10)
 cm.colors(5)
 ```
+
 - R color brewer
 ```
 library(RColorBrewer)
 display.brewer.all()
 brewer.pal(8, "Set3" ) 
 ```
+
 - favorites are the viridis palettes (color-blind friendly)
+
 ```
 library(viridis)
 n=10
@@ -514,6 +538,7 @@ plot(1:n, col=plasma(n), pch=19, cex=5)
 n=100
 plot(1:n, col=turbo(n), pch=19, cex=5)
 ```
+
 ![plot](../imgs/plot_magma.png)
 ![plot](../imgs/plot_plasma.png)
 ![plot](../imgs/plot_turbo.png)
