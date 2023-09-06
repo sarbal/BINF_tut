@@ -13,24 +13,10 @@ Download these files into your working directory:
 
 Extract the data.zip folder.
 
-####  
-To check your working directory:
-```
-getwd()
-```
-To set your working diretory: 
-```
-setwd("X:/project")
-```
-Run this to install/load libraries
-```
-source("helper.R") 
-```
 ## Setting up
 Start a new notebook file by selecting "File" -> "New File" -> "R Notebook" 
 Save the file as "yourname_week4.Rmd". Delete the instructions starting from "This is an [R...". For the different code below, insert it as R chunks. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
 As before, copy the code chunks into your R notebook as R chunks. 
-
 
 ## Reading in data
 - Depending on the format, there are multiple ways to input data into R 
@@ -116,7 +102,7 @@ data_table_df = data.frame(mutation_types = mutation_types[-1], day1=day1[-1], d
 - APIs: using httr, jsonlite, e.g., https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/ 
 
 
-### Check data
+## Check data
 It is always very important to check that you have correctly read in your data. Some basic data/sanity checks. 
 - Does it looks like what you think it should? Did you read in the correct file? 
 - Same number of lines imported as the file contains? 
@@ -168,11 +154,9 @@ Tidyverse packages are designed to work well together.
 The basic data format for the tidyverse are "tibbles" (tidy tables). They work (and look) a little different to the basic R table, but can be manipulated with tidy based functions. 
 R will print only the first ten rows of a tibble as well as all of the columns that fit into your console window. R also adds useful summary information about the tibble, such as the data types of each column and the size of the data set.
 Note, when you do not have the tidyverse packages loaded, tibbles act as data.frames! 
-```
 
-```
-
-- You can transform a data frame to a tibble with the as_tibble() function. 
+- You can transform a data frame to a tibble with the as_tibble() function.
+  
 ```
 x <- c("A", "B", "C", "D")
 y <- 4:1
@@ -184,6 +168,7 @@ tibble_data = as_tibble(data_frame)
 ### Tidy functions 
 - `select()` and `filter()`, which let you extract rows and columns from a data frame
 - `arrange()`, which lets you reorder the rows in your data
+
 ```
 select(tibble_data, ID, num)
 filter(tibble_data, ID == "A")
@@ -191,7 +176,8 @@ arrange(tibble_data, num)
 ```
 
 - `%>%,` which organizes your code into reader-friendly “pipes”
-Another useful tidy functionality is the use of the pipe. This allows you to use the output of your last function into a new function, with no need to assign intermediate variables. Take for example the below steps: 
+Another useful tidy functionality is the use of the pipe. This allows you to use the output of your last function into a new function, with no need to assign intermediate variables. Take for example the below steps:
+
 ```
 iris_tibble = as_tibble(iris)
 
@@ -199,38 +185,48 @@ iris_tibble_set <- filter(iris_tibble, Species == "setosa", Petal.Length > 1.6 )
 iris_tibble_set <- select(iris_tibble_set, Sepal.Length, Sepal.Width)
 iris_tibble_set <- arrange(iris_tibble_set, desc(Sepal.Width))
 ```
+
 These could be combined:  
+
 ```
 arrange(select(filter(iris_tibble, Species == "setosa", Petal.Length > 1.6), Sepal.Length, Sepal.Width), desc(Sepal.Width))
 ```
+
 But this is a little hard to read. The pipe version "tidies" this to: 
+
 ```
 iris_tibble %>% 
   filter(Species == "setosa", Petal.Length > 1.6 ) %>% 
   select(Sepal.Length, Sepal.Width) %>% 
   arrange(desc(Sepal.Width))
 ```
+
 ### Extracting summaries 
 - `mutate()`, `group_by()`, and `summarize()`, which help you use your data to compute new variables and summary statistics
+- 
 ```
 summarise(iris_tibble, total = sum(Sepal.Width), max = max(Sepal.Width), mean = mean(Sepal.Width))
 ```
+
 ```
 iris_tibble %>%
     group_by(Sepal.Width, Species) %>% 
     summarise( sum(Sepal.Length))
 ```
+
 ```
 iris_tibble %>%
     group_by(Sepal.Width, Species) %>% 
     summarise( sum(Sepal.Length))
 ```
+
 ```
 iris_tibble %>%
   mutate(ratio = Sepal.Width/Petal.Width)
 ```
 
 ### Reshaping tidy data 
+
 - `gather()` - which reshapes wide data into long data. Newer version is called `pivot_longer()`
 - `spread()` - which reshapes long data into wide data. Newer version is called `pivot_wider()`
 ### Joining data 
