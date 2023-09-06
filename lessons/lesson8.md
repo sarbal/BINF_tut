@@ -118,3 +118,13 @@ def n_factorial(n):
     return val
 ```
 
+## Test yourself! 
+
+
+ 
+Solutions: Next week!
+
+
+ ## Resources  
+ 
+Back to the [homepage](../README.md)
