@@ -32,7 +32,7 @@ As before, copy the code chunks into your R notebook as R chunks.
 
 ## Flow control
 - Way to program different paths for the program to take
-- Come in the form of `if`, `else if`, and `else` statements, which allow you to execute code based on if a condition is met
+- Come in the form of `if`, `else if`, and `else` statements, which allow you to execute code based on if a condition is met. The structure is generally like so: 
 ```
 if(condition)
 {
@@ -40,7 +40,7 @@ if(condition)
 }
 ```
 
-- Extend the conditions with `else if` and `else` statements
+- Extend the conditions with `else if` and `else` statements:
 ```
 if(condition1)
 {
@@ -56,8 +56,8 @@ else
 }
 ```
 
-- can have as many `else if` statements as you wish following an `if`
-- 
+- We can have as many `else if` statements as you wish following an `if`. Example (copy this): 
+
 ```
 i = 2 
 if( i > 0 )
@@ -73,7 +73,7 @@ else {
 }
 ```
 
-- can also only have a sole `if` statement 
+- Can also only have a sole `if` statement 
 ```
 ID = "Sara"
 if( ID == "Sara" )
@@ -87,14 +87,14 @@ ifelse(i>0, "Positive!", "Negative!")
 ```
 
 ## Loops and apply functions 
-- Loops, like in most other languages, run while certain conditions are met (while loop) 
+- Loops, like in most other languages, run while certain conditions are met (while loop): 
 ```
 while (test_expression)
 {
   do_this
 }
 ```
-- example: 
+- An example (copy this): 
 ```
 i = 10 
 while (i > 0)
@@ -110,7 +110,8 @@ for (i in objects)
   do_this
 }
 ```
-- example: 
+
+- Example (copy this): 
 ```
 for (i in 1:10)
 {
@@ -119,34 +120,62 @@ for (i in 1:10)
 ```
 
 
--  A similar but more efficient set of functions are the apply functions.
+-  A similar but more efficient set of functions are the apply functions. 
 -  Main function of the apply group: apply().
 -  It takes a data.frame, a matrix, or a multi-dimensional array as input and, depending on the input object type and the function passed in, outputs a vector, a list, a matrix, or an array.
 -  MARGIN -> 1 for rows, 2 for columns, and c(1,2) for both! 
 ```
 apply(X, MARGIN, FUN)
 ```
-- example, using it to sum across rows of a matrix
+- example, using it to sum across rows of a matrix (copy this)
 ```
 mat = matrix(sample(100), nrow=10, ncol=10 )
 apply(mat, 1, sum)
 ```
-- example
+- example (copy this)
 ```
 mat = matrix(sample(100), nrow=10, ncol=10 )
 apply(mat, c(1,2), sum)
 ```
 
 - Other functions include lapply(), sapply() and tapply()
+- lapply() and sapply() work the same, but one has lists as outputs, and the other vectors. X below is either an object or a list. FUN is the function.  
 
+```
+lapply(X, FUN)
+sapply(X, FUN) 
+```
+- examples :   
 ```
 lapply(1:10, function(i) rep(10, i)) 
 sapply(1:10, function(i) rep(i^2, 10))
+```
 
+- tapply() is similar, but this time it allows you to subset your object and apply the function to that set. In addition to the X and FUN input, it takes in an INDEX. 
+```
+tapply(X, INDEX, FUN)
+```
+
+- Example, we can find the sum of the different numbers associated with either "X" or "Y": 
+
+```
 x = sample(10, size = 100, replace=T)
 y = rep( c("X","Y"), 50 )
 tapply(x,y, sum)
 ```
+
+- Or calcualte their mean
+```
+tapply(x,y, mean)
+```
+
+- Or group the numbers into a list:
+
+```
+tapply(x,y, list)
+```
+
+
 
 
 ## Visuals
