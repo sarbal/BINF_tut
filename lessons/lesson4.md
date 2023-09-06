@@ -19,7 +19,8 @@ Save the file as "yourname_week4.Rmd". Delete the instructions starting from "Th
 As before, copy the code chunks into your R notebook as R chunks. 
 
 ## Reading in data
-- Depending on the format, there are multiple ways to input data into R 
+- Depending on the format, there are multiple ways to input data into R
+  
 ### From files
 - From a comma or tab separated file:
 ```
@@ -203,7 +204,7 @@ iris_tibble %>%
 
 ### Extracting summaries 
 - `mutate()`, `group_by()`, and `summarize()`, which help you use your data to compute new variables and summary statistics
-- 
+  
 ```
 summarise(iris_tibble, total = sum(Sepal.Width), max = max(Sepal.Width), mean = mean(Sepal.Width))
 ```
@@ -229,10 +230,12 @@ iris_tibble %>%
 
 - `gather()` - which reshapes wide data into long data. Newer version is called `pivot_longer()`
 - `spread()` - which reshapes long data into wide data. Newer version is called `pivot_wider()`
+  
 ### Joining data 
 - `left_join()`, `right_join()`, `full_join()`, and `inner_join()` - which augment a copy of one data frame with information from a second
 - `semi_join()` and `anti_join()` - which filter the contents of one data frame against the contents of a second
 - `bind_rows()`, `bind_cols()`, and set operations - which combine data sets in more simple ways
+  
 ### Other 
 - `separate()` - which separates a column of cells into multiple columns
 - `unite()` - which combines multiple columns of cells into a single column
