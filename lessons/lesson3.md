@@ -214,7 +214,7 @@ plot(iris$Sepal.Length, iris$Petal.Length, pch=12, cex=3, lwd=4, lty=4, type="b"
 
 ![scatterplot](../imgs/plot_iris_4.png)
 
-- We can use the lowess function (lowess stands for locally weighted scatterplot smoothing) and is one of many non-parametric regression techniques) to plot a smoothed version of the scatter: 
+- We can use the lowess function (lowess stands for locally weighted scatterplot smoothing and is one of many non-parametric regression techniques) to plot a smoothed version of the scatter: 
 ```
 plot(lowess(iris$Sepal.Length, iris$Petal.Length), pch=19)
 ```
