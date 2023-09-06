@@ -238,10 +238,9 @@ iris_tibble %>%
 - `unite()` - which combines multiple columns of cells into a single column
 
 ## Test yourself! 
-1. Create an R markdown file (using RStudio). Save the file as "yourname_Lesson3.Rmd". Once again, delete the instructions starting from "This is an [R...". For the remaining exercises, insert the code as R chunks when you are satisified with your solutions. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
-2. Load the file "lesson3.Rdata" into your environment. Check and tidy up the datasets.
-3. Plot the 13 sets within the datasaurus object. Calculate the mean and standard deviation of x and y, and then the pearson correlation between x and y. Record all these values. Why is it important to visualise your data?   
-4. "Knit" your R markdown file into an html page or a pdf.  
+1. Download and load the file "lesson3.Rdata" into your environment. 
+2. Plot the 13 sets within the datasaurus object. Calculate the mean and standard deviation of x and y, and then the pearson correlation between x and y. Record all these values. Why is it important to visualise your data?   
+3. "Knit" your R markdown file into an html page or a pdf.  
  
 Solutions: Next week!
 
