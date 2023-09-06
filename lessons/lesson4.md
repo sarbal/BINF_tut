@@ -102,6 +102,44 @@ data_table_df = data.frame(mutation_types = mutation_types[-1], day1=day1[-1], d
 - SQL databases: using DBI, dblplyr, or plyr. e.g., SRADB https://www.rdocumentation.org/packages/SRAdb/versions/1.30.0/topics/getSRA 
 - APIs: using httr, jsonlite, e.g., https://www.r-bloggers.com/accessing-apis-from-r-and-a-little-r-programming/ 
 
+- Let's try an API example.
+
+```{r}
+install.packages(c("httr", "jsonlite"))
+
+library("httr")
+library("jsonlite")
+
+uniprot_acc <- c("P21675")  # change this to your favorite protein
+
+# Get UniProt entry by accession 
+acc_uniprot_url <- c("https://www.ebi.ac.uk/proteins/api/proteins?accession=")
+
+comb_acc_api <- paste0(acc_uniprot_url, uniprot_acc)
+
+# basic function is GET() which accesses the API
+protein <- GET(comb_acc_api,
+           accept_json())
+
+status_code(protein)  # returns a 200 means it worked
+
+# use content() function from httr to give us a list 
+protein_json <- content(protein) # gives a Large list
+
+
+# Get features 
+feat_api_url <- c("https://www.ebi.ac.uk/proteins/api/features?offset=0&size=100&accession=")
+
+comb_acc_api <- paste0(feat_api_url, uniprot_acc)
+
+# basic function is GET() which accesses the API
+prot_feat <- GET(comb_acc_api,
+           accept_json())
+
+prot_feat_json <- content(prot_feat) # gives a Large list
+ 
+```
+
 
 ## Check data
 It is always very important to check that you have correctly read in your data. Some basic data/sanity checks. 
