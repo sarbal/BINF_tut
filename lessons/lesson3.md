@@ -274,12 +274,13 @@ tapply(iris$Petal.Width < 0.75, iris$Species, sum)
 
 - That was easy enough, and we can show this again by coloring the histogram based on the species
 - Plots in R work by layering, so we can start by drawing the whole histogram first
+  
 ```
-
 hist(iris$Petal.Width, col="lightblue")
-
 ```
+
 - And then adding each individual species as a layer  
+
 ```
 hist(iris$Petal.Width[iris$Species=="setosa"], col="red", add=T)
 hist(iris$Petal.Width[iris$Species=="versicolor"], col="blue", add=T)
@@ -294,6 +295,7 @@ hist(iris$Petal.Width[iris$Species=="virginica"], col="purple", add=T)
 h <- hist(iris$Petal.Width, col="lightblue")
 h
 ```
+
 - The h variable has the histogram output
 - It has useful tags that we can use such as h$counts, h$mids and most importantly, h$breaks.   
 
