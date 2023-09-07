@@ -12,7 +12,7 @@ Let's start at the very beginning [(a very good place to start)](/lessons/intro.
 Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/installwindows.md), [macs](/lessons/installmac.md), or [linux](/lessons/installunix.md/)
 
 ## Week 2: Python basics 
-[Restart!](/lessons/lesson6.md)   
+[Start here!](/lessons/lesson6.md)   
 
 ## Week 3: Data Viz 
 [Python visualisations.](/lessons/lesson7.md)
