@@ -1,4 +1,4 @@
-# Week 7: Python basics
+# Week 2: Python basics
 Taken/adapted from: https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python2
 ## Objectives 
 - Introduce you to as many concepts in python as possible.
@@ -20,7 +20,7 @@ Python can also be run interactively. Type in "python" into the terminal. Paste/
 
 Finally, you can also run python in a Jupyter notebook. The extension for this is ".ipynb". Each "chunk" of code can be run within the notebook. 
 ![vscode](../imgs/vscode4.png)
-Save a Jupyter notebook as "yourname_week7.ipynb". Similar to an R markdown notebook, you can write and run your code chunks in this file. Make sure to save! As before, copy the code throughout the tutorial into your notebook.  
+Save a Jupyter notebook as "yourname_week2.ipynb". Similar to an R markdown notebook, you can write and run your code chunks in this file. Make sure to save! As before, copy the code throughout the tutorial into your notebook.  
 
 ## Defintions
 - Variables
