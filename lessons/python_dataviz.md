@@ -1,4 +1,4 @@
-# Week : Data Viz
+# Week 3: Data Viz
 ## Objectives 
 - Plotting and displaying data in python
 - Using numpy, pandas and seaborn libraries
@@ -11,7 +11,7 @@ pip -q install palmerpenguins
 ```
 
 ## Setting up
-Start a new notebook. Save the file as "yourname_week8.ipynb". 
+Start a new notebook. Save the file as "yourname_week3.ipynb". 
 As before, copy the code into your notebook as chunks. 
 
 ### Installing and importing libraries 
