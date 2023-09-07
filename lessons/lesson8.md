@@ -1,11 +1,11 @@
-# Week 9: Snakes on a plane 
+# Week 4: Snakes on a plane 
 ## Objectives 
 This week's tutorial is on flow control and data wrangling in python. You will learn: 
 - Flow control statements
 - Functions and vectorised computations
 
 ## Setting up
-Start a new notebook. Save the file as "yourname_week9.ipynb". 
+Start a new notebook. Save the file as "yourname_week4.ipynb". 
 As before, copy the code into your notebook as chunks. 
 
 ## if statements
