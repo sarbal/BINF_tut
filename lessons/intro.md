@@ -8,14 +8,14 @@ Hi! Welcome to the BINF2010 tutorial stream.
 
 ## CouRse outline
 1. Week 1: [Intro](intro.md)
-2. Week 2: R basics[](lesson2.md)
-3. Week 3: Data Viz in R[](lesson3.md)
-4. Week 4: A fun example[](lesson4.md)
-5. Week 5: So shiny![](lesson5.md)
+2. Week 2: Introduction to Python[](lesson6.md)
+3. Week 3: Data Viz[](lesson7.md)
+4. Week 4: Snakes on a plane[](lesson8.md)
+5. Week 5: R basics[](lesson2.md)
 6. Week 6: BReak! 
-7. Week 7: Introduction to Python[](lesson6.md)
-8. Week 8: Data Viz[](lesson7.md)
-9. Week 9: Snakes on a plane[](lesson8.md)
+7. Week 7: Data Viz in R[](lesson3.md)
+8. Week 8: A fun example[](lesson4.md)
+9. Week 9: So shiny![](lesson5.md)
 10. Week 10: Recap[](lesson9.md)
 
 ## What is R? 
@@ -91,34 +91,12 @@ Start off by downloading [VSCode](https://code.visualstudio.com/) and then [Pyth
 #### Install modules
 ``` 
 pip install matplotlib
+pip install biopython
 ```
 #### Import modules
 ```
 import matplotlib
 ```
-
-## WheRe to get help
-- [Rstudio](https://www.rstudio.com/)
-- [R-Bloggers](https://www.r-bloggers.com/)
-- [Stat Methods](https://www.statmethods.net/index.html)
-
-## OtheR useful stuff 
-- [Plotly](https://plot.ly/r/)
-- [Shiny](https://shiny.rstudio.com/)
-- [RMarkdown](https://rmarkdown.rstudio.com/)
-- [Cheatsheets](https://www.rstudio.com/resources/cheatsheets/) 
-- [Swirl](http://swirlstats.com/)
-- [Tidyverse](https://www.tidyverse.org/)
-- [R tutorials](https://www.listendata.com/p/r-programming-tutorials.html)
-- [Genomics classes](http://genomicsclass.github.io/book/)
-- [RLang](https://twitter.com/@RLangTip)
-- [Data viz](http://serialmentor.com/dataviz/)
-- [Advanced R](https://adv-r.hadley.nz/)
-- [50 Practical data sci stats](https://peerj.com/collections/50-practicaldatascistats/)
-- [CSAMA](http://www-huber.embl.de/csama2018/#home)
-- [Composing-reproducible-manuscripts-using-r-markdown](https://elifesciences.org/labs/cad57bcf/composing-reproducible-manuscripts-using-r-markdown)
-
-
 
 ## Testing your installation - R 
 Make sure you have installed Rstudio and R correctly. 
@@ -157,6 +135,36 @@ Then run this bit of code in your console. Note, it might take a little while, b
 ```
 source("helper.R") 
 ```
+
+
+## Testing your installation - Python 
+Make sure you have installed VSCode and Python correctly. 
+
+
+
+
+## WheRe to get help
+- [Rstudio](https://www.rstudio.com/)
+- [R-Bloggers](https://www.r-bloggers.com/)
+- [Stat Methods](https://www.statmethods.net/index.html)
+
+## OtheR useful stuff 
+- [Plotly](https://plot.ly/r/)
+- [Shiny](https://shiny.rstudio.com/)
+- [RMarkdown](https://rmarkdown.rstudio.com/)
+- [Cheatsheets](https://www.rstudio.com/resources/cheatsheets/) 
+- [Swirl](http://swirlstats.com/)
+- [Tidyverse](https://www.tidyverse.org/)
+- [R tutorials](https://www.listendata.com/p/r-programming-tutorials.html)
+- [Genomics classes](http://genomicsclass.github.io/book/)
+- [RLang](https://twitter.com/@RLangTip)
+- [Data viz](http://serialmentor.com/dataviz/)
+- [Advanced R](https://adv-r.hadley.nz/)
+- [50 Practical data sci stats](https://peerj.com/collections/50-practicaldatascistats/)
+- [CSAMA](http://www-huber.embl.de/csama2018/#home)
+- [Composing-reproducible-manuscripts-using-r-markdown](https://elifesciences.org/labs/cad57bcf/composing-reproducible-manuscripts-using-r-markdown)
+
+
 
 And that's it for this week! 
 
