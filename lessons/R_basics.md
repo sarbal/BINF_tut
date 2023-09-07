@@ -1,4 +1,4 @@
-# Week 2: R basics
+# Week 5: R basics
 ## Objectives
 This tutorial will teach you background knowledge on R. 
 You’ll learn about:
@@ -9,14 +9,14 @@ You’ll learn about:
 
 ## Downloads
 First things first! Download these files into your working directory: 
-- [data](../data/lesson1.Rdata)
+- [data](../data/r_basics.Rdata)
 - [helper.R](../data/helper.R)
 
 
 ## Setting up
 Open up Rstudio.
 Start a new notebook file by selecting "File" -> "New File" -> "R Notebook" 
-Save the file as "yourname_week2.Rmd". Delete the instructions starting from "This is an [R...". For the different code below, insert it as R chunks. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
+Save the file as "yourname_week5.Rmd". Delete the instructions starting from "This is an [R...". For the different code below, insert it as R chunks. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
 For this tutorial, you will be copying the code chunks below into your R notebook as R chunks. 
 
 ## Defintions
