@@ -1,4 +1,4 @@
-# Week 4: A fun(ctional) example
+# Week 8: A fun(ctional) example
 ## Objectives 
 Let's play with real data! Learn the most important data handling skills. In this tutorial: 
 - Extracting values from a table
@@ -7,7 +7,7 @@ Let's play with real data! Learn the most important data handling skills. In thi
 
 ## Downloads 
 Download these files into your working directory: 
-- [data](../data/lesson3.Rdata) 
+- [data](../data/R_datafun.Rdata) 
 - [helper.R](../data/helper.R)
 - [extra data](../data/my_data.zip)
 
@@ -15,7 +15,7 @@ Extract the data.zip folder.
 
 ## Setting up
 Start a new notebook file by selecting "File" -> "New File" -> "R Notebook" 
-Save the file as "yourname_week4.Rmd". Delete the instructions starting from "This is an [R...". For the different code below, insert it as R chunks. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
+Save the file as "yourname_week8.Rmd". Delete the instructions starting from "This is an [R...". For the different code below, insert it as R chunks. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
 As before, copy the code chunks into your R notebook as R chunks. 
 
 ## Reading in data
