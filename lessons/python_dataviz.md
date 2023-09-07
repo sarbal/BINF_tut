@@ -1,4 +1,4 @@
-# Week 8: Data Viz
+# Week : Data Viz
 ## Objectives 
 - Plotting and displaying data in python
 - Using numpy, pandas and seaborn libraries
