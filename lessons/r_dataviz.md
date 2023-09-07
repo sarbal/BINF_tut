@@ -1,4 +1,4 @@
-# Week 3: Data vizualisation and exploratory analysis 
+# Week 7: Data vizualisation and exploratory analysis 
 ## Objectives 
 Some visual things you can do with R and ways to explore your data systematically.
 In the tutorial you will:
@@ -10,7 +10,7 @@ In the tutorial you will:
 ## Downloads 
 Once more, download these files into your working directory: 
 
-- [data](../data/lesson2.Rdata). 
+- [data](../data/r_dataviz.Rdata). 
 - [helper.R](../data/helper.R)
 
 To check your working directory:
@@ -27,7 +27,7 @@ source("helper.R")
 ```
 ## Setting up
 Start a new notebook file by selecting "File" -> "New File" -> "R Notebook" 
-Save the file as "yourname_week3.Rmd". Delete the instructions starting from "This is an [R...". For the different code below, insert it as R chunks. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
+Save the file as "yourname_week7.Rmd". Delete the instructions starting from "This is an [R...". For the different code below, insert it as R chunks. An R chunk is code placed  after a line that starts with ` ```{ r } `and ends before a line with ` ``` `.  
 As before, copy the code chunks into your R notebook as R chunks. 
 
 ## Flow control
