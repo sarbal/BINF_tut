@@ -3,6 +3,7 @@
 This week's tutorial is on flow control and data wrangling in python. You will learn: 
 - Flow control statements
 - Functions and vectorised computations
+- Biopython
 
 ## Setting up
 Start a new notebook. Save the file as "yourname_week4.ipynb". 
