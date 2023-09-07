@@ -119,6 +119,83 @@ def n_factorial(n):
     return val
 ```
 
+## Biopython
+Biopython is a set of freely available tools for biological computation written in Python by an international team of developers.
+It is a distributed collaborative effort to develop Python libraries and applications which address the needs of current and future work in bioinformatics. 
+Quick install: 
+
+```
+pip install biopython
+```
+Then import into your notebook (or console/terminal or script):
+
+```
+import Bio
+```
+There is a lot of functionality in [biopython](https://biopython.org/docs/ ) (too much to cover here) but revolve around sequences and sequence analysis. 
+These include BLAST searches, downloading sequences from NCBI, Phylogenetics, Cluster analysis, Graphics, etc. 
+The most useful function is accessing NCBI through their e-utils API. 
+Some extra tutorials here: https://biopython-tutorial.readthedocs.io/en/latest/notebooks/00%20-%20Tutorial%20-%20Index.html#  *NOTE: these will be important for your assigmment...*   
+### Sequences 
+```
+from Bio.Seq import Seq
+
+my_seq = Seq("CATGTAGACTAG")
+
+# print out some details about it
+print("seq %s is %i bases long" % (my_seq, len(my_seq)))
+```
+
+### Reading and writing Sequence Files
+Use the SeqIO module for reading or writing sequences as SeqRecord objects.
+```
+from Bio import SeqIO
+from Bio.Seq import Seq
+from Bio.SeqRecord import SeqRecord
+
+record = SeqRecord(
+    Seq("MKQHKAMIVALIVICITAVVAALVTRKDLCEVHIRTGQTEVAVF"),
+    id="YP_025292.1",
+    name="HokC",
+    description="toxic membrane protein, small",
+)
+print(record)
+# As Genbank entry
+Bio.SeqIO.write(record, "HokC.gbk", "gb")
+# As FASTA file 
+Bio.SeqIO.write(record, "HokC.fasta", "fasta")
+```
+Other formats here: 
+- https://biopython.org/wiki/SeqIO
+
+
+### Using E-utils
+```
+from Bio import Entrez
+Entrez.email = "my.email@unsw.edu.au"
+Entrez.tool = "my_script.py"
+```
+Searching:
+```  
+handle = Entrez.esearch(db="XXX", term=query)
+record = Entrez.read(handle)
+```
+
+Fetching:
+```
+handle = Entrez.efetch(db="XXXX", id=input, retmode="xml")
+record = Entrez.read(handle)
+```
+
+Cross IDs search:
+```
+handle = Entrez.elink(dbfrom="assembly", db="nucleotide", from_uid=accession)
+links = Entrez.read(handle)
+```
+
+More here: 
+https://biopython.org/docs/1.75/api/Bio.Entrez.html
+
 ## Test yourself! 
 1. Create a dictionary called dna_map that maps DNA bases to their complementary bases. I.e., A -> T, C -> G, etc..
 2. Use str.maketrans() to convert this to a "translation table" named dna_table.
@@ -128,7 +205,8 @@ mcs_seq = 'GAGACCCAAGCTGGCTAGCGTTTAAACTTAAGCTTGGTACCGAGCTCGGATCCACTA' \
           'GTCCAGTGTGGTGGAATTCTGCAGATATCCAGCACAGTGGCGGCCGCTCGAGTCTAG' \
           'AGGGCCCGTTTAAACCCGCTGATCAGCCT'
 ```
-
+4. Repeat question 3 but using the SeqIO module functions.
+  
 
 
  
