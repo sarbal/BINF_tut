@@ -207,12 +207,7 @@ mcs_seq = 'GAGACCCAAGCTGGCTAGCGTTTAAACTTAAGCTTGGTACCGAGCTCGGATCCACTA' \
 ```
 4. Repeat question 3 but using the SeqIO module functions.
   
-
-
  
 Solutions: Next week!
 
-
- ## Resources  
- 
 Back to the [homepage](../README.md)
