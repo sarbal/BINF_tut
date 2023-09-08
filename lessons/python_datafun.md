@@ -11,6 +11,7 @@ Start a new notebook. Save the file as "yourname_week4.ipynb".
 As before, copy the code into your notebook as chunks. 
 
 ## Download 
+- [tab file](DatasaurusDozen.txt)
 - [csv file](data.csv)
 - [json file](data.json)
     
