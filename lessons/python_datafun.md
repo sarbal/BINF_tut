@@ -9,6 +9,10 @@ This week's tutorial is on flow control and data wrangling in python. You will l
 Start a new notebook. Save the file as "yourname_week4.ipynb". 
 As before, copy the code into your notebook as chunks. 
 
+## Download 
+- [csv file](data.csv)
+- [json file](data.json)
+    
 ## if statements
 Allow blocks of code to be executed only under specific conditions.
 ```
