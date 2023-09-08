@@ -157,8 +157,8 @@ import pandas as pd
 df = pd.read_csv('data.csv')
 print(df.to_string())
 
-df = pd.read_json('data.json')
-print(df.to_string())
+df_js = pd.read_json('data.json')
+print(df_js.to_string())
 ```
 
 As a data frame, you can manipulate/look at your data: 
