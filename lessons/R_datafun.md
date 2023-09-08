@@ -59,7 +59,7 @@ library("tidyverse")
 pdf_filename  <- "elife-27469-v1.pdf"
 pdf_text_extract <- pdf_text(pdf_filename)
 length(pdf_text_extract)
-# load("lesson3.Rdata") # if the pdf extraction didn't work
+# load("R_datafun.Rdata") # if the pdf extraction didn't work
 ```
 
 
