@@ -3,6 +3,7 @@
 This week's tutorial is on flow control and data wrangling in python. You will learn: 
 - Flow control statements
 - Functions and vectorised computations
+- More on pandas for data wrangling
 - Biopython
 
 ## Setting up
