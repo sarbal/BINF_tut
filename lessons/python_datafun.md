@@ -119,6 +119,97 @@ def n_factorial(n):
     return val
 ```
 
+## Input 
+### Command line input 
+Reading in input from the command-line is in the argv from the sys module: 
+```
+import sys
+print 'Number of arguments:', len(sys.argv), 'arguments.'
+print 'Argument List:', str(sys.argv)
+```
+Note, the first argument is the name of the script. 
+
+### Reading/writing files 
+Reading in input from a file with the open() function. It takes in two parameters: filename, and method.
+There are four different modes for opening a file:
+- "r" - Read - Default value. Opens a file for reading, error if the file does not exist
+- "a" - Append - Opens a file for appending, creates the file if it does not exist
+- "w" - Write - Opens a file for writing, creates the file if it does not exist
+- "x" - Create - Creates the specified file, returns an error if the file exists
+  
+```
+f = open("file.txt", "r")
+print(f.readline()) # per line
+print(f.read()) # whole document 
+f.close()
+```
+In addition you can specify if the file should be handled as binary or text mode
+- "t" - Text - Default value. Text mode
+- "b" - Binary - Binary mode (e.g. images)
+
+### Reading in files with pandas
+```
+import pandas as pd
+df = pd.read_csv('file.csv')
+print(df.to_string())
+
+df = pd.read_json('file.json')
+print(df.to_string())
+```
+
+As a data frame, you can manipulate/look at your data: 
+
+```
+print(df.head(10))
+print(df.tail()) 
+```
+
+Dropping empty cells
+```
+new_df = df.dropna()
+df.dropna(inplace = True) # replaces within the same dataframe
+```
+
+Dropping rows 
+```
+df.dropna(subset=['Date'], inplace = True)
+```
+
+Replacing cells 
+```
+df.fillna(130, inplace = True) # replace NAs with fill value
+df["Calories"].fillna(130, inplace = True) # replace values in the column "Calories" with fill value 
+x = df["Calories"].mean()
+df["Calories"].fillna(x, inplace = True) # replace with mean
+```
+
+Changing format 
+
+```
+df['Date'] = pd.to_datetime(df['Date'])
+print(df.to_string())
+```
+
+Set values that are "wrong" (mistakes in data entry/recording) to a max value.
+
+```
+for x in df.index:
+  if df.loc[x, "Duration"] > 120:
+    df.loc[x, "Duration"] = 120
+```
+
+Or you can drop the rows that meet that criteria: 
+```
+for x in df.index:
+  if df.loc[x, "Duration"] > 120:
+    df.drop(x, inplace = True)
+```
+
+Another issue could be duplicated rows. You can use this check to find them: 
+```
+print(df.duplicated())
+```
+ 
 ## Biopython
 Biopython is a set of freely available tools for biological computation written in Python by an international team of developers.
 It is a distributed collaborative effort to develop Python libraries and applications which address the needs of current and future work in bioinformatics. 
