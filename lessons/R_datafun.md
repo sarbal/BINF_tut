@@ -20,7 +20,13 @@ As before, copy the code chunks into your R notebook as R chunks.
 
 ## Reading in data
 - Depending on the format, there are multiple ways to input data into R
-  
+
+### From command line 
+This works when you run an R script from command line (and not in your notebook). 
+```
+args = commandArgs(trailingOnly=TRUE)
+```
+
 ### From files
 - From a comma or tab separated file:
 ```
