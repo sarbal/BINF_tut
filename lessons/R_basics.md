@@ -9,7 +9,7 @@ You’ll learn about:
 
 ## Downloads
 First things first! Download these files into your working directory: 
-- [data](../data/r_basics.Rdata)
+- [data](../data/R_basics.Rdata)
 - [helper.R](../data/helper.R)
 
 
@@ -36,7 +36,7 @@ print("Hello World")
 - The print function is given an argument (also known as input) within the '()' . All functions are called this way.
 
 ``` 
-load("lesson1.Rdata")
+load("R_basics.Rdata")
 sum(x)
 plot(x,y)
 require(limma)
