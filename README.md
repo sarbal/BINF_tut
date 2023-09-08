@@ -12,30 +12,30 @@ Let's start at the very beginning [(a very good place to start)](/lessons/intro.
 Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/installwindows.md), [macs](/lessons/installmac.md), or [linux](/lessons/installunix.md/)
 
 ## Week 2: Python basics 
-[Start here!](/lessons/lesson6.md)   
+[Start here!](/lessons/python_basics.md)   
 
 ## Week 3: Data Viz 
-[Python visualisations.](/lessons/lesson7.md)
+[Python visualisations.](/lessons/python_dataviz.md)
 
 ## Week 4: Snakes on a plane 
-[Data wrangling.](/lessons/lesson8.md)
+[Data wrangling.](/lessons/python_datafun.md)
 
 ## Week 5: R basics 
-[First things first! Let's get started.](/lessons/lesson2.md)   
+[First things first! Let's get started.](/lessons/R_basics.md)   
 
 ## Week 6: BReak!
 
 ## Week 7: More R 
-[Some visual things you can do with R.](/lessons/lesson3.md)
+[Some visual things you can do with R.](/lessons/R_dataviz.md)
 
 ## Week 8: A fun example 
-[Let's play with real data.](/lessons/lesson4.md)
+[Let's play with real data.](/lessons/R_datafun.md)
 
 ## Week 9: So shiny!
-[Let's make something interactive.](/lessons/lesson5.md)
+[Let's make something interactive.](/lessons/R_shiny.md)
 
 ## Week 10: Recap
-[Reproducing some analyses.](/lessons/lesson9.md)
+[Reproducing some analyses.](/lessons/recap.md)
 
 
 
