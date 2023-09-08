@@ -138,7 +138,7 @@ There are four different modes for opening a file:
 - "x" - Create - Creates the specified file, returns an error if the file exists
   
 ```
-f = open("file.txt", "r")
+f = open("data.txt", "r")
 print(f.readline()) # per line
 print(f.read()) # whole document 
 f.close()
@@ -150,10 +150,10 @@ In addition you can specify if the file should be handled as binary or text mode
 ### Reading in files with pandas
 ```
 import pandas as pd
-df = pd.read_csv('file.csv')
+df = pd.read_csv('data.csv')
 print(df.to_string())
 
-df = pd.read_json('file.json')
+df = pd.read_json('data.json')
 print(df.to_string())
 ```
 
@@ -184,9 +184,8 @@ df["Calories"].fillna(x, inplace = True) # replace with mean
 ```
 
 Changing format 
-
 ```
-df['Date'] = pd.to_datetime(df['Date'])
+df['Date'] = pd.to_datetime(df['Date'], format="mixed", yearfirst=True)   
 print(df.to_string())
 ```
 
@@ -208,6 +207,7 @@ for x in df.index:
 Another issue could be duplicated rows. You can use this check to find them: 
 ```
 print(df.duplicated())
+df.drop_duplicates(inplace = True)
 ```
  
 ## Biopython
