@@ -7,7 +7,7 @@
 Let's do some analyses. 
 
 Download these files into your working directory: 
-- [data](../data/lesson4.Rdata) 
+- [data](../data/recap.Rdata) 
 - [helper.R](../data/helper.R)
 
 Run this to install/load libraries
