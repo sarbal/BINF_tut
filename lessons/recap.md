@@ -13,7 +13,7 @@ Download these files into your working directory:
 Run this to install/load libraries
 ```
 source("helper.R") 
-load("lesson4.Rdata")
+load("recap.Rdata")
 ```
 
 ### Gene set enrichment (GSE) in R 
