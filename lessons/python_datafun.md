@@ -11,7 +11,7 @@ Start a new notebook. Save the file as "yourname_week4.ipynb".
 As before, copy the code into your notebook as chunks. 
 
 ## Download 
-- [tab file](DatasaurusDozen.txt)
+- [text/tab file](DatasaurusDozen.txt)
 - [csv file](data.csv)
 - [json file](data.json)
     
@@ -144,11 +144,13 @@ There are four different modes for opening a file:
 - "x" - Create - Creates the specified file, returns an error if the file exists
   
 ```
-f = open("data.txt", "r")
+f = open("DatasaurusDozen.txt", "r")
 print(f.readline()) # per line
 print(f.read()) # whole document 
 f.close()
 ```
+(we will have a play with this data file later I promise) 
+
 In addition you can specify if the file should be handled as binary or text mode
 - "t" - Text - Default value. Text mode
 - "b" - Binary - Binary mode (e.g. images)
