@@ -140,6 +140,25 @@ source("helper.R")
 ## Testing your installation - Python 
 Make sure you have installed VSCode and Python correctly. 
 
+Open up VSCode 
+![rstudio console](../imgs/vscode_install.png)
+
+If an Untitled-1 file appears, click on Select a Language at the top of the new file and search for Python.
+![rstudio console](../imgs/vscode_python.png)
+
+Otherwise, click on "File -> New Text File", and that should open a new document. 
+![rstudio console](../imgs/vscode_python2.png)
+
+As a quick sanity check, see if you can execute this bit of code. 
+Open a new file in VSCode.  
+![vscode](../imgs/vscode2.png)
+
+Copy and paste (or type) this into your new file:
+```
+print("Hello, World!")
+```
+Save the file and name it “helloworld.py”. Note the “.py” extension.  Click the triangle “play” button to run your code in the terminal. 
+![vscode](../imgs/vscode3.png)
 
 
 
@@ -147,8 +166,13 @@ Make sure you have installed VSCode and Python correctly.
 - [Rstudio](https://www.rstudio.com/)
 - [R-Bloggers](https://www.r-bloggers.com/)
 - [Stat Methods](https://www.statmethods.net/index.html)
+- [Python forums](https://www.python.org/community/forums/)
 
-## OtheR useful stuff 
+
+## OtheR useful ssssstuff 
+- [Python documentation](https://cgi.cse.unsw.edu.au/~cs2041/python-3.9.13-docs-html/index.html)
+- [Python style guide](https://peps.python.org/pep-0008/)
+- [Biopython](https://biopython.org/)
 - [Plotly](https://plot.ly/r/)
 - [Shiny](https://shiny.rstudio.com/)
 - [RMarkdown](https://rmarkdown.rstudio.com/)
