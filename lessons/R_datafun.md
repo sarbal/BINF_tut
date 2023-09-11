@@ -20,7 +20,13 @@ As before, copy the code chunks into your R notebook as R chunks.
 
 ## Reading in data
 - Depending on the format, there are multiple ways to input data into R
-  
+
+### From command line 
+This works when you run an R script from command line (and not in your notebook). 
+```
+args = commandArgs(trailingOnly=TRUE)
+```
+
 ### From files
 - From a comma or tab separated file:
 ```
@@ -286,7 +292,7 @@ iris_tibble %>%
 
 
 ## Test yourself! 
-1. Download and load the file "lesson3.Rdata" into your environment. 
+1. Download and load the file "R_datafun.Rdata" into your environment. 
 2. Plot the 13 sets within the datasaurus object. Calculate the mean and standard deviation of x and y, and then the pearson correlation between x and y. Record all these values. Why is it important to visualise your data?   
 3. "Knit" your R markdown file into an html page or a pdf.  
  
