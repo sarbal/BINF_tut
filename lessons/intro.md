@@ -167,6 +167,7 @@ Save the file and name it “helloworld.py”. Note the “.py” extension.  Cl
 - [R-Bloggers](https://www.r-bloggers.com/)
 - [Stat Methods](https://www.statmethods.net/index.html)
 - [Python forums](https://www.python.org/community/forums/)
+- [Stack overflow](https://stackoverflow.com/)
 
 
 ## OtheR useful ssssstuff 
