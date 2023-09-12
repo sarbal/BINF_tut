@@ -1,4 +1,7 @@
 # Week 4: Snakes on a plane 
+Adapted from https://www.w3schools.com/python/pandas/pandas_cleaning.asp and 
+https://biopython.org/docs/1.75/api/Bio.Entrez.html
+ 
 ## Objectives 
 This week's tutorial is on flow control and data wrangling in python. You will learn: 
 - Flow control statements
@@ -11,9 +14,9 @@ Start a new notebook. Save the file as "yourname_week4.ipynb".
 As before, copy the code into your notebook as chunks. 
 
 ## Download 
-- [text/tab file](DatasaurusDozen.txt)
-- [csv file](data.csv)
-- [json file](data.json)
+- [text/tab file](../data/DatasaurusDozen.txt)
+- [csv file](../data/data.csv)
+- [json file](../data/data.json)
     
 ## if statements
 Allow blocks of code to be executed only under specific conditions.
