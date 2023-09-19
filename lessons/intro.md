@@ -57,6 +57,8 @@ Start off by downloading [R](https://cran.r-project.org/) and then [RStudio](htt
 - [Installing R for Mac](installmac.md)
 - [Installing R for Unix](installunix.md)
 
+> Note: make sure you use the correct install specific to your computer's hardware (e.g. M2 chip on newer macbooks will not work with the Intel CPU installation etc.)
+
 #### Install packages
 From CRAN: 
 ``` 
@@ -89,11 +91,17 @@ Start off by downloading [VSCode](https://code.visualstudio.com/) and then [Pyth
 - [Installing python for Unix](installunix.md#installing-python)
 
 #### Install modules
+These commands go in the `terminal` (your VSCode terminal, or another terminal on your computer as long as `python3` works). 
+This will NOT work in the python interactive console, nor should you type this into a `.py` file. 
+
+> Note: sometimes `python` or `pip` will not be recognised; try `pip3` or `python3` instead.
 ``` 
 pip install matplotlib
 pip install biopython
 ```
 #### Import modules
+
+Now that the packages have been installed to your computer with `pip`, the way we include the code from those packages into any given instance of python is with `import`.  The following line should be added to a `.py` file and then run (or, on the command line using `python -c "import matplotlib"`). 
 ```
 import matplotlib
 ```
