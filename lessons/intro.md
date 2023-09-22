@@ -99,12 +99,23 @@ This will NOT work in the python interactive console, nor should you type this i
 pip install matplotlib
 pip install biopython
 ```
+
 #### Import modules
 
 Now that the packages have been installed to your computer with `pip`, the way we include the code from those packages into any given instance of python is with `import`.  The following line should be added to a `.py` file and then run (or, on the command line using `python -c "import matplotlib"`). 
 ```
 import matplotlib
 ```
+
+#### Install Jupyter notebooks 
+Again., these commands go in the `terminal` (your VSCode terminal, or another terminal on your computer as long as `pip` works). 
+https://pypi.org/project/jupyter/
+```
+pip install jupyter
+```
+#### Select kernel
+https://code.visualstudio.com/docs/datascience/jupyter-kernel-management
+
 
 ## Testing your installation - R 
 Make sure you have installed Rstudio and R correctly. 
