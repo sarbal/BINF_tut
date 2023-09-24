@@ -4,22 +4,25 @@
 - Using numpy, pandas and seaborn libraries
   
 ## Downloads  
-First things first! Download these palmer penguins data into your working directory. 
+First things first! Download these palmer penguins data into your working directory. Note, you may need to use pip3. 
 Into a terminal, type in: 
 ```
 pip -q install palmerpenguins
+```
+
+### Installing and importing libraries 
+
+Make sure you have these installed too. 
+```
+pip install numpy
+pip install pandas
+pip install seaborn
 ```
 
 ## Setting up
 Start a new notebook. Save the file as "yourname_week3.ipynb". 
 As before, copy the code into your notebook as chunks. 
 
-### Installing and importing libraries 
-```
-pip install numpy
-pip install pandas
-pip install seaborn
-```
 Then, run an interactive python session in a terminal. In your python session:
 ```
 import numpy as np
