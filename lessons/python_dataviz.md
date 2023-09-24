@@ -49,6 +49,8 @@ df.columns
 ### Indexing/accessing data in a data frame 
 ```
 df.values
+i=1
+j=0
 df.loc[i] 
 df.iloc[i,j]
 df[['bill_length_mm','island']]
