@@ -1,4 +1,4 @@
-# Week : So shiny!
+# Week 9: So shiny!
 ## Objectives 
 Let's make something interactive! 
 Shiny is an R package that makes it easy to build interactive web applications (apps) straight from R. This lesson will get you started building Shiny apps right away. You will learn how to: 
