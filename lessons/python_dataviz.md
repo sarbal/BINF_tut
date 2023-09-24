@@ -42,54 +42,65 @@ df
 ```
 ### Summary statistics and properties 
 ```
-df.describe()
-df.dtypes
-df.columns
+print(df.describe())
+print(df.dtypes)
+print(df.columns)
 ```
 ### Indexing/accessing data in a data frame 
 ```
-df.values
+print(df.values)
 i=1
 j=0
-df.loc[i] 
-df.iloc[i,j]
-df[['bill_length_mm','island']]
-df.query("year > 2007")
+print(df.loc[i])
+print(df.iloc[i,j])
+print(df[['bill_length_mm','island']])
+print(df.query("year > 2007"))
 
 ```
 
 ### Plotting 
+We will use the seaborn module (which we named sns) to plot the palmer penguin data. First, let's take a look at the distribution of bill lengths. 
+Here we use the histplot function, and add a density line. 
 ```
 sns.histplot(df['bill_length_mm'],kde=True,bins=20)
 ```
 ![penguin](../imgs/penguin_histplot.png)
+
+Another plot type are "joint" or scatter plots with histograms. Here we can plot the bill length versus the bill depth, along with their distributions as histograms. 
 ```
 sns.jointplot(data=df, x="bill_length_mm", y="bill_depth_mm") 
 ```
 ![penguin](../imgs/penguin_scatterplot.png)
+
+We can also plot all the different data, pairwise. Note, some of these plots look weird. 
 ```
 sns.pairplot(df)
 ```
 ![penguin](../imgs/penguin_pairs.png)
+
+
+The seaborn package also lets us draw boxplots. Here we can split them by island and species. 
 ```
 g = sns.boxplot(x = 'island',
             y ='body_mass_g',
             hue = 'species',
-            data = penguins,
+            data = df,
             palette=['#FF8C00','#159090','#A034F0'],
             linewidth=0.3)
 g.set_xlabel('Island')
 g.set_ylabel('Body Mass')
-plt.show() 
+plt.show()
 ```
 ![penguin](../imgs/penguin_boxplot.png)
 
+
+Plot the flipper length and add regression models per species:  
 ```
 g = sns.lmplot(x="flipper_length_mm",
                y="body_mass_g",
                hue="species",
                height=7,
-               data=penguins,
+               data=df,
                palette=['#FF8C00','#159090','#A034F0'])
 g.set_xlabels('Flipper Length')
 g.set_ylabels('Body Mass')
@@ -99,6 +110,7 @@ plt.show()
 
 - Multiple figures
 - Use subplots() to create multiple figures.
+- Body mass, four ways: 
 ```
 import matplotlib.pyplot as pltt
 fig ,ax = pltt.subplots(figsize=(15,12), ncols=2,nrows=2)
@@ -112,26 +124,19 @@ pltt.show()
 
 See the documentation at https://pandas.pydata.org/docs/user_guide/io.html
 
-
+## Other 
 ### Show the help message for this function.
 ```
 df.to_csv?
 ```     
 
 ### Save to a file, load from file 
+Let's save the penguin data to a file. Then load it into another variable. 
 ```
-df.to_csv("mytaxis.csv")
-df = pd.read_csv("mytaxis.csv")
-df.head()
+df.to_csv("my_penguins.csv")
+df_pengiuns = pd.read_csv("my_penguins.csv")
+df_pengiuns.head()
 ```    
-
-### Colors etc
-```
-df["color"].value_counts()
-df.groupby("color")["tip"].mean()
-df.groupby("color").agg({"tip": "mean"})    
-df.groupby("color")["tip"].describe()
-```
 
 
 ## Test yourself!
@@ -139,7 +144,7 @@ df.groupby("color")["tip"].describe()
 2. Load the iris dataset. HINT: it is in the seaborn package. `iris = ???.load_dataset("iris")`.
 3. Look at it and make a distribution plot for one of the variables. 
 4. Do a pairplot between all variables for the iris dataset.
-5. Plot a variable in the iris dataset with the four different plot types above. 
+5. Plot a variable in the iris dataset with the four different plot types, as above. 
 
 Solutions: Next week!
 
