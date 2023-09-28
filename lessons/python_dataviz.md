@@ -81,6 +81,8 @@ plt.title('X-Y')
 plt.show()
 ```
 
+![plot1](../imgs/python_plot1.png)
+
 You can also add points to the plot by specifiying the plot type. And if we don't give an x and y, the x is the "index". 
 ```
 a = [1, 2, 3, 4, 5]
@@ -95,6 +97,8 @@ ax.legend(['Line', 'Dots'])
 
 plt.show()
 ```
+![plot2](../imgs/python_legend.png)
+
 
 There are many more plotting features you can play with, including colors, figure size (figure()), text (annotate()) and multiple plots (subplot()). 
 ```
@@ -107,6 +111,8 @@ sub2.plot(b, 'or') # circles, red
 sub2.annotate("Circles", (1,1))
 plt.show()
 ```
+![plot3](../imgs/python_multiple.png)
+
 Read more here:
 https://matplotlib.org/stable/gallery/lines_bars_and_markers/simple_plot.html
 https://www.geeksforgeeks.org/simple-plot-in-python-using-matplotlib/
