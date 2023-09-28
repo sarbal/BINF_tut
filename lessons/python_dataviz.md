@@ -59,6 +59,59 @@ print(df.query("year > 2007"))
 ```
 
 ### Plotting 
+
+Basic x-y plot:
+```
+# X values
+x = [1,2,3]
+# Y values
+y = [4,5,6]
+	
+# Plotting the points
+plt.plot(x, y)
+	
+# Naming the X and Y axes
+plt.xlabel('x - axis')
+plt.ylabel('y - axis')
+	
+# Adding a title
+plt.title('X-Y')
+	
+# Showing the plot
+plt.show()
+```
+
+You can also add points to the plot by specifiying the plot type. And if we don't give an x and y, the x is the "index". 
+```
+a = [1, 2, 3, 4, 5]
+b = [0, 0.6, 0.2, 15, 10, 8, 16, 21]
+plt.plot(a)
+# o is for circles
+plt.plot(b, "o")
+
+# Get current axes and plot the legend
+ax = plt.gca()
+ax.legend(['Line', 'Dots'])
+
+plt.show()
+```
+
+There are many more plotting features you can play with, including colors, figure size (figure()), text (annotate()) and multiple plots (subplot()). 
+```
+fig = plt.figure(figsize =(10, 5))
+sub1 = plt.subplot(2, 1, 1) # two plots, or 2 rows, one column, position 1
+sub2 = plt.subplot(2, 1, 2) # two plots, or 2 rows, one column, position 2
+sub1.plot(a, 'sb') # squares, blue
+sub1.annotate("Squares", (1,1))
+sub2.plot(b, 'or') # circles, red
+sub2.annotate("Circles", (1,1))
+plt.show()
+```
+Read more here:
+https://matplotlib.org/stable/gallery/lines_bars_and_markers/simple_plot.html
+https://www.geeksforgeeks.org/simple-plot-in-python-using-matplotlib/
+
+#### Penguin plots
 We will use the seaborn module (which we named sns) to plot the palmer penguin data. First, let's take a look at the distribution of bill lengths. 
 Here we use the histplot function, and add a density line. 
 ```
