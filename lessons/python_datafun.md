@@ -111,6 +111,8 @@ ns
 ```
 
 ## Functions
+Functions, as in other languages, are a block of code/statements that return a value and/or perform a specific task. The main idea is to join repeatedly done tasks together and "call" the function, rather than write the same code over multiple times.
+For example, if we want to calculate the factorial of a number, we can write a factorial function that takes in an integer as input (n) and returns the factorial of n (labelled val). So now everytime we wish to compute this, we simply call our function. 
 ```
 def n_factorial(n): 
     # Check that n is of the right type and form
@@ -126,17 +128,24 @@ def n_factorial(n):
         val *= i
 
     return val
+
+print(n_factorial(5))
+print(n_factorial(100))
+print(n_factorial(0))
+print(n_factorial(1001))
 ```
 
 ## Input 
 ### Command line input 
-Reading in input from the command-line is in the argv from the sys module: 
+Reading in input from the command-line is in the argv variable from the sys module: 
 ```
 import sys
-print 'Number of arguments:', len(sys.argv), 'arguments.'
-print 'Argument List:', str(sys.argv)
+print('Number of arguments:', len(sys.argv), 'arguments.')
+print('Argument List:', str(sys.argv))
 ```
-Note, the first argument is the name of the script. 
+Note, this only works if you run a python script (there is no terminal) and the first argument (ie index 0) is the name of the script. 
+What happens when you run this code in an interactive session or your notebook? Test it! 
+
 
 ### Reading/writing files 
 Reading in input from a file with the open() function. It takes in two parameters: filename, and method.
@@ -145,7 +154,7 @@ There are four different modes for opening a file:
 - "a" - Append - Opens a file for appending, creates the file if it does not exist
 - "w" - Write - Opens a file for writing, creates the file if it does not exist
 - "x" - Create - Creates the specified file, returns an error if the file exists
-  
+The name of the object that refers to the open file is the "stream handle" from the input/ouput (IO). In the code below, we've named our handle "f". There are certain functions that we can use with this, including reading and writing to the file. And also, we need to make sure to close the IO streamonce we've finished our tasks. Note, once we open a stream and read it in, we cannot "go back", the file is read in until it is "exhausted" (run out of input, hence a "stream") and we need to close and open it again.   
 ```
 f = open("DatasaurusDozen.txt", "r")
 print(f.readline()) # per line
@@ -277,23 +286,105 @@ from Bio import Entrez
 Entrez.email = "my.email@unsw.edu.au"
 Entrez.tool = "my_script.py"
 ```
-Searching:
+The general use of e-utils is one of these functions: 
+- esearch: searching a database with a query
+- efetch: fetching a record from a database with an key/ID
+- elink: cross-searching database with an ID
+
+Each function is broadly run like so, where the search returns a "handle", and you read the records/data fromt that handle in. Note, as before, you can only read in the stream once, and will have to repeat the function call if you do not store the record.   
 ```  
 handle = Entrez.esearch(db="XXX", term=query)
 record = Entrez.read(handle)
 ```
+  
+Searching:
+Take a look at the website for different databases and queries you can use. 
+E.g., Searching for the human taxonomic ID
+```  
+handle = Entrez.esearch(db="taxonomy", term="Human")
+record = Entrez.read(handle)
+len(record)
+print(record['IdList'])
+taxid = record['IdList'][0]
+```
 
 Fetching:
+Now we have the ID/key for the term we want. We can then retreive that entry from the taxonomy database using that ID.
+
 ```
-handle = Entrez.efetch(db="XXXX", id=input, retmode="xml")
+handle = Entrez.efetch(db="taxonomy", id=taxid, retmode="xml")
 record = Entrez.read(handle)
 ```
 
-Cross IDs search:
+The record that we read in from the search handle is a list. We access each result using an index.
+e.g., 
+
 ```
-handle = Entrez.elink(dbfrom="assembly", db="nucleotide", from_uid=accession)
+first_result = record[0]
+```
+
+And for multiple results, we can iterate through:
+```
+for result in record:
+    print(result)
+```
+
+The results from this search are individual dictionaries, so we can view the data through keys() and values(). 
+```
+print(first_result.keys())
+print(first_result.values())
+```
+
+And then retrieve individual results based on keys. For Taxonomic entries, some of these inlcude: 
+```
+print(first_result['ScientificName'])
+print(first_result['Lineage'])
+```
+ 
+Cross IDs search:
+Now, sometimes we have the key from once database and want the ID from a second. We can do this with the elink function.  
+```
+handle = Entrez.elink(dbfrom="taxonomy", db="assembly", from_uid=taxid)
 links = Entrez.read(handle)
 ```
+
+How many assembly entries do we get for the human taxon? 
+As before, we first access the first entry, and then the set of links, and final the ids. It is a little convoluted because of the list -> dict -> list -> dict structure of the results.  
+```
+len(links[0]['LinkSetDb'][0]['Link'] ) 
+```
+
+Let's take the first result, and access the record in the assembly database. 
+```
+assembly_id = links[0]['LinkSetDb'][0]['Link'][0]['Id']
+handle = Entrez.efetch(db="assembly", id=assembly_id, retmode="xml")
+record = Entrez.read(handle)
+print(record)
+```
+
+As you can see, not much in that! Let's use the taxid ID to search for other database entries, and once again select the first ID. 
+```
+handle = Entrez.elink(dbfrom="assembly", db="nuccore", from_uid=assembly_id)
+links = Entrez.read(handle)
+nuc_id = links[0]['LinkSetDb'][0]['Link'][0]['Id']
+handle = Entrez.efetch(db="nuccore", id=nuc_id, retmode="xml")
+record = Entrez.read(handle)
+print(record)
+```
+What does this give us? A random region of the genome?!
+
+
+You can refine your queries by selecting certain fields aswell. For example, this search looks for organisms with the human taxid, and filters on "RefSeq" entries and with the word "CYBB" in the record title.  
+```
+handle = Entrez.esearch(db="nuccore", term="txid"+str(taxid)+"[Organism] AND refseq[filter] AND CYBB[title]")
+record = Entrez.read(handle)
+nuc_id = record['IdList'][0]
+handle = Entrez.efetch(db="nuccore", id=nuc_id, retmode="xml")
+record = Entrez.read(handle)
+print(record)
+```
+What does this give us? 
+
 
 More here: 
 https://biopython.org/docs/1.75/api/Bio.Entrez.html
@@ -308,6 +399,7 @@ mcs_seq = 'GAGACCCAAGCTGGCTAGCGTTTAAACTTAAGCTTGGTACCGAGCTCGGATCCACTA' \
           'AGGGCCCGTTTAAACCCGCTGATCAGCCT'
 ```
 4. Repeat question 3 but using the SeqIO module functions.
+5. Write and run a query using the Entrez e-utils to search and fetch the nucletodie sequence for the mouse mitochondrial genome.
   
  
 Solutions: Next week!
