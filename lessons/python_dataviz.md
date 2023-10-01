@@ -205,7 +205,7 @@ df_pengiuns.head()
 4. Do a pairplot between all variables for the iris dataset.
 5. Plot a variable in the iris dataset with the four different plot types, as above. 
 
-[Solutions](../): Next week!
+[Solutions](python_dataviz_test.md): Next week!
 
 Back to the [homepage](../README.md)
 
