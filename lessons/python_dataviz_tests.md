@@ -30,14 +30,21 @@ print(iris.columns) # prints out the column names
 # Let's plot the sepal width
 sns.histplot(iris['sepal_width'],kde=True,bins=20, color="purple")
 # or petal length
-sns.histplot(iris['petal_length'],kde=True,bins=20, color="purple")
+sns.histplot(iris['petal_length'],bins=10, color="green")
 ```
+
+![python_sepal_width](../imgs/python_sepal_width.png)
+
+![python_petal_length](../imgs/python_petal_length.png)
 
 4. Do a pairplot between all variables for the iris dataset.
 As in the tut, we use pairplot. We can also select a color palette, and the column to colour it by (hue). 
 ```
 sns.pairplot(iris, palette="mako", hue="species")
 ```
+
+![python_iris_pair](../imgs/python_iris_pair.png)
+
 
 5. Plot a variable in the iris dataset with the four different plot types, as above. 
 
@@ -49,4 +56,8 @@ sns.violinplot(data=iris,x='species',y='petal_width',ax=ax[0,1],hue='species', p
 sns.boxplot(data=iris,x='species',y='petal_width',ax=ax[1,0],hue='species', palette="flare")
 sns.barplot(data=iris,x='species',y='petal_width',ax=ax[1,1],hue='species')
 pltt.show()
+
 ```
+![python_four_ways](../imgs/python_four_ways.png)
+
+
