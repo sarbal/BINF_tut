@@ -60,7 +60,7 @@ for c in dna:
 
 If we want to fill a list with content, we can write a for loop:
 ```
-# dna_list = []
+dna_list = []
 for c in dna:
     dna_list.append(c)
 print('dna_list =', dna_list)
@@ -68,23 +68,23 @@ print('dna_list =', dna_list)
 
 Alternatively, we can use a "list comprehension" to do this in one line
 ```
-simple_list = [c for c in name]
+simple_list = [c for c in dna]
 print('simple_list = ', simple_list)
 ```
 
 If we want to use the index of each element in a list, we can create a counter that is incremented in each run through the code block
 ```
 i=0
-for c in name:
-    print('name[%d] = %s'%(i,c))
+for c in dna:
+    print('dna[%d] = %s'%(i,c))
     i += 1
 ```
 
 Alternatively, we can use enumerate(), which takes any iterable as input and outputs a an iterable of index-value pairs. This will assign values to TWO variables in each pass of the loop.
 This strategy is said to be more "Pythonic" 
 ```
-for i, c in enumerate(name):
-    print("name[%d] = %s"%(i,c))
+for i, c in enumerate(dna):
+    print("dna[%d] = %s"%(i,c))
 ```
 
 Range is the Pythonic way of iterating over consecutive integers.
@@ -98,13 +98,14 @@ The while loop keeps going as long as the argument it is passed evaluates to "Tr
 ```
 i = 1
 n = 10
-while i <= n;
+while (i < n):
     print(i)
-    i = i + 1
+    i += 1 
 ```
 ## Vectorized computations
 Vectorized computations give you faster operations by using fast, low-level code to operate on bulk data
 ```
+import numpy as np
 N = 100
 ns = np.arange(N)
 ns
