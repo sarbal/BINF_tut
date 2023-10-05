@@ -204,12 +204,6 @@ x = df["Calories"].mean()
 df["Calories"].fillna(x, inplace = True) # replace with mean
 ```
 
-Changing format 
-```
-df['Date'] = pd.to_datetime(df['Date'], format="mixed", yearfirst=True)   
-print(df.to_string())
-```
-
 Set values that are "wrong" (mistakes in data entry/recording) to a max value.
 
 ```
