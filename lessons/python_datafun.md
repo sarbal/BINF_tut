@@ -397,6 +397,6 @@ mcs_seq = 'GAGACCCAAGCTGGCTAGCGTTTAAACTTAAGCTTGGTACCGAGCTCGGATCCACTA' \
 5. Write and run a query using the Entrez e-utils to search and fetch the nucletodie sequence for the mouse mitochondrial genome.
   
  
-Solutions: Next week!
+[Solutions](python_datafun_tests.md)
 
 Back to the [homepage](../README.md)
