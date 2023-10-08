@@ -37,7 +37,9 @@ print('RC:', mcs_seq_c[::-1])
 
 
 4. Repeat question 3 but using the SeqIO module functions.
+
 https://biopython.org/docs/1.75/api/Bio.Seq.html
+
 ```
 from Bio.Seq import Seq
 mcs_seq = 'GAGACCCAAGCTGGCTAGCGTTTAAACTTAAGCTTGGTACCGAGCTCGGATCCACTA' \
@@ -52,8 +54,5 @@ print('FW:', mcs_seq_record)
 print('C: ', mcs_seq_record_c)
 print('RC:', mcs_seq_record_rc)
 ```
-
-
-
 
   
