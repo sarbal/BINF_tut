@@ -158,7 +158,7 @@ my_seq[-10:-20]
 - Lists are collections of data, and elements in a list can be of varying lengths and data classes/types. 
 ``` 
 B <- 1:10
-C <- sex
+C <- "sex"
 D <- list(A,B,C)
 ```
 
