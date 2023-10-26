@@ -13,10 +13,8 @@ my_random_numbers[1]
 tail(my_random_numbers, n=1)
 ```
 
-
 3. Generate two square matrices (equal width and height) named B1 and B2. Multiply these matrices and save the output of the multiplication as B. Print out the first column of B1, the last row of B2, and then the diagonal of B. Copy the code into your R notebook as an R chunk. 
-
-```{r }
+```
 B1 = matrix( sample(100), nrow=10, ncol=10)
 B2 = matrix( sample(100), nrow=10, ncol=10)
 B = B1 %*% B2
