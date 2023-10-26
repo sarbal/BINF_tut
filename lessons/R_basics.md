@@ -280,7 +280,7 @@ my_plot(my_seq)
 5. Make a matrix of dimension 20 by 40, full of zeroes. Then, modify the matrix so that once viewed, it spells out your initials OR a random shape OR pixel art. Use the [image()](https://www.rdocumentation.org/packages/graphics/versions/3.5.1/topics/image) function to view it as you go along, but remember, it plots things [rotated](https://www.r-bloggers.com/creating-an-image-of-a-matrix-in-r-using-image/)... Once done, plot it using the image function, but remove the axes. Copy the code into your R notebook as an R chunk. 
 6. "Knit" your R markdown file into a pdf or html. 
  
-Solutions: Next week!
+[Solutions](R_basics_tests.md)
 
 ## Resources and cheatsheets
 https://posit.cloud/learn/cheat-sheets 
