@@ -6,14 +6,15 @@
 
 2. In your console, generate a vector of random numbers (any which way you want) of length between 10 and 100, and assign it to a variable called "my_random_numbers". Print out the length of this vector, and then the first and last numbers of the vector. Copy the code into your R notebook as an R chunk.  
 
-```{r }
+```
 my_random_numbers = sample(100, sample(10:100, 1))
 length(my_random_numbers)
 my_random_numbers[1]
 tail(my_random_numbers, n=1)
 ```
 
-3. Generate two square matrices (equal width and height) named B1 and B2. Multiply these matrices and save the output of the multiplication as B. Print out the first column of B1, the last row of B2, and then the diagonal of B. Copy the code into your R notebook as an R chunk. 
+3. Generate two square matrices (equal width and height) named B1 and B2. Multiply these matrices and save the output of the multiplication as B. Print out the first column of B1, the last row of B2, and then the diagonal of B. Copy the code into your R notebook as an R chunk.
+ 
 ```
 B1 = matrix( sample(100), nrow=10, ncol=10)
 B2 = matrix( sample(100), nrow=10, ncol=10)
@@ -25,7 +26,7 @@ print(diag(B))
 
 4. Plot any of the plots from the CatterPlot page. Copy the code into your R notebook as an R chunk. 
 
-```{r }
+```
 #library(devtools)
 #install_github("Gibbsdavidl/CatterPlots")
 library(CatterPlots)
@@ -36,20 +37,20 @@ rainbowCats(x, y, yspread=0.05, xspread=0.05, ptsize=2, catshiftx=0.5, catshifty
 ```
 ![catplots](../imgs/catplot1.png)
 
-```{r }
+```
 purr <- catplot(xs=x, ys=y, cat=3, catcolor='#000000FF')
 cats(purr, -x, -y, cat=4, catcolor='#FF0000')
 ```
 ![catplots](../imgs/catplot2.png)
 
-```{r }
+```
 # for more fun ...
 meow <- multicat(xs=x, ys=y, cat=c(1,2,3), catcolor=list('#33FCFF','#FF0000'), canvas=c(-0.1,1.1, -0.1, 1.1))
 morecats(meow, x, 10*sin(x)+40, size=0.05, cat=c(4,5,6), catcolor=list('#0495EE','#EE7504'), type="line")
 ```
 ![catplots](../imgs/catplot3.png) 
 
-```{r }
+```
 # random cats
 meow <- multicat(xs=x, ys=rnorm(21),
                  cat=c(1,2,3,4,5,6,7,8,9,10),
@@ -61,7 +62,7 @@ meow <- multicat(xs=x, ys=rnorm(21),
 
 5. Make a matrix of dimension 20 by 40, full of zeroes. Then, modify the matrix so that once viewed, it spells out your initials OR a random shape OR pixel art. Use the [image()](https://www.rdocumentation.org/packages/graphics/versions/3.5.1/topics/image) function to view it as you go along, but remember, it plots things [rotated](https://www.r-bloggers.com/creating-an-image-of-a-matrix-in-r-using-image/)... Once done, plot it using the image function, but remove the axes. Copy the code into your R notebook as an R chunk. 
 
-```{r }
+```
 ## S B example 
 matA = matrix(0, ncol=40, nrow=20)
 matA[2:5,2:39]   = 3
@@ -94,7 +95,7 @@ image(t(matA))
 ![catplots](../imgs/sb.png)
 
 
-```{r }
+```
 ## Smiley face
 circle <- function(r) { x = (-100:100)/100; y = sqrt(r^2 - x^2  ); return(rbind(cbind(x,y), cbind(x,-y) )) }
  
