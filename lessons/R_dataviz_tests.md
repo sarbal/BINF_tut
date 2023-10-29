@@ -63,7 +63,7 @@ bxplot(X$Scutes ~ X$Set, add=T, col=makeTransparent(turbo(n)) )
 
 ![plot](../imgs/beeswarm_x.png)
 
-    c. What are the correlations between the biometrics? Show as a correlation plot. 
+c. What are the correlations between the biometrics? Show as a correlation plot. 
 
 ```
 mat_cor = cor(X[,4:9])
