@@ -21,7 +21,9 @@ abline(v= female_mean, col="purple", lwd=2)
 abline(v= male_mean, col="green", lwd=2)
 legend("topright", leg=c("F", "M"),  border=1, fill=makeTransparent( c("purple", "green")), title="Sex")
 ```
+
 ![plot](../imgs/histogram_x.png)
+
 
     b. What are the range of scute numbers per set? Show as a boxplot.
 
@@ -42,29 +44,33 @@ for( set in levels(X$Set)){
 n = length(levels(X$Set))
 plot(X$Scutes ~ X$Set, col=turbo(n))
 ```
+
 ![plot](../imgs/plot_x.png)
+
 
 ```
 boxplot(X$Scutes ~ X$Set, col=turbo(n), xlab="Set", ylab="Number of scutes" )
 beeswarm(X$Scutes ~ X$Set, pch=19, add=T, col=turbo(n))
 ```
+
 ![plot](../imgs/boxplot_x.png)
+
 
 ```
 beeswarm(X$Scutes ~ X$Set, pch=19, col=turbo(n), xlab="Set", ylab="Number of scutes" )
 bxplot(X$Scutes ~ X$Set, add=T, col=makeTransparent(turbo(n)) ) 
 ```
+
 ![plot](../imgs/beeswarm_x.png)
 
     c. What are the correlations between the biometrics? Show as a correlation plot. 
 
-
 ```
 mat_cor = cor(X[,4:9])
 mat_cor
-```
 
-```
+
+
 ## These functions are taken from the tutorial page
 panel.hist <- function(x, ...)
 {
@@ -97,6 +103,7 @@ pairs(X[,4:9],
       bg=1:3,
       pch=19)
 ```
+
 ![plot](../imgs/pairs_x.png) 
  
 
