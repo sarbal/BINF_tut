@@ -545,7 +545,7 @@ plot(1:n, col=turbo(n), pch=19, cex=5)
 
 
 ## Test yourself! 
-1. Download and load the file ".Rdata"R_dataviz into your environment.
+1. Download and load the file "R_dataviz.Rdata" into your environment.
 2. Plot three plots from the dataset "X" to answer the next set of questions. There are multiple columns in the dataset, so feel free to explore and play around first.
     a. What are the average weights per sex? Show as a histogram.
     b. What are the range of scute numbers per set? Show as a boxplot.
@@ -554,7 +554,7 @@ plot(1:n, col=turbo(n), pch=19, cex=5)
 4. And finally, look at dataset "Z". Plot it the best way you think would show its key feature. 
 5. "Knit" your R markdown file into an html page or a pdf.  
  
-Solutions: Next week!
+[Solutions](R_dataviz_tests.md)
 
 
  ## Resources  
