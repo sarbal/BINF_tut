@@ -10,7 +10,7 @@ In the tutorial you will:
 ## Downloads 
 Once more, download these files into your working directory: 
 
-- [data](../data/R_dataviz.Rdata). 
+- [data](../data/R_dataviz.Rdata) 
 - [helper.R](../data/helper.R)
 
 To check your working directory:
