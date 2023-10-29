@@ -6,7 +6,7 @@ load("R_dataviz.Rdata")
 ```
 
 2. Plot three plots from the dataset "X" to answer the next set of questions. There are multiple columns in the dataset, so feel free to explore and play around first.
-    a. What are the average weights per sex? Show as a histogram.
+a. What are the average weights per sex? Show as a histogram.
 
 ```
 female_mean = mean(X$Body.weight[X$Sex=="F"]) 
@@ -25,7 +25,7 @@ legend("topright", leg=c("F", "M"),  border=1, fill=makeTransparent( c("purple",
 ![plot](../imgs/histogram_x.png)
 
 
-    b. What are the range of scute numbers per set? Show as a boxplot.
+b. What are the range of scute numbers per set? Show as a boxplot.
 
 ```
 # apply function
