@@ -101,6 +101,7 @@ samples.cor = cor(exprs.means[ ,-filt.species], m="s", use="p")
 heatmap.3(samples.cor)
 ``` 
 
+5. See if you can do the same in Python... 
 
 
 Back to the [homepage](../README.md)
