@@ -10,6 +10,7 @@ Download these files into your working directory:
 - [data](../data/R_datafun.Rdata) 
 - [helper.R](../data/helper.R)
 - [extra data](../data/my_data.zip)
+- [other data](../data/my_other_data.gz)
 
 Extract the data.zip folder.
 
@@ -34,13 +35,29 @@ dataA <- read.csv(file="my_dataA.csv")
 dataB <- read.table(file="my_dataB.tab", header=TRUE)
 datasaurus <- read.delim(file="DatasaurusDozen.txt", sep="\t")
 ```
-- With more control:
-  
+- Reading in from a file or the keyboard (or stdin) using scan(). To specify your keystrokes, keep the filename empty. Specifying the type of data to be read in is through the "what" parameter. Type in your input, and then hit return a few times to stop. 
 ```
-scan()
-readLines()
+typed_data <- scan("", what = "character")
+hello
+there
+
+
 ```
-- From Excel 
+- readline() reads in from stdin (ie keystrokes if in the console), but unlike scan(), you do not need to specify the type being returned. And you can give a prompt to appear:
+- 
+```
+readline( prompt="Hello there, please type in your favorite number:\n")
+
+``` 
+   
+- Another option is to read in the input with readLines(). This takes a "connection" (e.g., file, stdin, URL, zipped file, etc) and then number of lines to read in with the n parameter (default is the whole file).    
+```
+all_data = readLines(file="my_other_data.gz")
+all_data 
+```
+
+
+- From Excel. Note, if this doesn't work properly, skip to the next part.  
 
 ```{r}
 install.packages("xlsx") 
@@ -54,7 +71,7 @@ data <- read.xlsx(file="pnasEisen1998.xlsx", 2)
 key <- read.xlsx(file="pnasEisen1998.xlsx", sheetName = "Key")
 ```
 
-- From a PDF (a little more advanced)
+- From a PDF (a little more advanced). Skip if the packages don't load/install. 
 
 ```{r}
 install.packages("pdftools")
