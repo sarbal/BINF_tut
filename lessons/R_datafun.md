@@ -197,6 +197,7 @@ save(all_my_data, my_function, file="my_data.Rdata")
 ### Saving graphics 
 - As a pdf or postscript (vector graphics) 
 ```
+my_data = read.table(file="my_dataB.tab", header=TRUE) # data from earlier 
 pdf("my_plot.pdf") # or try postscript()  
 plot(my_data)
 dev.off() 
