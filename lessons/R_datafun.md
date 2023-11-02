@@ -52,7 +52,7 @@ readline( prompt="Hello there, please type in your favorite number:\n")
    
 - Another option is to read in the input with readLines(). This takes a "connection" (e.g., file, stdin, URL, zipped file, etc) and then number of lines to read in with the n parameter (default is the whole file).    
 ```
-all_data = readLines(file="my_other_data.gz")
+all_data = readLines(con="my_other_data.gz")
 all_data 
 ```
 
