@@ -142,7 +142,7 @@ x_shape    54.26015 47.83972 16.76996 26.93000         -0.06558334
 ``` 
 
 
- - Method 3
+- Method 3
 
 ```
 ## Using tapply on each of the different data columns (x and y), using the dataset ID as to apply on  
