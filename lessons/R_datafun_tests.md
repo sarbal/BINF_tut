@@ -5,7 +5,9 @@ load("R_datafun.Rdata")
 ```
 
 2. Plot the 13 sets within the datasaurus object.
- - Base R approach 
+
+ - Base R approach
+   
 ```
 ## Read in the data if you do not have it already 
 datasaurus <- read.delim(file="DatasaurusDozen.txt", sep="\t")
