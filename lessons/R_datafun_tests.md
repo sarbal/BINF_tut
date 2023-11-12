@@ -124,7 +124,7 @@ stats_data = t(stats_data)
 ```
 
 - The output looks like this:
-  
+
 ```             Mean x   Mean y     SD x     SD y Pearson correlation
 away       54.26610 47.83472 16.76982 26.93974         -0.06412835
 bullseye   54.26873 47.83082 16.76924 26.93573         -0.06858639
