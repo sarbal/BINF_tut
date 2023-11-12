@@ -60,6 +60,7 @@ for(i in datasets){
 ## Once you've gone through all the datasets, you can display the plot: 
 plot_all
 ```
+
 ![datasaurus](../imgs/datasaurus.png)
 
 
@@ -67,7 +68,8 @@ plot_all
  
 2. Calculate the mean and standard deviation of x and y, and then the pearson correlation between x and y. Record all these values.
 
-- Method 1 
+- Method 1
+  
 ```
 ## Intialise a list to store the results. Could also use a matrix or data.frame. 
 stats_data = list()
@@ -84,7 +86,9 @@ colnames(stats_data) = c("Dataset", "Mean x", "Mean y", "SD x", "SD y", "Pearson
 stats_data = as.data.frame(stats_data ) 
 ```
 
-- Output will look like this: 
+
+- Output will look like this:
+
 ```                                                                                                          
       Dataset           Mean x           Mean y             SD x             SD y Pearson correlation
 1        away 54.2660997842049 47.8347206248841 16.7698249541574 26.9397434188834 -0.0641283521547448
@@ -102,7 +106,8 @@ stats_data = as.data.frame(stats_data )
 13    x_shape  54.260150334038 47.8397172791604 16.7699576958193  26.930001686981 -0.0655833373100655
 ```
 
-- Method 2 
+- Method 2
+
 ```
 ## Convert the data into a list of datasets using the lapply function and the filter function  
 split_data = lapply(datasets, function(i)  g <- datasaurus %>% filter(dataset==i)  )
@@ -116,6 +121,7 @@ stats_data = t(stats_data)
 ```
 
 - The output looks like this:
+  
 ```             Mean x   Mean y     SD x     SD y Pearson correlation
 away       54.26610 47.83472 16.76982 26.93974         -0.06412835
 bullseye   54.26873 47.83082 16.76924 26.93573         -0.06858639
@@ -134,6 +140,7 @@ x_shape    54.26015 47.83972 16.76996 26.93000         -0.06558334
 
 
  - Method 3
+
 ```
 ## Using tapply on each of the different data columns (x and y), using the dataset ID as to apply on  
 stats_part1 = cbind(tapply(datasaurus$x, datasaurus$dataset, mean ),
@@ -154,7 +161,8 @@ stats_data = cbind(stats_part1[m,], stats_part2 )
 colnames(stats_data) = c("Mean x", "Mean y", "SD x", "SD y", "Pearson correlation")
 ```
 
-- Now the output should be (note the order of the datasets): 
+- Now the output should be (note the order of the datasets):
+
 ```
              Mean x   Mean y     SD x     SD y Pearson correlation
 dino       54.26327 47.83225 16.76514 26.93540         -0.06447185
