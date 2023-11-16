@@ -66,7 +66,7 @@ abline( v=mean(auc_mf, na.rm=T), col=2, lwd=3, lty=3)
 
 - How multifunctional are our results? 
 ```
-m = match( enriched2[enriched2$padj < 0.05, 1], names(auc_mf))
+m = match( enriched2[enriched2$padj <= 0.05, 1], names(auc_mf))
 hist <- plot_distribution(auc_mf[m], xlab="AUROC", med=FALSE, avg=FALSE)
 abline( v=mean(auc_mf[m], na.rm=T), col=2, lwd=3, lty=3)
 ```
@@ -74,6 +74,23 @@ abline( v=mean(auc_mf[m], na.rm=T), col=2, lwd=3, lty=3)
 ![sorted](../imgs/auc_mf2.png)
 
 
+Hopefully, you can see that the averages are a little different. We can test if this is significant through a couple of ways. 
+Permutation test: 
+```
+perm_r = sapply(1:10000, function(i) (mean(sample(auc_mf, length(m)), na.rm=T) ) )
+sum(mean(auc_mf[m], na.rm=T) > perm_r )/ 10000
+```
+(should be ~0)
+
+
+Wilcoxon test 
+```
+nm = match( enriched2[enriched2$padj > 0.05, 1], names(auc_mf))
+wilcox.test( auc_mf[m], auc_mf[nm]) 
+```
+P-value should be < 2.2e-16
+
+Both very significant! 
 
 
 ## Replicating a figure in R
@@ -92,8 +109,9 @@ exprs = read.table(gene_expression_file, header=T, row.names=1)
 samples = matrix(unlist(strsplit(colnames(exprs)[33:94] , "_" ) ) , byrow=T, ncol=2)
 ```
 
-2. Clean up data
 
+2. Clean up data
+Just a note, the gene expression table contains additional data such as GC% and gene length, so we filter those columns out and use only the gene expression values (those are in columns 33 to 94). So we copy those over into another variable.
 ```
 exprs.means = t(sapply(1:dim(exprs)[1], function(i) tapply(  as.numeric(exprs[i,33:94]), samples[,1], mean, na.rm=T) ))
 samples.sub = names(tapply(  as.numeric(exprs[1,33:94]), samples[,1], mean, na.rm=T)) 
@@ -102,14 +120,15 @@ rownames(exprs.means) = rownames(exprs)
 ```
 
 3. Data analysis 
-- Which genes are present in enough species?
+- Which genes are present in enough species? 
 - Which species does not have enough data?
-  
+Although a little arbitrary, we select genes that are present in at least 5 species (this is also from their paper I believe).   
 ```
 colSums(is.na(exprs.means ))
 filt.species = which.max(colSums(is.na(exprs.means )))
 gene.subset  = rowSums(is.na(exprs.means[,-filt.species ] )  ) >5  
 ```
+
 
 4. Plot/graph 
 (Note heatmap.3 is in the helper.R file, make sure you have sourced it at the start!)
