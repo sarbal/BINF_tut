@@ -48,16 +48,33 @@ enriched2 <- gene_set_enrichment(c("Runx1", "Gfi1", "Gfi1b", "Spi1", "Gata1", "K
 - We can assess our results and genes by calculating how multifunctional genes and gene sets/functions are using the EGAD package 
 ```
 multifunc_assessment <- calculate_multifunc(annot)
-plot(multifunc_assessment[,4])
+plot(sort(multifunc_assessment[,3]))
+```
+
+![sorted](../imgs/mf_sorted.png)
+
+
+```
 auc_mf <- auc_multifunc(annot, multifunc_assessment[,4])
 names(auc_mf) = colnames(annot)
 hist <- plot_distribution(auc_mf, xlab="AUROC", med=FALSE, avg=FALSE)
+abline( v=mean(auc_mf, na.rm=T), col=2, lwd=3, lty=3)
 ```
+
+![sorted](../imgs/auc_mf.png)
+
+
 - How multifunctional are our results? 
 ```
-m = match( enriched2[,1], names(auc_mf))
+m = match( enriched2[enriched2$padj < 0.05, 1], names(auc_mf))
 hist <- plot_distribution(auc_mf[m], xlab="AUROC", med=FALSE, avg=FALSE)
+abline( v=mean(auc_mf[m], na.rm=T), col=2, lwd=3, lty=3)
 ```
+
+![sorted](../imgs/auc_mf2.png)
+
+
+
 
 ## Replicating a figure in R
 Let's take a look at this paper:  https://genome.cshlp.org/content/22/4/602
