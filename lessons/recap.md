@@ -155,6 +155,12 @@ heatmap.3(samples.cor)
 ![heatmap](../imgs/samples_cor.png)
 
 
+Does it look like the figure in the paper? 
+
+![image](../imgs/samples_cor_fig.png)
+
+
+
 5. See if you can do the same in Python... 
 
 
