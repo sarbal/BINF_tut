@@ -118,7 +118,7 @@ samples.cor = cor(exprs.means[ ,-filt.species], m="s", use="p")
 heatmap.3(samples.cor)
 ``` 
 
-![heatmap](../imgs/sample_cor_allgenes.png)
+![heatmap](../imgs/samples_cor_allgenes.png)
 
 
 ```
@@ -126,7 +126,7 @@ samples.cor = cor(exprs.means[gene.subset,-filt.species ], m="s", use="p")
 heatmap.3(samples.cor)
 ```
 
-![heatmap](../imgs/sample_cor.png)
+![heatmap](../imgs/samples_cor.png)
 
 
 5. See if you can do the same in Python... 
