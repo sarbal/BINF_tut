@@ -35,7 +35,7 @@ enriched <- enrichr(c("Runx1", "Gfi1", "Gfi1b", "Spi1", "Gata1", "Kdr"), dbs)
 ```
 library(EGAD)
 annot = make_annotations( (GO.mouse[,c(1,3)][GO.mouse[,4]!="IEA",] ), unique(GO.mouse[,1]), unique(GO.mouse[,3]) )    
-enriched2 <- gene_set_enrichment(c("Runx1", "Gfi1", "Gfi1b", "Spi1", "Gata1", "Kdr"), annot, voc)
+enriched2 <- gene_set_enrichment(c("Runx1", "Gfi1", "Gfi1b", "Spi1", "Gata1", "Kdr"), annot, GO.voc)
 ```
 - How do the results compare?
 
