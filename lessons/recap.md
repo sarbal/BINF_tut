@@ -164,4 +164,7 @@ Does it look like the figure in the paper?
 5. See if you can do the same in Python... 
 
 
+More on how the AUROC is being used in this context: 
+https://johaupt.github.io/blog/Area_under_ROC_curve.html
+
 Back to the [homepage](../README.md)
