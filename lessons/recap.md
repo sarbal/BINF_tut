@@ -130,7 +130,7 @@ In total, we have around 10K genes, but one of the species has no data for almos
 filt.species = which.max(colSums(is.na(exprs.means )))
 ```
 
-Although a little arbitrary, we then select genes that are present in at least 5 species (this is also from their paper I believe), ignoring the species with little to no data. 
+Although a little arbitrary, we then select genes that are present in at least 6 species (this is also from their paper I believe), ignoring the species with little to no data. 
 ```
 gene.subset  = rowSums(is.na(exprs.means[,-filt.species ] )  ) >5  
 ```
