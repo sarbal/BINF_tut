@@ -82,10 +82,10 @@ Let's take a look at this paper:  https://genome.cshlp.org/content/22/4/602
 - Let's try reproducing the heatmap (Supplementary figure 5).  https://genome.cshlp.org/content/suppl/2012/01/03/gr.130468.111.DC1/SupplementalFigures_08_09_11.pdf 
 
 1. Get data 
-
+(Note, if the data fails to download through R, click directly on the link and it should automatically do so. Remember to then copy over the zip file to your working directory!) 
 ```
-download.file(url="https://genome.cshlp.org/content/suppl/2012/01/03/gr.130468.111.DC1/Supplemental.Database.primateRNAseq.zip", destfile="primateRNAseq.zip")
-unzip("primateRNAseq.zip", files = NULL, list = FALSE, overwrite = TRUE, junkpaths = FALSE, exdir = "primateRNAseq", unzip = "internal", setTimes = FALSE)
+download.file(url="https://genome.cshlp.org/content/suppl/2012/01/03/gr.130468.111.DC1/Supplemental.Database.primateRNAseq.zip", destfile="Supplemental.Database.primateRNAseq.zip")
+unzip("Supplemental.Database.primateRNAseq.zip", files = NULL, list = FALSE, overwrite = TRUE, junkpaths = FALSE, exdir = "primateRNAseq", unzip = "internal", setTimes = FALSE)
 unzip("primateRNAseq/Gene.expression.data.zip", files = NULL, list = FALSE, overwrite = TRUE, junkpaths = FALSE, exdir = "primateRNAseq/", unzip = "internal", setTimes = FALSE)
 gene_expression_file = "primateRNAseq/Gene.expression.data/Normalized.expression.data.txt" 
 exprs = read.table(gene_expression_file, header=T, row.names=1) 
@@ -109,17 +109,25 @@ rownames(exprs.means) = rownames(exprs)
 colSums(is.na(exprs.means ))
 filt.species = which.max(colSums(is.na(exprs.means )))
 gene.subset  = rowSums(is.na(exprs.means[,-filt.species ] )  ) >5  
-
-samples.cor = cor(exprs.means[gene.subset,-filt.species ], m="s", use="p")
 ```
 
 4. Plot/graph 
-
+(Note heatmap.3 is in the helper.R file, make sure you have sourced it at the start!)
 ```
-heatmap.3(samples.cor)
 samples.cor = cor(exprs.means[ ,-filt.species], m="s", use="p")
 heatmap.3(samples.cor)
 ``` 
+
+![heatmap](../imgs/sample_cor_allgenes.png)
+
+
+```
+samples.cor = cor(exprs.means[gene.subset,-filt.species ], m="s", use="p")
+heatmap.3(samples.cor)
+```
+
+![heatmap](../imgs/sample_cor.png)
+
 
 5. See if you can do the same in Python... 
 
