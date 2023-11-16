@@ -120,14 +120,21 @@ rownames(exprs.means) = rownames(exprs)
 ```
 
 3. Data analysis 
-- Which genes are present in enough species? 
 - Which species does not have enough data?
-Although a little arbitrary, we select genes that are present in at least 5 species (this is also from their paper I believe).   
 ```
+dim(exprs.means) 
 colSums(is.na(exprs.means ))
+```
+In total, we have around 10K genes, but one of the species has no data for almost 8K genes. We drop that species.  
+```
 filt.species = which.max(colSums(is.na(exprs.means )))
+```
+
+Although a little arbitrary, we then select genes that are present in at least 5 species (this is also from their paper I believe), ignoring the species with little to no data. 
+```
 gene.subset  = rowSums(is.na(exprs.means[,-filt.species ] )  ) >5  
 ```
+
 
 
 4. Plot/graph 
