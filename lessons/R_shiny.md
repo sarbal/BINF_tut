@@ -186,6 +186,7 @@ renderUI   |   a Shiny tag object or HTML
 1. We can modify the different bits of code in the ui and server functions to change the display and functionality of the code. Copy the above functions into this app. Run and play around! Increase the number of repeats, change the number of bins, and test different inputs. 
 2. Try different functions. Currently we are using the random "normal" generator. Make one for the Poisson distribution, and two others (see which here). Make sure you change the inputs needed accordingly (ie add more input boxes, change text).
 
+[Solutions](R_shiny_tests.md)
 
 ## Resources and other 
 https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/index.html
