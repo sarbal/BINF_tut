@@ -167,8 +167,7 @@ Does it look like the figure in the paper?
 
 
 
-5. See if you can do the same in Python... 
-
+5. See if you can do the same in Python... [Solution](recap_tests.md)
 
 More on how the AUROC is being used in this context: 
 https://johaupt.github.io/blog/Area_under_ROC_curve.html
