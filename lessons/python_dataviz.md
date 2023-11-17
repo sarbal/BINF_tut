@@ -31,7 +31,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 ```
 - Pandas is a library for working with tabular data. Based on the R data.frame library.
-- Seaborn is a visulization package. 
+- Seaborn is a visualization package. 
 
 ### Importing data 
 ```
