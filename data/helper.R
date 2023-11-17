@@ -6,6 +6,12 @@
 ##  Date: July 3rd, 2023
 
 ## Necessary libraries
+if (!quiet(require("BiocManager")))
+  install.packages("BiocManager")
+
+if( !quiet(require("EGAD")))
+ BiocManager::install("EGAD")
+
 if( !require("gplots")){
   install.packages("gplots")
 }
