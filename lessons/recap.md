@@ -14,6 +14,12 @@ Run this to install/load libraries
 ```
 source("helper.R") 
 load("recap.Rdata")
+
+if (!quiet(require("BiocManager")))
+  install.packages("BiocManager")
+
+if( !quiet(require("EGAD")))
+ BiocManager::install("EGAD")
 ```
 
 ### Gene set enrichment (GSE) in R 
