@@ -193,8 +193,8 @@ df.to_csv?
 Let's save the penguin data to a file. Then load it into another variable. 
 ```
 df.to_csv("my_penguins.csv")
-df_pengiuns = pd.read_csv("my_penguins.csv")
-df_pengiuns.head()
+df_penguins = pd.read_csv("my_penguins.csv")
+df_penguins.head()
 ```    
 
 
