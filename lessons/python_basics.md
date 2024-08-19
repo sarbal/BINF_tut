@@ -393,6 +393,6 @@ gene_exp_dict_copy = gene_exp_dict.copy()
 2. Populate the dictionary with at least 10 genes for 5 samples.
 3. Write the code to get the gene expression for the 4th gene, 2nd sample.
 
-[Solutions](python_basics_tests.md)
+[Solutions next week]
 
 Back to the [homepage](../README.md)
