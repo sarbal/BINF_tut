@@ -319,13 +319,16 @@ gene_list2[2] = "DMR5"
 print(gene_list)
 print(gene_list2)
 ```
-
+- Join lists
+```
+gene_list + gene_list2
+```
 - Check for membership in a list with "in"
 
 ```
 print("BRCA2" in gene_list)
 ```
-
+ 
 #### Built-in list methods
 
 ```
@@ -340,6 +343,10 @@ print(gene_list)
 ```
 
 More list methods: https://www.tutorialsteacher.com/python/list-methods
+
+# Q3: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, copy the `gene_list` variable from the previous code to a new variable called `gene_list_test`. Add three random genes and remove the third gene in the list. Add a gene to the middle of the list.     
+
 
 ### Dictionaries
 - A set of key/value pairs where the keys are unique (hash table)
@@ -403,10 +410,8 @@ gene_exp_dict_copy = gene_exp_dict.copy()
 ```
 
 
-## Test yourself!
-1. Create a dictionary for gene expression of multiple genes for multiple samples. Call it gene_exp_dict. 
-2. Populate the dictionary with at least 10 genes for 5 samples.
-3. Write the code to get the gene expression for the 4th gene, 2nd sample.
+# Q4: Test yourself!
+### In your jupyter notebook, create new chunk for this question. Create a dictionary for gene expression of multiple genes for multiple samples. Call it `gene_exp_dict`. Populate the dictionary with at least 10 genes for 5 samples. Then, write the code to get the gene expression for the 4th gene, 2nd sample.
 
 [Solutions next week]
 
