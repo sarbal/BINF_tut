@@ -20,7 +20,7 @@ Python can also be run interactively. Type in "python" into the terminal. Paste/
 
 Finally, you can also run python in a Jupyter notebook. The extension for this is ".ipynb". Each "chunk" of code can be run within the notebook. 
 ![vscode](../imgs/vscode4.png)
-Save a Jupyter notebook as "yourname_week2.ipynb". Similar to an R markdown notebook, you can write and run your code chunks in this file. Make sure to save! As before, copy the code throughout the tutorial into your notebook.  
+Save a Jupyter notebook as "yourname_week2.ipynb". Similar to a R markdown notebook, you can write and run your code chunks in this file. Make sure to save! As before, copy the code throughout the tutorial into your notebook.  
 
 ## Defintions
 - Variables
@@ -131,7 +131,7 @@ More here: https://www.w3schools.com/python/python_ref_string.asp
 
 ### Casting
 - Casting is converting certain values for certain datatypes to other datatypes
-- Convert a string to a boolean with "bool"
+- Convert a string to a boolean with `bool`
 
 ```
 tmpstr = "Hello"
@@ -139,14 +139,14 @@ tmpbool = bool(tmpstr)
 print(tmpbool)
 ```
 
-- Convert a decimal to a string
+- Convert a decimal to a string with `str`
 
 ```
 n = 42.24
 print("The number is: " + str(x))
 ```
 
-- Convert string to an integer
+- Convert string to an integer with `int`
 
 ```
 mystr = "50"
