@@ -52,7 +52,11 @@ n_pi = 3.14
 
 ```
 gene = "TAF1"
+print(gene)
+print("My gene is called:", gene)
+print("My gene is called:" + gene)
 ```
+Note, `print` outputs to your screen. What is the difference in output between the two above print statements? 
 
 - Booleans: true/false. Represents the two values of logic and Boolean algebra
   
@@ -69,6 +73,10 @@ print(type(n))
 print("The data type of the variable 'gene' is:")
 print(type(gene))
 ```
+
+# Q1: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, write some code where you assign your name to a variable called `user`. Then print it out to read "This is my <name> codebook".
+ 
 
 ### Built-in datatypes and their corresponding category:
 - Text Type: str
