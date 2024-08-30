@@ -136,7 +136,7 @@ More here: https://www.w3schools.com/python/python_ref_string.asp
 
 
 # Q1: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk, write some code where you assign your name to a variable called `user`. Then print out a sentence that reads "This is my <name> codebook", where <name> is replaced by your name. 
+### In your jupyter notebook, create new chunk for this question. In this chunk, write some code where you assign your name to a variable called `user`. Then print out a sentence that reads "This is my NAME codebook", where NAME is replaced by your `user` text. 
 
  
 ### Casting
