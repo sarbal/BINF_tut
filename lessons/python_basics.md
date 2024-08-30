@@ -56,7 +56,7 @@ print(gene)
 print("My gene is called:", gene)
 print("My gene is called:" + gene)
 ```
-Note, `print` outputs to your screen. What is the difference in output between the two above print statements? 
+Note, `print` outputs to your screen. What is the difference in output between the last two print statements? 
 
 - Booleans: true/false. Represents the two values of logic and Boolean algebra
   
@@ -74,9 +74,6 @@ print("The data type of the variable 'gene' is:")
 print(type(gene))
 ```
 
-# Q1: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk, write some code where you assign your name to a variable called `user`. Then print it out to read "This is my <name> codebook".
- 
 
 ### Built-in datatypes and their corresponding category:
 - Text Type: str
@@ -137,6 +134,11 @@ print(tmpstr2.find("california"))
 
 More here: https://www.w3schools.com/python/python_ref_string.asp 
 
+
+# Q1: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, write some code where you assign your name to a variable called `user`. Then print out a sentence that reads "This is my <name> codebook", where <name> is replaced by your name. 
+
+ 
 ### Casting
 - Casting is converting certain values for certain datatypes to other datatypes
 - Convert a string to a boolean with `bool`
@@ -162,6 +164,7 @@ myint = int(mystr) + 1
 print(str(myint))
 ```
 
+ 
 ### Arithmetic: 
 - Addition
 
@@ -227,6 +230,10 @@ print(int(4.8))
 ```
 
 - The math package has many common math functions you can use: https://docs.python.org/3/library/math.html 
+
+
+# Q2: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, start off by importing the "random" python package (i.e., `import random`). Then, write some code that assigns a random number to two variables (x and y) with the `random.random()` function. Then calculate the average value of these variables (x and y), and round the result to the nearest two decimal points. Assign that result to the variable z, and print it out.  
 
  
 ## Basic Data Structures
