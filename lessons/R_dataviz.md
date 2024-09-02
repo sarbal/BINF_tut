@@ -1,4 +1,4 @@
-# Week 7: Data vizualisation and exploratory analysis 
+# Week 9: Data vizualisation and exploratory analysis 
 ## Objectives 
 Some visual things you can do with R and ways to explore your data systematically.
 In the tutorial you will:
