@@ -97,7 +97,7 @@ You can also add points to the plot by specifiying the plot type. And if we don'
 a = [1, 2, 3, 4, 5]
 b = [0, 0.6, 0.2, 15, 10, 8, 16, 21]
 plt.plot(a)
-# o is for circles
+# o is for plotting a scatter plot (i.e., no connecting lines, just the dots)
 plt.plot(b, "o")
 
 # Get current axes and plot the legend
@@ -128,7 +128,7 @@ https://www.geeksforgeeks.org/simple-plot-in-python-using-matplotlib/
 
 
 # Q2: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk, write some code to create two variables `m` and `n` that are correlated to each other. You can do this by first creating values for `m`. If you remember from last week, we can generate a random set of numbers with the random package (don't forget to _import_ the random package! HINT: `random.random()` ). Then, to get a correlated variable, we add a small amount of noise to `m`, and assign that to `n`. As before, we can generate a random signal with the random package, or we can use numpy: e.g., noise = np.random.normal(0,1,100). Then plot these two variables. Feel free to get creative with the plot. 
+### In your jupyter notebook, create new chunk for this question. In this chunk, write some code to create two variables `m` and `n` that are correlated to each other. You can do this by first creating values for `m`. If you remember from last week, we generated a single value with the random package. Here, we can use the numpy package to generate multiple numbers. e.g., m = np.random.normal(0,1,100), where 0 is the mean, 1 is the standard deviation, and 100 is the number of values to generate. To get correlated values `n`, we generate some "noise" (e.g, `noise = np.random.normal(0,0.1,100)`) and add that signal to `m` (assigning it to `n`). Then plot `m` versus `n` variables (don't forget the "o" variable!). Note how we decreased the standard deviation when generating the noise signal. See what happens when you play around with that value by increasing and decreasing it and plotting those two graphs again. 
 
 
 #### Penguin plots
