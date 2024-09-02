@@ -1,4 +1,4 @@
-# Week 9: A fun(ctional) example
+# Week 10: A fun(ctional) example
 ## Objectives 
 Let's play with real data! Learn the most important data handling skills. In this tutorial: 
 - Extracting values from a table
