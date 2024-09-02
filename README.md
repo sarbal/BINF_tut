@@ -20,23 +20,24 @@ Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/
 ## Week 4: Snakes on a plane 
 [Data wrangling.](/lessons/python_datafun.md)
 
-## Week 5: R basics 
-[Let's get staRted.](/lessons/R_basics.md)   
+## Week 5: Biopython basics (and assignment help) 
+[Help!](/lessons/biopython.md)   
 
 ## Week 6: BReak!
 
-## Week 7: More R 
+## Week 7: Biopython advanced (and assignment help) 
+[Help!](/lessons/biopython2.md)   
+
+## Week 8: R basics
+[Let's get staRted.](/lessons/R_basics.md)
+
+## Week 9: So shiny! 
+Let's make something interactive.[in python](/lessons/python_shiny.md) or [R](/lessons/R_shiny.md)
+
+## Week 10: Recap and extras
 [Some visual things you can do with R.](/lessons/R_dataviz.md)
-
-## Week 8: A fun example 
 [Let's play with real data.](/lessons/R_datafun.md)
-
-## Week 9: So shiny!
-[Let's make something interactive.](/lessons/R_shiny.md)
-
-## Week 10: Recap
 [Reproducing some analyses.](/lessons/recap.md)
-
 
 
 #### Inspired by many:
