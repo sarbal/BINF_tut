@@ -1,4 +1,4 @@
-# Week 5: R basics
+# Week 8: R basics
 ## Objectives
 This tutorial will teach you background knowledge on R. 
 You’ll learn about:
