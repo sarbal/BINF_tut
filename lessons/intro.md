@@ -7,32 +7,16 @@ Hi! Welcome to the BINF2010 tutorial stream.
 - "Cool" visuals 
 
 ## CouRse outline
-1. Week 1: [Intro](intro.md)
-2. Week 2: Introduction to Python[](lesson6.md)
-3. Week 3: Data Viz[](lesson7.md)
-4. Week 4: Snakes on a plane[](lesson8.md)
-5. Week 5: R basics[](lesson2.md)
+1. Week 1: Installing all the things!
+2. Week 2: Introduction to Python 
+3. Week 3: Data Viz in Python
+4. Week 4: Snakes on a plane
+5. Week 5: Biopython basics
 6. Week 6: BReak! 
-7. Week 7: Data Viz in R[](lesson3.md)
-8. Week 8: A fun example[](lesson4.md)
-9. Week 9: So shiny![](lesson5.md)
-10. Week 10: Recap[](lesson9.md)
-
-## What is R? 
-- Statistical and graphical language
-- Follower of [S](https://en.wikipedia.org/wiki/S_(programming_language))
-
-### What is it good foR?  
-- Data mining/analysis 
-- Data visualization and graphics
-- Statistics! 
-- Glorified calculator? 
-
-### Packages, Repositories, oh my!
-- Packages are code (and other!) bundles.
-- Packages are accessed through the `library()` or `require()` functions. 
-- Repositories are where packages are located. Most are in [CRAN](https://cran.r-project.org/web/packages/). [Bioconductor](https://www.bioconductor.org/packages/release/BiocViews.html) and also [github](https://github.com/trending/r). 
-- More on this [here](http://r-pkgs.had.co.nz/) and [here](https://www.datacamp.com/community/tutorials/r-packages-guide). 
+7. Week 7: Biopython extra
+8. Week 8: Introduction to R
+9. Week 9: More R
+10. Week 10: Recap
 
 ## What is Python?
 - Initially developed during the late 1980’s by Guido van Rossum. First development version released in 1991. Version 1 released in 1994.
@@ -49,42 +33,7 @@ Python 3.x (December 2008) was a significant re-design and broke compatibility w
 - Modules are accessed by using the import statement. When you do this, you execute the code of the module, keeping the scopes of the definitions so that your current file(s) can make use of these.
 - You can download modules through `pip` (package installer for Python). 
 
-
-## How do I...
-### Install R
-Start off by downloading [R](https://cran.r-project.org/) and then [RStudio](https://www.rstudio.com/).
-- [Installing R for Windows](installwindows.md)
-- [Installing R for Mac](installmac.md)
-- [Installing R for Unix](installunix.md)
-
-> Note: make sure you use the correct install specific to your computer's hardware (e.g. M2 chip on newer macbooks will not work with the Intel CPU installation etc.)
-
-#### Install packages
-From CRAN: 
-``` 
-install.packages("gplots")
-```
-From Bioconductor: 
-``` 
-if (!require("BiocManager"))
-    install.packages("BiocManager")
-BiocManager::install("limma")
-```
-From github:
-```  
-install.packages("devtools")
-library(devtools)
-devtools::install_github("karthik/wesanderson")
-```
-#### Load libraries 
-```
-library(gplots)
-library(limma)
-library(wesanderson)
-```
-
 ### Install Python
-
 Start off by downloading [VSCode](https://code.visualstudio.com/) and then [Python](https://www.python.org/downloads/).
 - [Installing python for Windows](installwindows.md#installing-python)
 - [Installing python for Mac](installmac.md#installing-python)
@@ -116,6 +65,81 @@ pip install jupyter
 #### Select kernel
 https://code.visualstudio.com/docs/datascience/jupyter-kernel-management
 
+
+## Testing your installation - Python 
+Make sure you have installed VSCode and Python correctly. 
+
+Open up VSCode 
+![rstudio console](../imgs/vscode_install.png)
+
+If an Untitled-1 file appears, click on Select a Language at the top of the new file and search for Python.
+![rstudio console](../imgs/vscode_python.png)
+
+Otherwise, click on "File -> New Text File", and that should open a new document. 
+![rstudio console](../imgs/vscode_python2.png)
+
+As a quick sanity check, see if you can execute this bit of code. 
+Open a new file in VSCode.  
+![vscode](../imgs/vscode2.png)
+
+Copy and paste (or type) this into your new file:
+```
+print("Hello, World!")
+```
+Save the file and name it “helloworld.py”. Note the “.py” extension.  Click the triangle “play” button to run your code in the terminal. 
+![vscode](../imgs/vscode3.png)
+
+
+
+
+## What is R? 
+- Statistical and graphical language
+- Follower of [S](https://en.wikipedia.org/wiki/S_(programming_language))
+
+### What is it good foR?  
+- Data mining/analysis 
+- Data visualization and graphics
+- Statistics! 
+- Glorified calculator? 
+
+### Packages, Repositories, oh my!
+- Packages are code (and other!) bundles.
+- Packages are accessed through the `library()` or `require()` functions. 
+- Repositories are where packages are located. Most are in [CRAN](https://cran.r-project.org/web/packages/). [Bioconductor](https://www.bioconductor.org/packages/release/BiocViews.html) and also [github](https://github.com/trending/r). 
+- More on this [here](http://r-pkgs.had.co.nz/) and [here](https://www.datacamp.com/community/tutorials/r-packages-guide). 
+
+### Install R
+Start off by downloading [R](https://cran.r-project.org/) and then [RStudio](https://www.rstudio.com/).
+- [Installing R for Windows](installwindows.md)
+- [Installing R for Mac](installmac.md)
+- [Installing R for Unix](installunix.md)
+
+> Note: make sure you use the correct install specific to your computer's hardware (e.g. M2 chip on newer macbooks will not work with the Intel CPU installation etc.)
+
+
+#### Install packages
+From CRAN: 
+``` 
+install.packages("gplots")
+```
+From Bioconductor: 
+``` 
+if (!require("BiocManager"))
+    install.packages("BiocManager")
+BiocManager::install("limma")
+```
+From github:
+```  
+install.packages("devtools")
+library(devtools)
+devtools::install_github("karthik/wesanderson")
+```
+#### Load libraries 
+```
+library(gplots)
+library(limma)
+library(wesanderson)
+```
 
 ## Testing your installation - R 
 Make sure you have installed Rstudio and R correctly. 
@@ -154,32 +178,6 @@ Then run this bit of code in your console. Note, it might take a little while, b
 ```
 source("helper.R") 
 ```
-
-
-## Testing your installation - Python 
-Make sure you have installed VSCode and Python correctly. 
-
-Open up VSCode 
-![rstudio console](../imgs/vscode_install.png)
-
-If an Untitled-1 file appears, click on Select a Language at the top of the new file and search for Python.
-![rstudio console](../imgs/vscode_python.png)
-
-Otherwise, click on "File -> New Text File", and that should open a new document. 
-![rstudio console](../imgs/vscode_python2.png)
-
-As a quick sanity check, see if you can execute this bit of code. 
-Open a new file in VSCode.  
-![vscode](../imgs/vscode2.png)
-
-Copy and paste (or type) this into your new file:
-```
-print("Hello, World!")
-```
-Save the file and name it “helloworld.py”. Note the “.py” extension.  Click the triangle “play” button to run your code in the terminal. 
-![vscode](../imgs/vscode3.png)
-
-
 
 ## WheRe to get help
 - [Rstudio](https://www.rstudio.com/)
