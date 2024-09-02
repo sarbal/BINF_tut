@@ -17,6 +17,7 @@ Make sure you have these installed too.
 pip install numpy
 pip install pandas
 pip install seaborn
+pip install palmerpenguins
 ```
 
 ## Setting up
@@ -31,16 +32,20 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 ```
 - Pandas is a library for working with tabular data. Based on the R data.frame library.
-- Seaborn is a visualization package. 
+- Seaborn is a visualization package.
+- Palmerpenguins is a dataset used for data exploration & visualisation education. https://github.com/mcnakhaee/palmerpenguins 
 
 ### Importing data 
+Let's first load the data we will be using.  
 ```
 from palmerpenguins import load_penguins
 df = load_penguins()
 print(type(df))
 df
 ```
+
 ### Summary statistics and properties 
+- Since the dataset is in the form of a data frame, we can use `pandas` functions to play around with it. 
 ```
 print(df.describe())
 print(df.dtypes)
@@ -57,6 +62,10 @@ print(df[['bill_length_mm','island']])
 print(df.query("year > 2007"))
 
 ```
+
+# Q1: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, write some code to access and print out the properties of the _rows_ from the `df` variable. 
+
 
 ### Plotting 
 
@@ -117,6 +126,11 @@ Read more here:
 https://matplotlib.org/stable/gallery/lines_bars_and_markers/simple_plot.html
 https://www.geeksforgeeks.org/simple-plot-in-python-using-matplotlib/
 
+
+# Q2: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, write some code to create two variables `m` and `n` that are correlated to each other. You can do this by first creating values for `m`. If you remember from last week, we can generate a random set of numbers with the random package (don't forget to _import_ the random package! HINT: `random.random()` ). Then, to get a correlated variable, we add a small amount of noise to `m`, and assign that to `n`. As before, we can generate a random signal with the random package, or we can use numpy: e.g., noise = np.random.normal(0,1,100). Then plot these two variables. Feel free to get creative with the plot. 
+
+
 #### Penguin plots
 We will use the seaborn module (which we named sns) to plot the palmer penguin data. First, let's take a look at the distribution of bill lengths. 
 Here we use the histplot function, and add a density line. 
@@ -167,6 +181,11 @@ plt.show()
 ```
 ![penguin](../imgs/penguin_lmplot.png)
 
+
+# Q3: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, we will try to repeat similar plots with the `iris` dataset. Using the `describe` function, look at the variables in the iris dataset, and make a distribution plot for one of them. 
+
+
 - Multiple figures
 - Use subplots() to create multiple figures.
 - Body mass, four ways: 
@@ -198,13 +217,10 @@ df_penguins.head()
 ```    
 
 
-## Test yourself!
-1. Open a Juptyr notebook and save your work there.
-2. Load the iris dataset. HINT: it is in the seaborn package. `iris = ???.load_dataset("iris")`.
-3. Look at it and make a distribution plot for one of the variables. 
-4. Do a pairplot between all variables for the iris dataset.
-5. Plot a variable in the iris dataset with the four different plot types, as above. 
+# Q4: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, we will try to repeat similar plots with the `iris` dataset. Plot a multiple plot figure, with any variable in the iris dataset, across the four different plot types. 
 
+ 
 [Solutions next week]
 
 Back to the [homepage](../README.md)
