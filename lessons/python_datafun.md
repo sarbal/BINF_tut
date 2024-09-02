@@ -136,6 +136,10 @@ print(n_factorial(0))
 print(n_factorial(1001))
 ```
 
+
+# Q1: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk,  
+
 ## Input 
 ### Command line input 
 Reading in input from the command-line is in the argv variable from the sys module: 
@@ -167,6 +171,7 @@ f.close()
 In addition you can specify if the file should be handled as binary or text mode
 - "t" - Text - Default value. Text mode
 - "b" - Binary - Binary mode (e.g. images)
+
 
 ### Reading in files with pandas
 ```
@@ -224,6 +229,13 @@ Another issue could be duplicated rows. You can use this check to find them:
 print(df.duplicated())
 df.drop_duplicates(inplace = True)
 ```
+
+
+# Q2: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk,  
+
+
+
  
 ## Biopython
 Biopython is a set of freely available tools for biological computation written in Python by an international team of developers.
@@ -242,6 +254,8 @@ There is a lot of functionality in [biopython](https://biopython.org/docs/ ) (to
 These include BLAST searches, downloading sequences from NCBI, Phylogenetics, Cluster analysis, Graphics, etc. 
 The most useful function is accessing NCBI through their e-utils API. 
 Some extra tutorials here: https://biopython-tutorial.readthedocs.io/en/latest/notebooks/00%20-%20Tutorial%20-%20Index.html#  *NOTE: these will be important for your assigmment...*   
+
+
 ### Sequences 
 ```
 from Bio.Seq import Seq
@@ -273,6 +287,10 @@ Bio.SeqIO.write(record, "HokC.fasta", "fasta")
 ```
 Other formats here: 
 - https://biopython.org/wiki/SeqIO
+
+
+# Q3: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, using SeqIO module functions, find the function that finds the reverse complement of a DNA sequence (or write one yourself).
 
 
 ### Using E-utils
@@ -380,22 +398,11 @@ print(record)
 ```
 What does this give us? 
 
+# Q4: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, write some code to run a query using the Entrez e-utils to search and fetch the nucletodie sequence for the mouse mitochondrial genome. 
 
 More here: 
 https://biopython.org/docs/1.75/api/Bio.Entrez.html
-
-## Test yourself! 
-1. Create a dictionary called dna_map that maps DNA bases to their complementary bases. I.e., A -> T, C -> G, etc..
-2. Use str.maketrans() to convert this to a "translation table" named dna_table.
-3. By passing dna_table to the string method .translate(), then using indexing with a step of -1 ([::-1]), compute the reverse complement of the MCS sequence given below.
-```
-mcs_seq = 'GAGACCCAAGCTGGCTAGCGTTTAAACTTAAGCTTGGTACCGAGCTCGGATCCACTA' \
-          'GTCCAGTGTGGTGGAATTCTGCAGATATCCAGCACAGTGGCGGCCGCTCGAGTCTAG' \
-          'AGGGCCCGTTTAAACCCGCTGATCAGCCT'
-```
-4. Repeat question 3 but using the SeqIO module functions.
-5. Write and run a query using the Entrez e-utils to search and fetch the nucletodie sequence for the mouse mitochondrial genome.
-  
  
 [Solutions next week]
 
