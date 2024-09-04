@@ -51,7 +51,9 @@ print(df.describe())
 print(df.dtypes)
 print(df.columns)
 ```
+
 ### Indexing/accessing data in a data frame 
+- 
 ```
 print(df.values)
 i=1
