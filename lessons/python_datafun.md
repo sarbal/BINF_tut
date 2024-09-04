@@ -169,13 +169,23 @@ f.close()
 ```
 (we will have a play with this data file later I promise) 
 
+- If we want to write to a file, we also open a handle, and write out the line (or lines)  
+```
+f = open("NotTheDirtyDozen.txt", "w")
+line = "This is a test line\n"
+f.write(line) # one line
+for i in range(12):
+    f.write( str(i) + "\n")
+f.close()
+```
+
 In addition you can specify if the file should be handled as binary or text mode
 - "t" - Text - Default value. Text mode
 - "b" - Binary - Binary mode (e.g. images)
 
 
 # Q3: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk, 
+### In your jupyter notebook, create new chunk for this question. In this chunk, write out the output to a file called "Powers_of_2.txt" the first 10 powers of 2 starting at 0. You can use your function from Q2. 
 
 ### Reading in files with pandas
 ```
