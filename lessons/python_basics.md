@@ -5,24 +5,25 @@ Taken/adapted from: https://ucdavis-bioinformatics-training.github.io/2022-Feb-I
 - Python's basic data and data structures  
 
 ## Setting up 
-Make sure you have VSCode and python installed. 
+Make sure you have VSCode and python installed. Let's write our first piece of code. 
 
-Open a new file in VSCode.  
+1. Open a new file in VSCode.  
 ![vscode](../imgs/vscode2.png)
 
-Copy and paste (or type) this into your new file:
+2. Copy and paste (or type) this into your new file:
 ```
 print("Hello, World!")
 ```
-Save the file and name it “helloworld.py”. Note the “.py” extension.  Click the triangle “play” button to run your code in the terminal. 
+3. Save the file and name it “helloworld.py”. Note the “.py” extension.  Click the triangle “play” button to run your code in the terminal. 
 Python can also be run interactively. Type in "python" into the terminal. Paste/type in the code snippets in the terminal.
 ![vscode](../imgs/vscode3.png)
 
-Finally, you can also run python in a Jupyter notebook. The extension for this is ".ipynb". Each "chunk" of code can be run within the notebook. 
+4. Finally, you can also run python in a Jupyter notebook. The extension for this is ".ipynb". Each "chunk" of code can be run within the notebook. 
 ![vscode](../imgs/vscode4.png)
-Save a Jupyter notebook as "yourname_week2.ipynb". Similar to a R markdown notebook, you can write and run your code chunks in this file. Make sure to save! As before, copy the code throughout the tutorial into your notebook.  
 
-## Defintions
+5. Save a Jupyter notebook as "yourname_week2.ipynb". You can write and run your code chunks in this file, and make sure to save! For the remainder of this tutorial, you will be copying bits of code and pasting it there.
+   
+## Definitions
 - Variables
 - Data types 
 - Casting 
