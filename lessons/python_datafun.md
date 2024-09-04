@@ -185,7 +185,7 @@ In addition you can specify if the file should be handled as binary or text mode
 
 
 # Q3: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk, write out the output to a file called "Powers_of_2.txt" the first 10 powers of 2 starting at 0. You can use your function from Q2. 
+### In your jupyter notebook, create new chunk for this question. In this chunk, write out the output to a file called "Powers_of_2.txt" the first 10 powers of 2 starting at 0. You can modify your function from Q2. 
 
 ### Reading in files with pandas
 ```
@@ -246,7 +246,7 @@ df.drop_duplicates(inplace = True)
 
 
 # Q4: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk,  
+### In your jupyter notebook, create new chunk for this question. In this chunk, read in the "data.csv" file again to the df variable. Drop all the empty rows and then write this to a file named "data_filtered.csv".  
 
 
 [Solutions next week]
