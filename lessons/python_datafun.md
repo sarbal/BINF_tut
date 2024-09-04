@@ -246,7 +246,7 @@ df.drop_duplicates(inplace = True)
 
 
 # Q4: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk, read in the "data.csv" file again to the df variable. Drop all the empty rows and then write this to a file named "data_filtered.csv".  
+### In your jupyter notebook, create new chunk for this question. In this chunk, read in the "data.csv" file again to the df variable. Drop all the rows with "NaN" and then write this to a file named "data_filtered.txt".  
 
 
 [Solutions next week]
