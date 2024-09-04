@@ -53,7 +53,7 @@ print(df.columns)
 ```
 
 ### Indexing/accessing data in a data frame 
-- 
+- Using an index or the column name:  
 ```
 print(df.values)
 i=1
@@ -62,7 +62,6 @@ print(df.loc[i])
 print(df.iloc[i,j])
 print(df[['bill_length_mm','island']])
 print(df.query("year > 2007"))
-
 ```
 
 # Q1: Test yourself!
