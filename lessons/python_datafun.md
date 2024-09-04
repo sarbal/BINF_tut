@@ -92,6 +92,10 @@ for x in range(10):
     print(x)
 ```
 
+
+# Q1: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, write a for loop that prints out the first ten powers of 2 starting from 2^0. 
+
 ## while loops
 The while loop keeps going as long as the argument it is passed evaluates to "True".  
 ```
@@ -134,10 +138,8 @@ print(n_factorial(100))
 print(n_factorial(0))
 print(n_factorial(1001))
 ```
-
-
-# Q1: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk,  
+# Q2: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, write a function that prints out the first N powers of 2. It should take in the number of values "N" as input, and check that N is not larger than 100.   
 
 ## Input 
 ### Command line input 
@@ -171,6 +173,9 @@ In addition you can specify if the file should be handled as binary or text mode
 - "t" - Text - Default value. Text mode
 - "b" - Binary - Binary mode (e.g. images)
 
+
+# Q3: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, 
 
 ### Reading in files with pandas
 ```
@@ -230,7 +235,7 @@ df.drop_duplicates(inplace = True)
 ```
 
 
-# Q2: Test yourself!
+# Q4: Test yourself!
 ### In your jupyter notebook, create new chunk for this question. In this chunk,  
 
 
