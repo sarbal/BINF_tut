@@ -132,7 +132,7 @@ https://www.geeksforgeeks.org/simple-plot-in-python-using-matplotlib/
 ### In your jupyter notebook, create new chunk for this question. In this chunk, write some code to create two variables `m` and `n` that are correlated to each other. You can do this by first creating values for `m`. If you remember from last week, we generated a single value with the random package. Here, we can use the numpy package to generate multiple numbers. e.g., m = np.random.normal(0,1,100), where 0 is the mean, 1 is the standard deviation, and 100 is the number of values to generate. To get correlated values `n`, we generate some "noise" (e.g, `noise = np.random.normal(0,0.1,100)`) and add that signal to `m` (assigning it to `n`). Then plot `m` versus `n` variables (don't forget the "o" variable!). Note how we decreased the standard deviation when generating the noise signal. See what happens when you play around with that value by increasing and decreasing it and plotting those two graphs again. 
 
 
-#### Penguin plots
+### Penguin plots
 We will use the seaborn module (which we named sns) to plot the palmer penguin data. First, let's take a look at the distribution of bill lengths. 
 Here we use the histplot function, and add a density line. 
 ```
