@@ -64,7 +64,7 @@ print(df.query("year > 2007"))
 ```
 
 # Q1: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk, write some code to access and print out the properties of the _rows_ from the `df` variable. 
+### In your jupyter notebook, create new chunk for this question. In this chunk, write some code to access and print out the properties of the first two _columns_ from the `df` variable. 
 
 
 ### Plotting 
