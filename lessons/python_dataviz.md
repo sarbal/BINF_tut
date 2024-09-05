@@ -2,6 +2,7 @@
 ## Objectives 
 - Plotting and displaying data in python
 - Using numpy, pandas and seaborn libraries
+- Data frames?!
   
 ## Downloads  
 First things first! Download these palmer penguins data into your working directory. Note, you may need to use pip3. 
@@ -9,9 +10,6 @@ Into a terminal, type in:
 ```
 pip -q install palmerpenguins
 ```
-
-### Installing and importing libraries 
-
 Make sure you have these installed too. 
 ```
 pip install numpy
@@ -21,10 +19,10 @@ pip install palmerpenguins
 ```
 
 ## Setting up
-Start a new notebook. Save the file as "yourname_week3.ipynb". 
-As before, copy the code into your notebook as chunks. 
+Start a new notebook. Save the file as "yourname_week3.ipynb". As before, copy the code into your notebook as chunks. 
 
-Then, run an interactive python session in a terminal. In your python session:
+## Running Python interactively 
+Instead of using your notebook straightaway, run an interactive python session in a terminal. In your python session:
 ```
 import numpy as np
 import pandas as pd
@@ -35,42 +33,76 @@ import matplotlib.pyplot as plt
 - Seaborn is a visualization package.
 - Palmerpenguins is a dataset used for data exploration & visualisation education. https://github.com/mcnakhaee/palmerpenguins 
 
-### Importing data 
-Let's first load the data we will be using.  
+Note: This type of data exploration is a data science approach to understanding and interrogating a dataset to either answer a question, research topic or just around basic curiosity. You will be repeating things like these for most types of analysis. 
+
+### Data frames 
+A data type we didn't explicitly speak about are data frames. 
+- A data frame is a 2 dimensional data structure, like a 2 dimensional array, or a table with rows and columns. 
+- We can create a data frame with the pandas `.DataFrame()` function. 
+```
+data = {
+  "pandas": ["Alex", "Bob", "Carl"],
+  "age": [5, 4, 5]
+}
+df = pd.DataFrame(data)
+print(df)
+```
+
+- Let's now load the penguin data we will be using.  
 ```
 from palmerpenguins import load_penguins
 df = load_penguins()
 print(type(df))
-df
+print(df)
 ```
 
-### Summary statistics and properties 
-- Since the dataset is in the form of a data frame, we can use `pandas` functions to play around with it. 
+- Some of the built-in functions include ways to access and describe the data. It is also a typical first step when you have data you know nothing about. Other than just taking a look at the text file or whatnot, you will want to know a bit more about the dataset. 
 ```
-print(df.describe())
-print(df.dtypes)
-print(df.columns)
+print(df.describe()) # Summary statistics of numerical data
+print(df.dtypes)     # What data types are in the data frame
 ```
+- Depending on what you need, there are many ways to access the data from the data frame. 
+```
+print(df.columns)    # Returns column names used to access the column
+print(df.values)     # Accessing the data values per row as tuples
 
-### Indexing/accessing data in a data frame 
-- Using an index or the column name:  
-```
-print(df.values)
+## Intialise index values
 i=1
 j=0
-print(df.loc[i])
-print(df.iloc[i,j])
-print(df[['bill_length_mm','island']])
-print(df.query("year > 2007"))
+## Using index
+print(df.loc[i])     			# Returns the ith row 
+print(df.iloc[i,j])  			# Returns the ith and jth element 
+## Using column names
+print(df[['bill_length_mm','island']])  # Returns the two columns specified 
+print(df.query("year > 2007"))		# Filters the data based on the year column
 ```
 
 # Q1: Test yourself!
 ### In your jupyter notebook, create new chunk for this question. In this chunk, write some code to access and print out the properties of the first two _columns_ from the `df` variable. 
 
 
-### Plotting 
+## Plotting 
+Now that we have our data loaded and a basic idea of how to manipulate it and what it contains, let's get started on visualising it. Before we do that, we will go over some of the basic plotting functions. 
+The matplotlib package is the standard go-to for this. In addition, the seaborn package is an extension of this for statistical data visualisation. We should have imported both of these earlier, but just in case: 
 
-Basic x-y plot:
+```
+import matplotlib.pyplot as plt
+import seaborn as sns
+```
+
+The standard plotting functions in matplot include:
+- plot: x-y plots
+- scatter: scatter plot 
+- hist: histograms, to plot distributions
+- boxplot: box and whisker plots
+- bar: bar plots 
+- others: pie, lmplot, etc. 
+
+More here: https://www.w3schools.com/python/matplotlib_intro.asp 
+
+- Each plot has additional built-in features, such as adding axis titles and labels, and ways to make your plots look "pretty". More on this later.   
+ 
+### Basic x-y plot:
 ```
 # X values
 x = [1,2,3]
@@ -90,7 +122,6 @@ plt.title('X-Y')
 # Showing the plot
 plt.show()
 ```
-
 ![plot1](../imgs/python_plot1.png)
 
 You can also add points to the plot by specifiying the plot type. And if we don't give an x and y, the x is the "index". 
@@ -133,8 +164,15 @@ https://www.geeksforgeeks.org/simple-plot-in-python-using-matplotlib/
 
 
 ### Penguin plots
-We will use the seaborn module (which we named sns) to plot the palmer penguin data. First, let's take a look at the distribution of bill lengths. 
-Here we use the histplot function, and add a density line. 
+We will use the seaborn module (which we named sns) to plot the palmer penguin data. The plotting functions in seaborn can be organised around three categories.  
+- Relational plots: relplot, scatterplot, lineplot, ...
+- Distributions: histplot, displot, kdeplot, rugplot, ecdfplot, ... 
+- Categorical: stripplot, swarmplot, boxplot, violinplot, pointplot, barplot, ...
+Addtionally, we can combine these with functions like: 
+- jointplot, subplots, etc 
+
+#### Exploratory plots
+First, let's take a look at the distribution of bill lengths. Here we use the histplot function, and add a density line. 
 ```
 sns.histplot(df['bill_length_mm'],kde=True,bins=20)
 ```
@@ -187,7 +225,7 @@ plt.show()
 ### In your jupyter notebook, create new chunk for this question. In this chunk, we will try to repeat similar plots with the `iris` dataset. Using the `describe` function, look at the variables in the iris dataset, and make a distribution plot for one of them. 
 
 
-- Multiple figures
+#### Multiple figures
 - Use subplots() to create multiple figures.
 - Body mass, four ways: 
 ```
