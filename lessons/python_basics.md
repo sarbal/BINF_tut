@@ -24,32 +24,41 @@ Python can also be run interactively. Type in "python" into the terminal. Paste/
 5. Save a Jupyter notebook as "yourname_week2.ipynb". You can write and run your code chunks in this file, and make sure to save! For the remainder of this tutorial, you will be copying bits of code and pasting it there.
    
 ## Definitions
-- Variables
-- Data types 
-- Casting 
+- Variables: way to store information that can be named, accessed, and changed in a computer program 
+- Data types: the type of values a variable can have, and also what mathematical, relational or logical operations can be applied to it (without causing an error!)
+- Casting: a way to convert values for certain data types to other data types
 
-## Variables 
+### Variables 
 - "Named" storage. 
 - Can store numbers, characters, etc.  
 - Variable names can only contain alphanumeric characters (A-Z, a-z, 0-9) and the underscore (_). No other special characters can be used, and cannot start with a number. 
 - Type is determined by the value assigned
 - Assign values with the equals sign = 
 
-## Basic Data Types: 
+### Basic Data Types: 
+#### Built-in datatypes and their corresponding category:
+- Text Type: str
+- Numeric Types: int, float, complex
+- Sequence Types: list, tuple, range
+- Mapping Type: dict
+- Set Types: set, frozenset
+- Boolean Type: bool
+- Binary Types: bytes, bytearray, memoryview
 
-- Integers: whole numbers, negative or positive
+1. Examples of the most common data types: 
+- `int`: integers, these are whole numbers, negative or positive. 
   
 ```
 n = 42 
 ```
 
-- Floats: real numbers (ie doubles)
+- `float` : floats, or real numbers (i.e., doubles)
 
 ```
 n_pi = 3.14
 ```
 
-- Strings: any text (including all symbols and spaces), designated by quotes.
+- str: strings, any text (including all symbols and spaces), designated by quotes.
 
 ```
 gene = "TAF1"
@@ -59,14 +68,14 @@ print("My gene is called:" + gene)
 ```
 Note, `print` outputs to your screen. What is the difference in output between the last two print statements? 
 
-- Booleans: true/false. Represents the two values of logic and Boolean algebra
+- bool: booleans, true/false. Represents the two values of logic and Boolean algebra
   
 ```
 control = False
 treatment = True
 ```
 
-- The “type” returns the type of the variable
+2. The `type()` function returns the data type of the variable
 
 ```
 print("The data type of the variable 'n' is:")
@@ -75,22 +84,70 @@ print("The data type of the variable 'gene' is:")
 print(type(gene))
 ```
 
+#### Built-in string methods
+Strings have a long list of built-in methods to return modified versions of the string. 
+1. The methods do not modify the string, they return a new string. Test this out: 
+  
+```
+tmpstr = "Hello my name is X"
+allcaps = tmpstr.upper()
+print(allcaps)
+newstr = tmpstr.replace("X","Y")
+print(newstr)
+```
 
-### Built-in datatypes and their corresponding category:
-- Text Type: str
-- Numeric Types: int, float, complex
-- Sequence Types: list, tuple, range
-- Mapping Type: dict
-- Set Types: set, frozenset
-- Boolean Type: bool
-- Binary Types: bytes, bytearray, memoryview
+2. Concatenate strings: + symbol 
+
+```
+tmpstr2 = "How are you doing?"
+print(tmpstr + " " + tmpstr2)
+```
+
+3. Find the position of one string in another. Note, returns -1 if not found.
+  
+```
+print(tmpstr2.find("you"))
+print(tmpstr2.find("california"))
+```
+
+More here: https://www.w3schools.com/python/python_ref_string.asp 
 
 
+# Q1: Test yourself!
+### In your jupyter notebook, create new chunk for this question. In this chunk, write some code where you assign your name to a variable called `user`. Then print out a sentence that reads "This is my NAME codebook", where NAME is replaced by your `user` text. 
  
-### Comparisons
+### Casting
+Casting is converting certain values for certain datatypes to other datatypes. Some examples are listed below. 
+1. Convert a string to a boolean with `bool()`
+
+```
+tmpstr = "Hello"
+tmpbool = bool(tmpstr)
+print(tmpbool)
+```
+
+2. Convert a decimal to a string with `str()`
+
+```
+n = 42.24
+print("The number is: " + str(x))
+```
+
+3. Convert string to an integer with `int()`
+
+```
+mystr = "50"
+myint = int(mystr) + 1
+print(str(myint))
+```
+
+## Mathematical, relational and logical operations 
+
+### Comparisons 
+Comparisons are useful and some of them most common operations performed. Numerical and string comparisons can be done like so: 
 - Equalities (==)
 - Inequalities (>,<, >=, <=) 
-- Can be used for numerical and string comparisons
+
   
 ```
 print(1<1)
@@ -106,67 +163,7 @@ print(gene == "BRCA2")
 print(greeting == "hello")
 ```
 
-### Built-in string methods
-
-- Strings have a long list of built-in methods to return modified versions of the string. 
-- The methods do not modify the string, they return a new string.
-  
-```
-tmpstr = "Hello my name is X"
-allcaps = tmpstr.upper()
-print(allcaps)
-newstr = tmpstr.replace("X","Y")
-print(newstr)
-```
-
-- Concatenate strings: + symbol 
-
-```
-tmpstr2 = "How are you doing?"
-print(tmpstr + " " + tmpstr2)
-```
-
-- Find the position of one string in another. Note, returns -1 if not found.
-  
-```
-print(tmpstr2.find("you"))
-print(tmpstr2.find("california"))
-```
-
-More here: https://www.w3schools.com/python/python_ref_string.asp 
-
-
-# Q1: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk, write some code where you assign your name to a variable called `user`. Then print out a sentence that reads "This is my NAME codebook", where NAME is replaced by your `user` text. 
-
- 
-### Casting
-- Casting is converting certain values for certain datatypes to other datatypes
-- Convert a string to a boolean with `bool`
-
-```
-tmpstr = "Hello"
-tmpbool = bool(tmpstr)
-print(tmpbool)
-```
-
-- Convert a decimal to a string with `str`
-
-```
-n = 42.24
-print("The number is: " + str(x))
-```
-
-- Convert string to an integer with `int`
-
-```
-mystr = "50"
-myint = int(mystr) + 1
-print(str(myint))
-```
-
- 
-### Arithmetic: 
+### Arithmetic 
 - Addition
 
 ```
@@ -233,11 +230,18 @@ print(int(4.8))
 - The math package has many common math functions you can use: https://docs.python.org/3/library/math.html 
 
 
+ 
 # Q2: Test yourself!
 ### In your jupyter notebook, create new chunk for this question. In this chunk, start off by importing the "random" python package (i.e., `import random`). Then, write some code that assigns a random number to two variables (x and y) with the `random.random()` function. Then calculate the average value of these variables (x and y), and round the result to the nearest two decimal points. Assign that result to the variable z, and print it out.  
 
  
 ## Basic Data Structures
+In addition to simple data types, we have collections of these data types into things we call data structures. These include: 
+- tuples: list of elements, are immutable (cannot be modified)
+- lists: list of elements, can be nested, contain different data types, and mutable (can change) 
+- dictionaries: a set of key/value pairs where the keys are unique (hash table)
+- sets: list of UNIQUE (and immutable) elements, mutable
+
 ### Tuples 
 - List of elements, but cannot be changed and defined by "()".
 - Functions often pass tuples (not lists) back to the user.
@@ -251,7 +255,7 @@ gene_tuple = ("DDX11L1","WASH7P","MIR6859-1","MIR1302-2HG","MIR1302-2","FAM138A"
 gene_list = ["DDX11L1","WASH7P","MIR6859-1","MIR1302-2HG","MIR1302-2","FAM138A"]
 ```
 
-- In python, lists are 0-indexed 
+In python, lists are 0-indexed. This means to access the first element, we use the index value of 0. However, we can also use "negative indices" to access this (based on the length of the list):  
 - First element
   
 ```
@@ -263,11 +267,11 @@ print(gene_list[-6])
 - Last element
   
 ```
-print(gene_list[-1])
 print(gene_list[5])
+print(gene_list[-1])
 ```
 
-- Extracting a range of the list - not very intuitive
+- Extracting a range of the list - not very intuitive, bust uses the colon (:) to pick a range of values. 
   
 ```
 print(gene_list[-3:]) # last three elements
@@ -331,6 +335,7 @@ print("BRCA2" in gene_list)
 ```
  
 #### Built-in list methods
+Some basic list methods that are useful include `.append()`, `.remove()`, and .`reverse()`. More methods can be found here: https://www.tutorialsteacher.com/python/list-methods
 
 ```
 gene_list.append("BRCA2")
@@ -343,7 +348,6 @@ gene_list.reverse()
 print(gene_list)
 ```
 
-More list methods: https://www.tutorialsteacher.com/python/list-methods
 
 # Q3: Test yourself!
 ### In your jupyter notebook, create new chunk for this question. In this chunk, copy the `gene_list` variable from the previous code to a new variable called `gene_list_test`. Add three random genes and remove the third gene in the list. Add a gene to the middle of the list.     
@@ -409,8 +413,28 @@ print("BRCA2" in gene_exp_dict)
 ```
 gene_exp_dict_copy = gene_exp_dict.copy()
 ```
+### Sets
+- Collections of immutable unique elements
+- These are useful to perform some operations, which can be applied faster than on lists 
+- To create a set, we can use either curly brackets ({}) or the set() constructor.
+  
+```
+s1 = {1, 2, 3}
+s2 = set([1, 2, 3, 4])
+print(f"Set s1: {s1}")
+print(f"Set s2: {s2}")
+```
 
+- A useful operation is creating a union of sets (merging two sets together). If two sets have two or more identical values, the resulting set will contain only one of these values.
 
+```
+set_union = s1.union(s2)
+print(set_union)
+set_union(s1 | s2)
+print(set_union)
+```
+
+  
 # Q4: Test yourself!
 ### In your jupyter notebook, create new chunk for this question. Create a dictionary for gene expression of multiple genes for multiple samples. Call it `gene_exp_dict`. Populate the dictionary with at least 10 genes for 5 samples. Then, write the code to get the gene expression for the 4th gene, 2nd sample.
 
