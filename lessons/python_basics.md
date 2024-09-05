@@ -430,7 +430,7 @@ print(f"Set s2: {s2}")
 ```
 set_union = s1.union(s2)
 print(set_union)
-set_union(s1 | s2)
+set_union = (s1 | s2)
 print(set_union)
 ```
 
