@@ -35,9 +35,10 @@ Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/
 [Some visual things you can do with R.](/lessons/R_dataviz.md) 
 
 ## Week 10: Recap and extras
-[Let's play with real data.](/lessons/R_datafun.md)
 [Reproducing some analyses.](/lessons/recap.md)
-
+- [Let's play with real data.](/lessons/R_datafun.md)
+- [Shiny - R](/lessons/R_shiny.md)
+- [Shiny - python (under construction!)]
 #### Inspired by many:
 - https://github.com/data-lessons/DEPRECATED-R-genomics/
 - https://www.datamentor.io/
