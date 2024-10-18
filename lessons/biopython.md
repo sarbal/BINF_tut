@@ -49,6 +49,7 @@ record = SeqRecord(
     id="YP_025292.1",
     name="HokC",
     description="toxic membrane protein, small",
+    annotations={"molecule_type":"protein"}) ###
 )
 print(record)
 # As Genbank entry
