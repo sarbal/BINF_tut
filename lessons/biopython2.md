@@ -70,40 +70,9 @@ print(first_result['ScientificName'])
 print(first_result['Lineage'])
 ```
  
-Cross IDs search:
-Now, sometimes we have the key from once database and want the ID from a second. We can do this with the elink function.  
-```
-handle = Entrez.elink(dbfrom="taxonomy", db="assembly", from_uid=taxid)
-links = Entrez.read(handle)
-```
 
-How many assembly entries do we get for the human taxon? 
-As before, we first access the first entry, and then the set of links, and final the ids. It is a little convoluted because of the list -> dict -> list -> dict structure of the results.  
-```
-len(links[0]['LinkSetDb'][0]['Link'] ) 
-```
-
-Let's take the first result, and access the record in the assembly database. 
-```
-assembly_id = links[0]['LinkSetDb'][0]['Link'][0]['Id']
-handle = Entrez.efetch(db="assembly", id=assembly_id, retmode="xml")
-record = Entrez.read(handle)
-print(record)
-```
-
-As you can see, not much in that! Let's use the taxid ID to search for other database entries, and once again select the first ID. 
-```
-handle = Entrez.elink(dbfrom="assembly", db="nuccore", from_uid=assembly_id)
-links = Entrez.read(handle)
-nuc_id = links[0]['LinkSetDb'][0]['Link'][0]['Id']
-handle = Entrez.efetch(db="nuccore", id=nuc_id, retmode="xml")
-record = Entrez.read(handle)
-print(record)
-```
-What does this give us? A random region of the genome?!
-
-
-You can refine your queries by selecting certain fields aswell. For example, this search looks for organisms with the human taxid, and filters on "RefSeq" entries and with the word "CYBB" in the record title.  
+You can refine your queries by selecting certain fields aswell. 
+For example, this search looks for organisms with the human taxid, and filters on "RefSeq" entries and with the word "CYBB" in the record title.  
 ```
 handle = Entrez.esearch(db="nuccore", term="txid"+str(taxid)+"[Organism] AND refseq[filter] AND CYBB[title]")
 record = Entrez.read(handle)
