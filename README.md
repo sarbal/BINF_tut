@@ -36,7 +36,7 @@ Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/
 
 ## Week 10: Recap and extras
 - [Shiny - R](/lessons/R_shiny.md)
-- [Shiny - python (/lessons/python_shiny.md)]
+- [Shiny - python](/lessons/python_shiny.md)
 #### Inspired by many:
 - https://github.com/data-lessons/DEPRECATED-R-genomics/
 - https://www.datamentor.io/
