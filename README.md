@@ -34,7 +34,7 @@ Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/
 ## Week 9: More R
 [Some visual things you can do with R.](/lessons/R_dataviz.md) 
 
-## Week 10: Recap and extras
+## Week 10: Shiny
 - [Shiny - R](/lessons/R_shiny.md)
 - [Shiny - python](/lessons/python_shiny.md)
 #### Inspired by many:
