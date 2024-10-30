@@ -1,4 +1,4 @@
-# Week 7: So shiny!
+# Week 10: So shiny!
 ## Objectives 
 Let's make something interactive! 
 Shiny is an R/python package that makes it easy to build interactive web applications (apps) straight from R/Python. This lesson will get you started building Shiny apps right away. You will learn how to: 
