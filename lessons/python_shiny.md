@@ -5,7 +5,7 @@ Shiny is an R/python package that makes it easy to build interactive web applica
 - Build a user interface
 - Add control widgets
 - Display reactive output
-- Use R scripts and data
+- Use python scripts and data
 - Use reactive expressions
  
 ## Setting up
