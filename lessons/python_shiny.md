@@ -99,7 +99,7 @@ renderUI   |   a Shiny tag object or HTML
  
 
 ## Resources and other 
- 
+https://shiny.posit.co/py/docs/overview.html
 
 Back to the [homepage](../README.md)
 
