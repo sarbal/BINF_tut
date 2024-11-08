@@ -1,5 +1,5 @@
 ## Test yourself SOLUTIONS 
-1. Download and load the file "R_dataviz.Rdata" into your environment.
+1. Download and load the file [R_dataviz.Rdata](../data/R_dataviz.Rdata)  into your environment.
 
 ```
 load("R_dataviz.Rdata")
