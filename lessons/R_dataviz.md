@@ -554,7 +554,7 @@ plot(1:n, col=turbo(n), pch=19, cex=5)
 4. And finally, look at dataset "Z". Plot it the best way you think would show its key feature. 
 5. "Knit" your R markdown file into an html page or a pdf.  
  
-[Solutions next week]
+[Solutions](R_dataviz_tests.md)
 
 
  ## Resources  
