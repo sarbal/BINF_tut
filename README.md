@@ -3,8 +3,8 @@
 A set of tutorials designed for the undergraduate introduction to bioinformatics course (BINF2010).
 
 Adapted from:
-- https://github.com/jbkinney/23e_urp/
-- https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python1
+- [https://github.com/jbkinney/23e_urp/]
+- [https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python1]
 
 
 ## Week 1: Setting up: 
@@ -38,10 +38,10 @@ Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/
 - [Shiny - R](/lessons/R_shiny.md)
 - [Shiny - python](/lessons/python_shiny.md)
 #### Inspired by many:
-- https://github.com/data-lessons/DEPRECATED-R-genomics/
-- https://www.datamentor.io/
-- http://www.datacarpentry.org/R-genomics/
-- https://github.com/cambiotraining/r-intro
-- http://garrettgman.github.io/tidying/
-- https://www.tidyverse.org/blog/2023/08/teach-tidyverse-23/
+- [https://github.com/data-lessons/DEPRECATED-R-genomics/]
+- [https://www.datamentor.io/]
+- [http://www.datacarpentry.org/R-genomics/]
+- [https://github.com/cambiotraining/r-intro]
+- [http://garrettgman.github.io/tidying/]
+- [https://www.tidyverse.org/blog/2023/08/teach-tidyverse-23/]
 
