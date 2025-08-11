@@ -1,5 +1,5 @@
 # Week 1: Intro and setting up
-Hi! Welcome to the BINF2010 tutorial stream. 
+Hi! Welcome to the BINF2010 tutorial stream. Today, you will be setting up your work environment. This will involve installing VScode and Python, and if there is time, R and Rstudio. If you have these already set up - great! Try helping someone in your tutorial that doesn't. 
 
 ## Overall tutoRial aims 
 - Introduce you to R :large_blue_circle: and Python :snake:
