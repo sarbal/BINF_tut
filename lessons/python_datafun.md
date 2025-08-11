@@ -93,8 +93,8 @@ for x in range(10):
 ```
 
 
-# Q1: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk, write a for loop that prints out the first ten powers of 2 starting from 2^0. 
+## Q1: Test yourself!
+> In your jupyter notebook, create new chunk for this question. In this chunk, write a for loop that prints out the first ten powers of 2 starting from 2^0. 
 
 ## while loops
 The while loop keeps going as long as the argument it is passed evaluates to "True".  
@@ -138,8 +138,8 @@ print(n_factorial(100))
 print(n_factorial(0))
 print(n_factorial(1001))
 ```
-# Q2: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk, write a function that prints out the first N powers of 2. It should take in the number of values "N" as input, and check that N is not larger than 100.   
+## Q2: Test yourself!
+> In your jupyter notebook, create new chunk for this question. In this chunk, write a function that prints out the first N powers of 2. It should take in the number of values "N" as input, and check that N is not larger than 100.   
 
 ## Input 
 ### Command line input 
@@ -184,8 +184,8 @@ In addition you can specify if the file should be handled as binary or text mode
 - "b" - Binary - Binary mode (e.g. images)
 
 
-# Q3: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk, write out the output to a file called "Powers_of_2.txt" the first 10 powers of 2 starting at 0. You can modify your function from Q2. 
+## Q3: Test yourself!
+> In your jupyter notebook, create new chunk for this question. In this chunk, write out the output to a file called "Powers_of_2.txt" the first 10 powers of 2 starting at 0. You can modify your function from Q2. 
 
 ### Reading in files with pandas
 ```
@@ -245,8 +245,8 @@ df.drop_duplicates(inplace = True)
 ```
 
 
-# Q4: Test yourself!
-### In your jupyter notebook, create new chunk for this question. In this chunk, read in the "data.csv" file again to the df variable. Drop all the rows with "NaN" and then write this to a file named "data_filtered.txt".  
+## Q4: Test yourself!
+> In your jupyter notebook, create new chunk for this question. In this chunk, read in the "data.csv" file again to the df variable. Drop all the rows with "NaN" and then write this to a file named "data_filtered.txt".  
 
 
 [Solutions next week]
