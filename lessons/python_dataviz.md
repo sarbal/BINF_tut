@@ -65,14 +65,19 @@ print(df.dtypes)     # What data types are in the data frame
 ```
 print(df.columns)    # Returns column names used to access the column
 print(df.values)     # Accessing the data values per row as tuples
-
+```
 ## Intialise index values
+```
 i=1
 j=0
+```
 ## Using index
+```
 print(df.loc[i])     			# Returns the ith row 
-print(df.iloc[i,j])  			# Returns the ith and jth element 
+print(df.iloc[i,j])  			# Returns the ith and jth element
+```
 ## Using column names
+```
 print(df[['bill_length_mm','island']])  # Returns the two columns specified 
 print(df.query("year > 2007"))		# Filters the data based on the year column
 ```
