@@ -82,7 +82,7 @@ print(df[['bill_length_mm','island']])  # Returns the two columns specified
 print(df.query("year > 2007"))		# Filters the data based on the year column
 ```
 
-> Q1: Test yourself!
+## Q1: Test yourself!
 > In your jupyter notebook, create new chunk for this question. In this chunk, write some code to access and print out the properties of the first two _columns_ from the `df` variable. 
 
 
@@ -164,7 +164,7 @@ https://matplotlib.org/stable/gallery/lines_bars_and_markers/simple_plot.html
 https://www.geeksforgeeks.org/simple-plot-in-python-using-matplotlib/
 
 
-> Q2: Test yourself!
+## Q2: Test yourself!
 > In your jupyter notebook, create new chunk for this question. In this chunk, write some code to create two variables `m` and `n` that are correlated to each other. You can do this by first creating values for `m`. If you remember from last week, we generated a single value with the random package. Here, we can use the numpy package to generate multiple numbers. e.g., m = np.random.normal(0,1,100), where 0 is the mean, 1 is the standard deviation, and 100 is the number of values to generate. To get correlated values `n`, we generate some "noise" (e.g, `noise = np.random.normal(0,0.1,100)`) and add that signal to `m` (assigning it to `n`). Then plot `m` versus `n` variables (don't forget the "o" variable!). Note how we decreased the standard deviation when generating the noise signal. See what happens when you play around with that value by increasing and decreasing it and plotting those two graphs again. 
 
 
@@ -226,7 +226,7 @@ plt.show()
 ![penguin](../imgs/penguin_lmplot.png)
 
 
-> Q3: Test yourself!
+## Q3: Test yourself!
 > In your jupyter notebook, create new chunk for this question. In this chunk, we will try to repeat similar plots with the `iris` dataset. Using the `describe` function, look at the variables in the iris dataset, and make a distribution plot for one of them. 
 
 
@@ -261,7 +261,7 @@ df_penguins.head()
 ```    
 
 
-> Q4: Test yourself!
+## Q4: Test yourself!
 > In your jupyter notebook, create new chunk for this question. In this chunk, we will try to repeat similar plots with the `iris` dataset. Plot a multiple plot figure, with any variable in the iris dataset, across the four different plot types. 
 
  
