@@ -3,8 +3,8 @@
 A set of tutorials designed for the undergraduate introduction to bioinformatics course (BINF2010).
 
 Adapted from:
-- [https://github.com/jbkinney/23e_urp/]
-- [https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python1]
+- [URP](https://github.com/jbkinney/23e_urp/)
+- [UCDavis bioinformatics training](https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python1)
 
 
 ## Week 1: Setting up: 
