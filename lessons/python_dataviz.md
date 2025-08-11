@@ -33,7 +33,7 @@ import matplotlib.pyplot as plt
 - Seaborn is a visualization package.
 - Palmerpenguins is a dataset used for data exploration & visualisation education. https://github.com/mcnakhaee/palmerpenguins 
 
-Note: This type of data exploration is a data science approach to understanding and interrogating a dataset to either answer a question, research topic or just around basic curiosity. You will be repeating things like these for most types of analysis. 
+> Note: This type of data exploration is a data science approach to understanding and interrogating a dataset to either answer a question, research topic or just around basic curiosity. You will be repeating things like these for most types of analysis. 
 
 ### Data frames 
 A data type we didn't explicitly speak about are data frames. 
