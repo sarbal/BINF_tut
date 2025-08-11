@@ -113,7 +113,7 @@ print(tmpstr2.find("california"))
 More here: https://www.w3schools.com/python/python_ref_string.asp 
 
 
-> Q1: Test yourself!
+## Q1: Test yourself!
 > In your jupyter notebook, create new chunk for this question. In this chunk, write some code where you assign your name to a variable called `user`. Then print out a sentence that reads "This is my NAME codebook", where NAME is replaced by your `user` text. 
  
 ### Casting
@@ -231,7 +231,7 @@ print(int(4.8))
 
 
  
-> Q2: Test yourself!
+## Q2: Test yourself!
 > In your jupyter notebook, create new chunk for this question. In this chunk, start off by importing the "random" python package (i.e., `import random`). Then, write some code that assigns a random number to two variables (x and y) with the `random.random()` function. Then calculate the average value of these variables (x and y), and round the result to the nearest two decimal points. Assign that result to the variable z, and print it out.  
 
  
@@ -349,7 +349,7 @@ print(gene_list)
 ```
 
 
-> Q3: Test yourself!
+## Q3: Test yourself!
 > In your jupyter notebook, create new chunk for this question. In this chunk, copy the `gene_list` variable from the previous code to a new variable called `gene_list_test`. Add three random genes and remove the third gene in the list. Add a gene to the middle of the list.     
 
 
@@ -436,7 +436,7 @@ print(set_union)
 
 More here: https://www.dataquest.io/blog/data-structures-in-python/
   
-> Q4: Test yourself!
+## Q4: Test yourself!
 > In your jupyter notebook, create new chunk for this question. Create a dictionary for gene expression of multiple genes for multiple samples. Call it `gene_exp_dict`. Populate the dictionary with at least 10 genes for 5 samples. Then, write the code to get the gene expression for the 4th gene, 2nd sample.
 
 [Solutions - released next week!]
