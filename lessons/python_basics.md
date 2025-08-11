@@ -439,7 +439,7 @@ More here: https://www.dataquest.io/blog/data-structures-in-python/
 # Q4: Test yourself!
 ### In your jupyter notebook, create new chunk for this question. Create a dictionary for gene expression of multiple genes for multiple samples. Call it `gene_exp_dict`. Populate the dictionary with at least 10 genes for 5 samples. Then, write the code to get the gene expression for the 4th gene, 2nd sample.
 
-[Solutions](week2_solutions.ipynb)
-
+[Solutions - released next week!]()
+[(week2_solutions.ipynb)]: #
 
 Back to the [homepage](../README.md)
