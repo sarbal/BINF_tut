@@ -28,10 +28,10 @@ Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/
 ## Week 7: R basics
 [Let's get staRted.](/lessons/R_basics.md)
 
-## Week 8: More R
+## Week 8: MoRe R
 [Some visual things you can do with R.](/lessons/R_dataviz.md) 
 
-## Week 9: More R
+## Week 9: Even moRe R
 [Functions in R.](/lessons/R_datafun.md) 
 
 ## Week 10: Shiny
