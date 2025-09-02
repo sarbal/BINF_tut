@@ -2,11 +2,6 @@
 
 A set of tutorials designed for the undergraduate introduction to bioinformatics course (BINF2010).
 
-Adapted from:
-- [URP](https://github.com/jbkinney/23e_urp/)
-- [UCDavis bioinformatics training](https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python1)
-
-
 ## Week 1: Setting up: 
 Let's start at the very beginning [(a very good place to start)](/lessons/intro.md)   
 Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/installwindows.md), [macs](/lessons/installmac.md), or [linux](/lessons/installunix.md/)
@@ -37,8 +32,12 @@ Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/
 ## Week 10: Shiny
 - [Shiny - R](/lessons/R_shiny.md)
 - [Shiny - python](/lessons/python_shiny.md)
-  
+
 #### Inspired by many:
+Adapted from:
+- [URP](https://github.com/jbkinney/23e_urp/)
+- [UCDavis bioinformatics training](https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python1)
+
 - [https://github.com/data-lessons/DEPRECATED-R-genomics/]
 - [https://www.datamentor.io/]
 - [http://www.datacarpentry.org/R-genomics/]
