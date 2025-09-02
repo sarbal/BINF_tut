@@ -33,11 +33,10 @@ Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/
 - [Shiny - R](/lessons/R_shiny.md)
 - [Shiny - python](/lessons/python_shiny.md)
 
-#### Inspired by many:
-Adapted from:
+#### Adapted from:
 - [URP](https://github.com/jbkinney/23e_urp/)
 - [UCDavis bioinformatics training](https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python1)
-
+#### Inspired by many:
 - [https://github.com/data-lessons/DEPRECATED-R-genomics/]
 - [https://www.datamentor.io/]
 - [http://www.datacarpentry.org/R-genomics/]
