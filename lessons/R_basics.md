@@ -1,4 +1,4 @@
-# Week 8: R basics
+# Week 7: R basics
 ## Objectives
 This tutorial will teach you background knowledge on R. 
 You’ll learn about:
@@ -287,4 +287,5 @@ https://posit.cloud/learn/cheat-sheets
 https://posit.cloud/learn/primers/1.2 
 
 Back to the [homepage](../README.md)
+
 
