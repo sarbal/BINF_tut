@@ -1,4 +1,4 @@
-# Week 9: Data vizualisation and exploratory analysis 
+# Week 8: Data vizualisation and exploratory analysis 
 ## Objectives 
 Some visual things you can do with R and ways to explore your data systematically.
 In the tutorial you will:
@@ -564,3 +564,4 @@ plot(1:n, col=turbo(n), pch=19, cex=5)
 
 
 Back to the [homepage](../README.md)
+
