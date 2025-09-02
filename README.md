@@ -25,18 +25,19 @@ Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/
 
 ## Week 6: BReak!
 
-## Week 7: Biopython advanced (and assignment help) 
-[Help!](/lessons/biopython2.md)   
-
-## Week 8: R basics
+## Week 7: R basics
 [Let's get staRted.](/lessons/R_basics.md)
 
-## Week 9: More R
+## Week 8: More R
 [Some visual things you can do with R.](/lessons/R_dataviz.md) 
+
+## Week 9: More R
+[Functions in R.](/lessons/R_datafun.md) 
 
 ## Week 10: Shiny
 - [Shiny - R](/lessons/R_shiny.md)
 - [Shiny - python](/lessons/python_shiny.md)
+- 
 #### Inspired by many:
 - [https://github.com/data-lessons/DEPRECATED-R-genomics/]
 - [https://www.datamentor.io/]
