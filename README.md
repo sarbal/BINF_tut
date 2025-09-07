@@ -37,10 +37,11 @@ Installation of sofware (R, RStudio, Python3 and VSCode) for [windows](/lessons/
 - [URP](https://github.com/jbkinney/23e_urp/)
 - [UCDavis bioinformatics training](https://ucdavis-bioinformatics-training.github.io/2022-Feb-Introduction-To-Python-For-Bioinformatics/python/python1)
 #### Inspired by many:
-- [https://github.com/data-lessons/DEPRECATED-R-genomics/]
-- [https://www.datamentor.io/]
-- [http://www.datacarpentry.org/R-genomics/]
-- [https://github.com/cambiotraining/r-intro]
-- [http://garrettgman.github.io/tidying/]
-- [https://www.tidyverse.org/blog/2023/08/teach-tidyverse-23/]
+- [R Genomics](https://github.com/data-lessons/DEPRECATED-R-genomics/)
+- [Data mentor](https://www.datamentor.io/)
+- [Data carpentry - R Genomics](http://www.datacarpentry.org/R-genomics/)
+- [R intro](https://github.com/cambiotraining/r-intro)
+- [Tidy](http://garrettgman.github.io/tidying/)
+- [Tidyverse](https://www.tidyverse.org/blog/2023/08/teach-tidyverse-23/)
+
 
