@@ -13,10 +13,10 @@ Hi! Welcome to the BINF2010 tutorial stream. Today, you will be setting up your 
 4. Week 4: Snakes on a plane
 5. Week 5: Biopython basics
 6. Week 6: BReak! 
-7. Week 7: Biopython extra
-8. Week 8: Introduction to R
-9. Week 9: More R
-10. Week 10: Recap
+7. Week 7: Introduction to R
+8. Week 8: More R
+9. Week 9: Even moRe R
+10. Week 10: Shiny/Recap
 
 ## What is Python?
 - Initially developed during the late 1980’s by Guido van Rossum. First development version released in 1991. Version 1 released in 1994.
